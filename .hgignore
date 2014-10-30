@@ -1,0 +1,21 @@
+syntax: glob
+
+*.DS_Store
+*.bak
+*.bck
+*.c
+*.egg
+*.egg-info/*
+*.orig
+*.pyc
+*.so
+*.xml
+*.zip
+*build/**
+*dist/**
+*~
+.*.swp
+.coverage
+.idea/
+.pythoscope/**
+ve/**
