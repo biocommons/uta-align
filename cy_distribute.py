@@ -58,7 +58,7 @@ class cy_build_ext(build_ext):
                             self.distribution.has_ext_modules() and self.plat_name).egg_name()
 
 ## <LICENSE>
-## Copyright 2014 uta-align Contributors (https://bitbucket.org/uta/uta-align)
+## Copyright 2014 uta-align Contributors (https://bitbucket.org/biocommons/uta-align)
 ## 
 ## Licensed under the Apache License, Version 2.0 (the "License");
 ## you may not use this file except in compliance with the License.

@@ -834,7 +834,7 @@ def cigar_to_extended(CigarSequence cigar, bytes ref, bytes query, int ref_start
     return new_cigar
 
 ## <LICENSE>
-## Copyright 2014 uta-align Contributors (https://bitbucket.org/uta/uta-align)
+## Copyright 2014 uta-align Contributors (https://bitbucket.org/biocommons/uta-align)
 ## 
 ## Licensed under the Apache License, Version 2.0 (the "License");
 ## you may not use this file except in compliance with the License.
