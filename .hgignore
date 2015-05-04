@@ -16,6 +16,6 @@ syntax: glob
 *~
 .*.swp
 .coverage
+.eggs
 .idea/
 .pythoscope/**
-ve/**
