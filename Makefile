@@ -25,9 +25,6 @@ config:
 ############################################################################
 #= SETUP, INSTALLATION, PACKAGING
 
-#=> setup
-setup: develop
-
 #=> docs -- make sphinx docs
 docs: setup build_sphinx
 
@@ -35,11 +32,13 @@ docs: setup build_sphinx
 # sphinx docs needs to be able to import packages
 build_sphinx: develop
 
-#=> develop, bdist, bdist_egg, sdist, upload_docs, etc
+#=> setup, develop -- install requirements for testing or development
+setup: develop
 develop: %:
-	#pip install --upgrade setuptools
+	[ -f requirements.txt ] && pip install --upgrade -r requirements.txt
 	python setup.py $*
 
+#=> bdist, bdist_egg, sdist, upload_docs, etc
 bdist bdist_egg build build_sphinx install sdist: %:
 	python setup.py $*
 

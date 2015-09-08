@@ -13,6 +13,7 @@ build_requires = [
 
 install_requires = build_requires + [
     'nose',
+    'pysam>=0.8',
     'sphinx',
 ]
 
@@ -82,15 +83,15 @@ ext_modules = [
 
 
 setup(
-    author='uta-align Contributors',
-    author_email='reecehart+uta@gmail.com',
+    author='Kevin Jacobs',
+    author_email='reecehart+biocommons@gmail.com',
     cmdclass={'build_ext': cy_build_ext},
     description='C-based alignment for Python',
     ext_modules=ext_modules,
     install_requires=install_requires,
     license='Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0)',
     maintainer='Reece Hart',
-    maintainer_email='reecehart+uta@gmail.com',
+    maintainer_email='reecehart+biocommons@gmail.com',
     name='uta-align',
     #packages=find_packages(),
     setup_requires=setup_requires,
