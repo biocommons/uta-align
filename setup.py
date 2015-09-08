@@ -1,13 +1,7 @@
-import os
 import importlib
 import subprocess
-import re
 
-from ez_setup import use_setuptools
-use_setuptools()
-
-from setuptools import setup, find_packages
-
+from setuptools import setup
 
 # build_requires is not a setuptools keyword. These packages are
 # required just to process this setup.py, and therefore are installed
@@ -18,13 +12,12 @@ build_requires = [
 ]
 
 install_requires = build_requires + [
-    'enum34',
     'nose',
     'sphinx',
 ]
 
 setup_requires = [
-    'hgtools',
+    'setuptools_scm',
 ]
 
 tests_require = [
@@ -71,8 +64,7 @@ install_build_requires(build_requires)
 
 # ###########################################################################
 # cython dependencies/setup
-# consider cython-plugin instead?
-
+#
 from cy_distribute import CyExtension, cy_build_ext
 
 def pysam_incl(cy_ext):
@@ -81,28 +73,13 @@ def pysam_incl(cy_ext):
     cy_ext.extend_macros(pysam.get_defines())
     cy_ext.extend_extra_objects([pysam.libchtslib.__file__, pysam.csamfile.__file__])
 
-#def numpy_incl(cy_ext):
-#    import numpy as np
-#    cy_ext.extend_includes([np.get_include()])
-
 
 ext_modules = [
     CyExtension('uta_align.align.cigar_utils',      ['uta_align/align/cigar_utils.pyx'],      init_func=pysam_incl),
     CyExtension('uta_align.align.algorithms',       ['uta_align/align/algorithms.pyx'],       init_func=pysam_incl),
 ]
 
-def version_handler(mgr, options):
-    version = mgr.get_current_version()
-    if version.endswith('dev'):
-        # PEP440 compliant version string
-        version = version[0:-3] + '.dev0+' + mgr._invoke('log', '-l1', '-r.', '--template', '{node|short}').strip()
-    elif re.match('^\d+\.\d+$', version):
-        # StrictVersion considers x.y == x.y.0 and drops the .0 from a
-        # repo tag.  Add it back and ensure that it's really a tag for
-        # our parent.
-        version += '.0'
-        assert version in mgr.get_parent_tags('tip')
-    return version
+
 
 setup(
     author='uta-align Contributors',
@@ -115,14 +92,15 @@ setup(
     maintainer='Reece Hart',
     maintainer_email='reecehart+uta@gmail.com',
     name='uta-align',
-    packages=find_packages(),
+    #packages=find_packages(),
     setup_requires=setup_requires,
     test_suite='nose.collector',
     tests_require=tests_require,
     url='https://bitbucket.org/biocommons/uta-align/',
-    use_vcs_version={'version_handler': version_handler},
+    use_scm_version=True,
     zip_safe=False,
 )
+
 
 ## <LICENSE>
 ## Copyright 2014 uta-align Contributors (https://bitbucket.org/biocommons/uta-align)
