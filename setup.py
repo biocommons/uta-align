@@ -1,7 +1,7 @@
 import importlib
 import subprocess
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 # build_requires is not a setuptools keyword. These packages are
 # required just to process this setup.py, and therefore are installed
@@ -94,7 +94,7 @@ setup(
     maintainer='Reece Hart',
     maintainer_email='reecehart+biocommons@gmail.com',
     name='uta-align',
-    #packages=find_packages(),
+    packages=find_packages(),
     setup_requires=setup_requires,
     test_suite='nose.collector',
     tests_require=tests_require,
