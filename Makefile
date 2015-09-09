@@ -40,7 +40,7 @@ develop: %:
 
 #=> bdist, bdist_egg, sdist, upload_docs, etc
 bdist bdist_egg build build_sphinx install sdist: %:
-	python setup.py $*
+	python setup.py $@
 
 #=> upload
 upload: upload_pypi
@@ -50,11 +50,7 @@ upload_all: upload_pypi upload_docs;
 
 #=> upload_*: upload to named pypi service (requires config in ~/.pypirc)
 upload_%:
-	python setup.py bdist_egg sdist upload -r $*
-
-#=> upload_docs: upload documentation to pythonhosted
-upload_docs: %:
-	python setup.py $* -r pypi
+	python setup.py bdist_egg bdist_wheel sdist upload -r $*
 
 
 ############################################################################
@@ -121,7 +117,7 @@ cleaner: clean
 #	-make -C doc clean
 #=> cleanest: above, and remove the virtualenv, .orig, and .bak files
 cleanest: cleaner
-	find . \( -name \*.orig -o -name \*.bak \) -print0 | xargs -0r /bin/rm -v
+	find . \( -name \*.orig -o -name \*.bak -o -name \*.rej \) -print0 | xargs -0r /bin/rm -v
 	/bin/rm -fr distribute-* *.egg *.egg-info *.tar.gz nosetests.xml cover __pycache__
 #=> pristine: above, and delete anything unknown to mercurial
 pristine: cleanest

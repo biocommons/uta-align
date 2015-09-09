@@ -1,11 +1,9 @@
 syntax: glob
 
-*.DS_Store
 *.bak
-*.bck
-*.c
+*.cache
 *.egg
-*.egg-info/*
+*.egg-info
 *.orig
 *.pyc
 *.so
@@ -19,3 +17,7 @@ syntax: glob
 .eggs
 .idea/
 .pythoscope/**
+tmp
+
+uta_align/align/algorithms.c
+uta_align/align/cigar_utils.c
