@@ -19,7 +19,7 @@ install_requires = build_requires + [
 
 setup_requires = [
     'setuptools_scm',
-    'wheel',
+    # 'wheel',
 ]
 
 tests_require = [
