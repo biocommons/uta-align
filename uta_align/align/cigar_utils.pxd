@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from    libc.stdint   cimport uint32_t
-from pysam.csamfile   cimport AlignedRead
+from pysam.libcsamfile   cimport AlignedRead
 
 cdef enum:
     BAM_MATCH        = 0

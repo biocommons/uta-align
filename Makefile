@@ -112,7 +112,7 @@ clean:
 	find . -name \*~ -print0 | xargs -0r /bin/rm
 #=> cleaner: above, and remove generated files
 cleaner: clean
-	find . -name \*.pyc -print0 | xargs -0r /bin/rm -f
+	find . \( -name \*.pyc -o -name \*.so \) -print0 | xargs -0r /bin/rm -f
 	/bin/rm -fr build bdist cover dist sdist
 #	-make -C doc clean
 #=> cleanest: above, and remove the virtualenv, .orig, and .bak files

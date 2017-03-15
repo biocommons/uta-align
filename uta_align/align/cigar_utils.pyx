@@ -11,7 +11,7 @@ from libc.stdlib               cimport malloc, realloc, free
 from libc.string               cimport memcpy
 from cpython.ref               cimport PyObject
 from cpython.string            cimport PyString_FromStringAndSize
-from pysam.chtslib             cimport bam_get_cigar, bam1_t
+from pysam.libchtslib          cimport bam_get_cigar, bam1_t
 
 
 cdef extern from "Python.h":

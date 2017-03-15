@@ -73,7 +73,7 @@ def pysam_incl(cy_ext):
     import pysam
     cy_ext.extend_includes(pysam.get_include())
     cy_ext.extend_macros(pysam.get_defines())
-    cy_ext.extend_extra_objects([pysam.libchtslib.__file__, pysam.csamfile.__file__])
+    cy_ext.extend_extra_objects([pysam.libchtslib.__file__])
 
 
 ext_modules = [
