@@ -13,13 +13,13 @@ build_requires = [
 
 install_requires = build_requires + [
     'nose',
-    'pysam>=0.8',
+    'pysam>=0.10.0',
     'sphinx',
 ]
 
 setup_requires = [
     'setuptools_scm',
-    # 'wheel',
+    'wheel',
 ]
 
 tests_require = [
