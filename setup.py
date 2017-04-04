@@ -12,9 +12,7 @@ build_requires = [
 ]
 
 install_requires = build_requires + [
-    'nose',
     'pysam>=0.10.0',
-    'sphinx',
 ]
 
 setup_requires = [
@@ -23,7 +21,8 @@ setup_requires = [
 ]
 
 tests_require = [
-    'coverage'
+    'coverage',
+    'nose',
 ]
 
 
