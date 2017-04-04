@@ -97,7 +97,7 @@ setup(
     setup_requires=setup_requires,
     test_suite='nose.collector',
     tests_require=tests_require,
-    url='https://bitbucket.org/biocommons/uta-align/',
+    url='https://github.com/biocommons/uta-align/',
     use_scm_version=True,
     zip_safe=False,
 )
