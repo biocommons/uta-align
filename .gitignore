@@ -1,5 +1,3 @@
-syntax: glob
-
 *.bak
 *.cache
 *.egg
@@ -18,6 +16,6 @@ syntax: glob
 .idea/
 .pythoscope/**
 tmp
-
 uta_align/align/algorithms.c
 uta_align/align/cigar_utils.c
+venv

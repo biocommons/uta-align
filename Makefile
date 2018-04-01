@@ -114,11 +114,14 @@ clean:
 cleaner: clean
 	find . \( -name \*.pyc -o -name \*.so \) -print0 | xargs -0r /bin/rm -f
 	/bin/rm -fr build bdist cover dist sdist
+	/bin/rm -f uta_align/align/algorithms.c uta_align/align/cigar_utils.c
 #	-make -C doc clean
 #=> cleanest: above, and remove the virtualenv, .orig, and .bak files
 cleanest: cleaner
 	find . \( -name \*.orig -o -name \*.bak -o -name \*.rej \) -print0 | xargs -0r /bin/rm -v
-	/bin/rm -fr distribute-* *.egg *.egg-info *.tar.gz nosetests.xml cover __pycache__
+	find . -name __pycache__ -print0 | xargs -0r /bin/rm -fr
+	/bin/rm -fr venv
+	/bin/rm -fr distribute-* *.egg *.egg-info *.tar.gz nosetests.xml cover
 #=> pristine: above, and delete anything unknown to mercurial
 pristine: cleanest
 	if [ -d .hg ]; then hg st -inu0 | xargs -0r /bin/rm -fv; fi

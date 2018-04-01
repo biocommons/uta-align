@@ -35,7 +35,7 @@ def install_build_requires(pkg_targets):
 
     def pip_install(pkg_name, pkg_vers=None):
         pkg_name_version = '%s==%s' % (pkg_name, pkg_vers) if pkg_vers else pkg_name
-        print '[WARNING] %s not found, attempting to install using a raw "pip install" call!' % pkg_name_version
+        print('[WARNING] {} not found, attempting to install using a raw "pip install" call!'.format(pkg_name_version))
         subprocess.Popen('pip install %s' % pkg_name_version, shell=True).communicate()
 
     def get_pkg_info(pkg):
