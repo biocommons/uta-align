@@ -50,7 +50,7 @@ from    libc.limits                     cimport INT_MIN
 from    libc.stdlib                     cimport malloc, free
 from    libc.string                     cimport memset
 from    cpython                         cimport PyErr_NoMemory
-from    cpython.string                  cimport PyString_FromStringAndSize
+from    cpython                         cimport PyBytes_FromStringAndSize
 
 from    uta_align.align.cigar_utils cimport CigarSequence, CigarOperator, get_op_by_char
 
@@ -142,8 +142,8 @@ def cigar_alignment(str1, str2, cigar, hide_match=True):
         raise ValueError('Query length does not match CIGAR')
 
     n     = cigar.gapped_len(include_soft_clip=True)
-    astr1 = PyString_FromStringAndSize(<char*>0, n)
-    astr2 = PyString_FromStringAndSize(<char*>0, n)
+    astr1 = PyBytes_FromStringAndSize(<char*>0, n)
+    astr2 = PyBytes_FromStringAndSize(<char*>0, n)
     a1    = astr1
     a2    = astr2
     s1    = str1

@@ -10,7 +10,7 @@ from libc.stdio                cimport sprintf
 from libc.stdlib               cimport malloc, realloc, free
 from libc.string               cimport memcpy
 from cpython.ref               cimport PyObject
-from cpython.string            cimport PyString_FromStringAndSize
+from cpython                   cimport PyBytes_FromStringAndSize
 from pysam.libchtslib          cimport bam_get_cigar, bam1_t
 
 
@@ -663,7 +663,7 @@ cdef class CigarSequence(object):
         for i in range(self.cigar_len):
             str_len += integer_width(self.cigar_buf[i] >> BAM_CIGAR_SHIFT)
 
-        cigar_str = PyString_FromStringAndSize(<char*>0, str_len)
+        cigar_str = PyBytes_FromStringAndSize(<char*>0, str_len)
         cigar_ptr = cigar_str
 
         for i in range(self.cigar_len):
