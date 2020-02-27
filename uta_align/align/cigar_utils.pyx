@@ -98,7 +98,7 @@ cpdef inline CigarOperator get_op_by_str(bytes str_op):
     '''
     if len(str_op) != 1:
         raise KeyError('invalid cigar op=%s' % str_op)
-    cdef char_op = ord(str_op[0])
+    cdef char_op = ord(str_op)
     op = BAM_OP_CHAR_MAP[char_op]
     if op is None:
         raise KeyError('cigar op=%s (%d) not found' % (chr(char_op),char_op))
@@ -154,10 +154,10 @@ cdef inline CigarOperator _decode_op(op_obj):
         return <CigarOperator>op_obj
     elif isinstance(op_obj, int):
         return get_op_by_binary(op_obj)
-    elif isinstance(op_obj, str):
+    elif isinstance(op_obj, bytes):
         return get_op_by_str(op_obj)
     else:
-        raise TypeError
+        raise TypeError(f"_decode_op failed with {op_obj} ({type(op_obj)})")
 
 
 cdef class CigarSequence(object):
@@ -349,14 +349,14 @@ cdef class CigarSequence(object):
         '''
         Returns the total count for the specified CIGAR op.
 
-        >>> cigar = CigarSequence('6H5S4M3I5M2D6S11H')
-        >>> cigar.count('H')
+        >>> cigar = CigarSequence(b'6H5S4M3I5M2D6S11H')
+        >>> cigar.count(b'H')
         17
         >>> cigar.count(SOFT_CLIP)
         11
-        >>> cigar.count('M')
+        >>> cigar.count(b'M')
         9
-        >>> cigar.count('X')
+        >>> cigar.count(b'X')
         0
         '''
         cdef int i, n = 0, op = _decode_op(op_obj).binary
@@ -369,9 +369,9 @@ cdef class CigarSequence(object):
         '''
         Return the gapped aligment length with our without considering soft clipped bases
 
-        >>> CigarSequence('6H5S4M3I5M2D6S11H').gapped_len()
+        >>> CigarSequence(b'6H5S4M3I5M2D6S11H').gapped_len()
         14
-        >>> CigarSequence('6H5S4M3I5M2D6S11H').gapped_len(True)
+        >>> CigarSequence(b'6H5S4M3I5M2D6S11H').gapped_len(True)
         25
         '''
         cdef int           i
@@ -391,9 +391,9 @@ cdef class CigarSequence(object):
         Return the reference length.  If query_bases is greater than zero, then the query length
         returned is based on that number of reference bases.
 
-        >>> CigarSequence('6H5S4M3I5M2D6S11H').ref_len()
+        >>> CigarSequence(b'6H5S4M3I5M2D6S11H').ref_len()
         11
-        >>> CigarSequence('6H5S4M3I5M2D6S11H').ref_len(0)
+        >>> CigarSequence(b'6H5S4M3I5M2D6S11H').ref_len(0)
         0
         '''
         cdef int           i, done = 0
@@ -424,17 +424,17 @@ cdef class CigarSequence(object):
         is greater than zero, then the query length returned is based on that number of reference
         bases.
 
-        >>> CigarSequence('6H5S4M3I5M2D6S11H').query_len()
+        >>> CigarSequence(b'6H5S4M3I5M2D6S11H').query_len()
         12
-        >>> CigarSequence('6H5S4M3I5M2D6S11H').query_len(include_soft_clip=True)
+        >>> CigarSequence(b'6H5S4M3I5M2D6S11H').query_len(include_soft_clip=True)
         23
-        >>> CigarSequence('6H5S4M3I5M2D6S11H').query_len(5)
+        >>> CigarSequence(b'6H5S4M3I5M2D6S11H').query_len(5)
         8
-        >>> CigarSequence('6H5S4M3I5M2D6S11H').query_len(5, True)
+        >>> CigarSequence(b'6H5S4M3I5M2D6S11H').query_len(5, True)
         13
-        >>> CigarSequence('6H5S4M3I5M2D6S11H').query_len(0)
+        >>> CigarSequence(b'6H5S4M3I5M2D6S11H').query_len(0)
         0
-        >>> CigarSequence('6H5S4M3I5M2D6S11H').query_len(0, True)
+        >>> CigarSequence(b'6H5S4M3I5M2D6S11H').query_len(0, True)
         5
         '''
         cdef int           i, done = 0
@@ -483,7 +483,7 @@ cdef class CigarSequence(object):
 
     def __repr__(self):
         '''
-        >>> repr(CigarSequence('10M10I10D'))
+        >>> repr(CigarSequence(b'10M10I10D'))
         '[(<CigarOperator:MATCH>, 10), (<CigarOperator:INSERTION>, 10), (<CigarOperator:DELETION>, 10)]'
         '''
         return str(self.to_op_list())
@@ -493,7 +493,7 @@ cdef class CigarSequence(object):
         Append to a CigarSequence a tuple of a CIGAR operator and a count
 
         >>> c = CigarSequence()
-        >>> c.append( ('I', 5) )
+        >>> c.append( (b'I', 5) )
         >>> c
         [(<CigarOperator:INSERTION>, 5)]
         >>> c.append( (HARD_CLIP, 2) )
@@ -501,7 +501,7 @@ cdef class CigarSequence(object):
         [(<CigarOperator:INSERTION>, 5), (<CigarOperator:HARD_CLIP>, 2)]
         >>> c.append( (0, 5) )
         >>> c.to_string()
-        '5I2H5M'
+        b'5I2H5M'
         '''
         cdef uint32_t op
         op_obj, n = item
@@ -519,16 +519,16 @@ cdef class CigarSequence(object):
             5. sequence of tuples of CIGAR operator character and count
             6. CIGAR string
 
-        >>> c = CigarSequence('I510M')
-        >>> c.extend('10M5I')
+        >>> c = CigarSequence(b'I510M')
+        >>> c.extend(b'10M5I')
         >>> c.to_string()
-        '1I520M5I'
+        b'1I520M5I'
         >>> c.extend( [(1,5), (0, 10)] )
         >>> c.to_string()
-        '1I520M10I10M'
+        b'1I520M10I10M'
         >>> c.extend( [(SOFT_CLIP, 5)] )
         >>> c.to_string()
-        '1I520M10I10M5S'
+        b'1I520M10I10M5S'
         '''
         if isinstance(items, AlignedRead):
             self._extend_from_align(items)
@@ -566,7 +566,7 @@ cdef class CigarSequence(object):
         '''
         Pop last CIGAR element, returning a tuple of CigarOperator and count
 
-        >>> c = CigarSequence('10M10I10D')
+        >>> c = CigarSequence(b'10M10I10D')
         >>> c.pop()
         (<CigarOperator:DELETION>, 10)
         >>> c.pop()
@@ -588,10 +588,10 @@ cdef class CigarSequence(object):
         '''
         Reverse CigarSequence in-place
 
-        >>> c = CigarSequence('10M10I')
+        >>> c = CigarSequence(b'10M10I')
         >>> c.reverse()
         >>> c.to_string()
-        '10I10M'
+        b'10I10M'
         '''
         cdef int i = 0
         cdef int j = self.cigar_len - 1
@@ -650,10 +650,10 @@ cdef class CigarSequence(object):
         '''
         Convert CigarSequence to a CIGAR string
 
-        >>> CigarSequence('150M3S5H').to_string()
-        '150M3S5H'
-        >>> CigarSequence('150M3I').to_string()
-        '150M3I'
+        >>> CigarSequence(b'150M3S5H').to_string()
+        b'150M3S5H'
+        >>> CigarSequence(b'150M3I').to_string()
+        b'150M3I'
         '''
         cdef bytes    cigar_str
         cdef char*    cigar_ptr
@@ -678,11 +678,11 @@ cdef class CigarSequence(object):
         '''
         Convert CigarSequence to a pysam CIGAR list of tuplesa
 
-        >>> CigarSequence('MID').to_pysam_list()
+        >>> CigarSequence(b'MID').to_pysam_list()
         [(0, 1), (1, 1), (2, 1)]
-        >>> CigarSequence('MMMMMIIIIDDDDD').to_pysam_list()
+        >>> CigarSequence(b'MMMMMIIIIDDDDD').to_pysam_list()
         [(0, 5), (1, 4), (2, 5)]
-        >>> CigarSequence('10M10I10D').to_pysam_list()
+        >>> CigarSequence(b'10M10I10D').to_pysam_list()
         [(0, 10), (1, 10), (2, 10)]
         '''
         if not self.cigar_len:
@@ -697,11 +697,11 @@ cdef class CigarSequence(object):
         '''
         Convert CigarSequence to a list of tuples of CigarOperators and counts
 
-        >>> CigarSequence('MID').to_op_list()
+        >>> CigarSequence(b'MID').to_op_list()
         [(<CigarOperator:MATCH>, 1), (<CigarOperator:INSERTION>, 1), (<CigarOperator:DELETION>, 1)]
-        >>> CigarSequence('MMMMMIIIIDDDDD').to_op_list()
+        >>> CigarSequence(b'MMMMMIIIIDDDDD').to_op_list()
         [(<CigarOperator:MATCH>, 5), (<CigarOperator:INSERTION>, 4), (<CigarOperator:DELETION>, 5)]
-        >>> CigarSequence('10M10I10D').to_op_list()
+        >>> CigarSequence(b'10M10I10D').to_op_list()
         [(<CigarOperator:MATCH>, 10), (<CigarOperator:INSERTION>, 10), (<CigarOperator:DELETION>, 10)]
         '''
         cdef list cigar = []
@@ -715,24 +715,24 @@ def test_CigarSequence():
     Various input and output tests
 
     >>> CigarSequence( [(0, 1), (0, 4), (2, 1), (3, 1), (4, 1)] ).to_string()
-    '5M1D1N1S'
-    >>> CigarSequence( ('150M3S5H') ).to_string()
-    '150M3S5H'
-    >>> CigarSequence( ('150M3II') ).to_string()
-    '150M4I'
-    >>> CigarSequence('MID').to_pysam_list()
+    b'5M1D1N1S'
+    >>> CigarSequence( (b'150M3S5H') ).to_string()
+    b'150M3S5H'
+    >>> CigarSequence( (b'150M3II') ).to_string()
+    b'150M4I'
+    >>> CigarSequence(b'MID').to_pysam_list()
     [(0, 1), (1, 1), (2, 1)]
-    >>> CigarSequence('MMMMMIIIIDDDDD').to_pysam_list()
+    >>> CigarSequence(b'MMMMMIIIIDDDDD').to_pysam_list()
     [(0, 5), (1, 4), (2, 5)]
-    >>> CigarSequence('10M10I10D').to_pysam_list()
+    >>> CigarSequence(b'10M10I10D').to_pysam_list()
     [(0, 10), (1, 10), (2, 10)]
 
     Test __contains__
 
-    >>> c = CigarSequence('10M10I10D')
-    >>> 'M' in c
+    >>> c = CigarSequence(b'10M10I10D')
+    >>> b'M' in c
     True
-    >>> 'X' in c
+    >>> b'X' in c
     False
     >>> 0 in c
     True
@@ -744,55 +744,55 @@ def test_CigarSequence():
     >>> c = CigarSequence()
     >>> c.reverse()
     >>> c.to_string()
-    ''
-    >>> c = CigarSequence('1M')
+    b''
+    >>> c = CigarSequence(b'1M')
     >>> c.reverse()
     >>> c.to_string()
-    '1M'
+    b'1M'
 
-    >>> c = CigarSequence('1M1I')
+    >>> c = CigarSequence(b'1M1I')
     >>> c.reverse()
     >>> c.to_string()
-    '1I1M'
+    b'1I1M'
 
-    >>> c = CigarSequence('10M10I10D')
+    >>> c = CigarSequence(b'10M10I10D')
     >>> c.to_string()
-    '10M10I10D'
+    b'10M10I10D'
     >>> c.reverse()
     >>> c.to_string()
-    '10D10I10M'
+    b'10D10I10M'
 
-    >>> c = CigarSequence('10M10I')
+    >>> c = CigarSequence(b'10M10I')
     >>> c.to_string()
-    '10M10I'
+    b'10M10I'
     >>> c.reverse()
     >>> c.to_string()
-    '10I10M'
+    b'10I10M'
 
     Test add, extend
 
-    >>> CigarSequence('5I') + CigarSequence('5M')
+    >>> CigarSequence(b'5I') + CigarSequence(b'5M')
     [(<CigarOperator:INSERTION>, 5), (<CigarOperator:MATCH>, 5)]
-    >>> CigarSequence('5I') + CigarSequence('5I')
+    >>> CigarSequence(b'5I') + CigarSequence(b'5I')
     [(<CigarOperator:INSERTION>, 10)]
-    >>> CigarSequence('5I255M') + '12D'
+    >>> CigarSequence(b'5I255M') + b'12D'
     [(<CigarOperator:INSERTION>, 5), (<CigarOperator:MATCH>, 255), (<CigarOperator:DELETION>, 12)]
 
-    >>> c  = CigarSequence('HSIMD')
-    >>> c += '5D'
+    >>> c  = CigarSequence(b'HSIMD')
+    >>> c += b'5D'
     >>> c.to_string()
-    '1H1S1I1M6D'
+    b'1H1S1I1M6D'
     >>> c += [(0, 5), (1, 1)]
     >>> c.to_string()
-    '1H1S1I1M6D5M1I'
+    b'1H1S1I1M6D5M1I'
 
     >>> c  = CigarSequence()
-    >>> c += CigarSequence('M')
-    >>> c += CigarSequence('MM')
-    >>> c += CigarSequence('MMM')
-    >>> c += CigarSequence('4M')
+    >>> c += CigarSequence(b'M')
+    >>> c += CigarSequence(b'MM')
+    >>> c += CigarSequence(b'MMM')
+    >>> c += CigarSequence(b'4M')
     >>> c.to_string()
-    '10M'
+    b'10M'
     '''
 
 

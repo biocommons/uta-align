@@ -35,7 +35,6 @@ build_sphinx: develop
 #=> setup, develop -- install requirements for testing or development
 setup: develop
 develop: %:
-	[ -f requirements.txt ] && pip install --upgrade -r requirements.txt
 	python setup.py $*
 
 #=> bdist, bdist_egg, sdist, upload_docs, etc

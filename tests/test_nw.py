@@ -1,7 +1,7 @@
 import re
 import unittest
 
-from   itertools import izip_longest
+from   itertools import zip_longest
 from   functools import partial
 from collections import namedtuple
 
@@ -16,7 +16,7 @@ def grouper(n, iterable, fillvalue=None):
     "Collect data into fixed-length chunks or blocks"
     # grouper(3, 'ABCDEFG', 'x') --> ABC DEF Gxx
     args = [iter(iterable)] * n
-    return izip_longest(fillvalue=fillvalue, *args)
+    return zip_longest(fillvalue=fillvalue, *args)
 
 
 def seq_attributes(seq):
