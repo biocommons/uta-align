@@ -44,7 +44,9 @@ venv/3 venv/3.5 venv/3.6 venv/3.7: venv/%:
 
 #=> develop: install package in develop mode
 develop:
-	pip install -e .[dev]
+	pip install cython
+	pip install pysam
+	pip install -e .
 
 #=> install: install package
 #=> bdist bdist_egg bdist_wheel build sdist: distribution options
@@ -61,7 +63,7 @@ bdist bdist_egg bdist_wheel build sdist install: %:
 #=> test: execute tests
 .PHONY: test
 test:
-	python setup.py test 
+	python setup.py pytest 
 
 #=> tox: execute tests via tox
 .PHONY: tox
