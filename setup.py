@@ -10,6 +10,7 @@ install_requires = [
 ]
 
 setup_requires = [
+    "pytest-runner",
     "setuptools > 41"
     "setuptools_scm",
     "wheel",

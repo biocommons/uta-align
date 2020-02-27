@@ -1,12 +1,18 @@
-# Python project Makefile
+# Makefile for Python project
 
-.SUFFIXES :
-.PRECIOUS :
-.PHONY : FORCE
 .DELETE_ON_ERROR:
+.PHONY: FORCE
+.PRECIOUS:
+.SUFFIXES:
 
-SHELL:=/bin/bash -o pipefail
+SHELL:=/bin/bash -e -o pipefail
 SELF:=$(firstword $(MAKEFILE_LIST))
+
+PKG=uta_align
+PKGD=$(subst .,/,${PKG})
+
+PYV=3.7
+VEDIR=venv/${PYV}
 
 
 ############################################################################
@@ -14,119 +20,96 @@ SELF:=$(firstword $(MAKEFILE_LIST))
 default: help
 
 #=> help -- display this help message
-help: config
-	@sbin/extract-makefile-documentation "${SELF}"
-
-config:
-	@echo CONFIGURATION
-	@echo "  UTA_DB_URL=${UTA_DB_URL}"
+help:
+	@sbin/makefile-extract-documentation "${SELF}"
 
 
 ############################################################################
 #= SETUP, INSTALLATION, PACKAGING
 
-#=> docs -- make sphinx docs
-docs: setup build_sphinx
+#=> devready: create venv and install pkg in develop mode
+.PHONY: devready
+devready:
+	make ${VEDIR} && source ${VEDIR}/bin/activate && make develop
+	@echo '#################################################################################'
+	@echo '###  Do not forget to `source ${VEDIR}/bin/activate` to use this environment  ###'
+	@echo '#################################################################################'
 
-#=> build_sphinx
-# sphinx docs needs to be able to import packages
-build_sphinx: develop
+#=> venv: make a Python 3 virtual environment
+venv/3 venv/3.5 venv/3.6 venv/3.7: venv/%:
+	python$* -mvenv $@; \
+	source $@/bin/activate; \
+	python -m ensurepip --upgrade; \
+	pip install --upgrade pip setuptools
 
-#=> setup, develop -- install requirements for testing or development
-setup: develop
-develop: %:
-	python setup.py $*
+#=> develop: install package in develop mode
+develop:
+	pip install -e .[dev]
 
-#=> bdist, bdist_egg, sdist, upload_docs, etc
-bdist bdist_egg build build_sphinx install sdist: %:
+#=> install: install package
+#=> bdist bdist_egg bdist_wheel build sdist: distribution options
+.PHONY: bdist bdist_egg bdist_wheel build build_sphinx sdist install
+bdist bdist_egg bdist_wheel build sdist install: %:
 	python setup.py $@
 
-#=> upload
-upload: upload_pypi
-
-#=> upload_all: upload_pypi, upload_invitae, and upload_docs
-upload_all: upload_pypi upload_docs;
-
-#=> upload_*: upload to named pypi service (requires config in ~/.pypirc)
-upload_%:
-	python setup.py bdist_egg sdist upload -r $*
 
 
 ############################################################################
 #= TESTING
 # see test configuration in setup.cfg
 
-host-info:
-	(PS4="\n>>"; set -x; /bin/uname -a; ./sbin/cpu-info; /usr/bin/free) 2>&1 | sed -e 's/^/## /'
+#=> test: execute tests
+.PHONY: test
+test:
+	python setup.py test 
 
-#=> test -- run all tests (except those tagged "extra")
-test: host-info
-	python setup.py nosetests -A '(not tags) or ("extra" not in tags)'
-
-#=> test-* -- run tests with specified tag
-test-%: host-info
-	python setup.py nosetests -a 'tags=$*'
-
-#=> ci-test -- per-commit test target for CI
-ci-test: test
-
-#=> ci-test-ve -- test in virtualenv
-ci-test-ve: ve
-	source ve/bin/activate; \
-	make ci-test
-
+#=> tox: execute tests via tox
+.PHONY: tox
+tox:
+	tox
 
 
 ############################################################################
 #= UTILITY TARGETS
 
-#=> changelog
-doc/source/changelog.rst: CHANGELOG
-	./sbin/clog-txt-to-rst <$< >$@
+# N.B. Although code is stored in github, I use hg and hg-git on the command line
+#=> reformat: reformat code with yapf and commit
+.PHONY: reformat
+reformat:
+	@if hg sum | grep -qL '^commit:.*modified'; then echo "Repository not clean" 1>&2; exit 1; fi
+	@if hg sum | grep -qL ' applied'; then echo "Repository has applied patches" 1>&2; exit 1; fi
+	yapf -i -r "${PKGD}" tests
+	hg commit -m "reformatted with yapf"
 
-#=> lint -- run lint, flake, etc
-# TBD
-
-
-#=> ve -- create a *local* virtualenv (not typically needed)
-VE_DIR:=ve
-VE_MAJOR:=1
-VE_MINOR:=10
-VE_PY_DIR:=virtualenv-${VE_MAJOR}.${VE_MINOR}
-VE_PY:=${VE_PY_DIR}/virtualenv.py
-${VE_PY}:
-	curl -sO  https://pypi.python.org/packages/source/v/virtualenv/virtualenv-${VE_MAJOR}.${VE_MINOR}.tar.gz
-	tar -xvzf virtualenv-${VE_MAJOR}.${VE_MINOR}.tar.gz
-	rm -f virtualenv-${VE_MAJOR}.${VE_MINOR}.tar.gz
-${VE_DIR}: ${VE_PY} 
-	${SYSTEM_PYTHON} $< ${VE_DIR} 2>&1 | tee "$@.err"
-	/bin/mv "$@.err" "$@"
-
+#=> docs -- make sphinx docs
+.PHONY: docs
+docs: develop
+	# RTD makes json. Build here to ensure that it works.
+	make -C doc html json
 
 ############################################################################
 #= CLEANUP
-.PHONY: clean cleaner cleanest pristine
-#=> clean: clean up editor backups, etc.
+
+#=> clean: remove temporary and backup files
+.PHONY: clean
 clean:
-	find . -name \*~ -print0 | xargs -0r /bin/rm
-#=> cleaner: above, and remove generated files
+	find . \( -name \*~ -o -name \*.bak \) -print0 | xargs -0r rm
+
+#=> cleaner: remove files and directories that are easily rebuilt
+.PHONY: cleaner
 cleaner: clean
-	find . \( -name \*.pyc -o -name \*.so \) -print0 | xargs -0r /bin/rm -f
-	/bin/rm -fr build bdist cover dist sdist
-	/bin/rm -f uta_align/align/algorithms.c uta_align/align/cigar_utils.c
-#	-make -C doc clean
-#=> cleanest: above, and remove the virtualenv, .orig, and .bak files
+	rm -fr .cache *.egg-info build dist doc/_build htmlcov
+	find . \( -name \*.pyc -o -name \*.orig -o -name \*.rej \) -print0 | xargs -0r rm
+	find . -name __pycache__ -print0 | xargs -0r rm -fr
+
+#=> cleanest: remove files and directories that require more time/network fetches to rebuild
+.PHONY: cleanest
 cleanest: cleaner
-	find . \( -name \*.orig -o -name \*.bak -o -name \*.rej \) -print0 | xargs -0r /bin/rm -v
-	find . -name __pycache__ -print0 | xargs -0r /bin/rm -fr
-	/bin/rm -fr venv
-	/bin/rm -fr distribute-* *.egg *.egg-info *.tar.gz nosetests.xml cover
-#=> pristine: above, and delete anything unknown to mercurial
-pristine: cleanest
-	if [ -d .hg ]; then hg st -inu0 | xargs -0r /bin/rm -fv; fi
+	rm -fr .eggs .tox venv
+
 
 ## <LICENSE>
-## Copyright 2014 uta-align Contributors (https://bitbucket.org/biocommons/uta-align)
+## Copyright 2016 Source Code Committers
 ## 
 ## Licensed under the Apache License, Version 2.0 (the "License");
 ## you may not use this file except in compliance with the License.
@@ -140,4 +123,3 @@ pristine: cleanest
 ## See the License for the specific language governing permissions and
 ## limitations under the License.
 ## </LICENSE>
-
