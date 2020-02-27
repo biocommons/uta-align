@@ -4,68 +4,68 @@ from uta_align.align.algorithms import align, needleman_wunsch_altshul_erikson
 
 def test_gap_open():
     '''
-    >>> ref   = 'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
-    >>> query = 'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
+    >>> ref   = b'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
+    >>> query = b'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
 
-    >>> a = align(ref, query, 'local', match_score=10, mismatch_score=-9, gap_open_score=-100, gap_extend_score=-6)
+    >>> a = align(ref, query, b'local', match_score=10, mismatch_score=-9, gap_open_score=-100, gap_extend_score=-6)
     >>> a.score
     930
     >>> a.cigar.to_string() # 1
-    '15M6D91M'
+    b'15M6D91M'
 
     >>> aref, aquery = a.gapped_alignment()
     >>> aref
-    'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
+    b'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
     >>> aquery
-    '...............------...........................................................................................'
+    b'...............------...........................................................................................'
 
-    >>> a = align(ref, query, 'glocal', match_score=10, mismatch_score=-9, gap_open_score=-100, gap_extend_score=-6)
+    >>> a = align(ref, query, b'glocal', match_score=10, mismatch_score=-9, gap_open_score=-100, gap_extend_score=-6)
     >>> a.score
     930
     >>> a.cigar.to_string() # 2
-    '15M6D91M'
+    b'15M6D91M'
 
     >>> aref, aquery = a.gapped_alignment()
     >>> aref
-    'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
+    b'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
     >>> aquery
-    '...............------...........................................................................................'
+    b'...............------...........................................................................................'
 
-    >>> a = align(ref, query, 'global', match_score=10, mismatch_score=-9, gap_open_score=-100, gap_extend_score=-6)
+    >>> a = align(ref, query, b'global', match_score=10, mismatch_score=-9, gap_open_score=-100, gap_extend_score=-6)
     >>> a.score
     930
     >>> a.cigar.to_string() # 3
-    '15M6D91M'
+    b'15M6D91M'
 
     >>> aref, aquery = a.gapped_alignment()
     >>> aref
-    'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
+    b'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
     >>> aquery
-    '...............------...........................................................................................'
+    b'...............------...........................................................................................'
 
-    >>> a = align(ref, query, 'local_global', match_score=10, mismatch_score=-9, gap_open_score=-100, gap_extend_score=-6)
+    >>> a = align(ref, query, b'local_global', match_score=10, mismatch_score=-9, gap_open_score=-100, gap_extend_score=-6)
     >>> a.score
     930
     >>> a.cigar.to_string() # 4
-    '15M6D91M'
+    b'15M6D91M'
 
     >>> aref, aquery = a.gapped_alignment()
     >>> aref
-    'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
+    b'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
     >>> aquery
-    '...............------...........................................................................................'
+    b'...............------...........................................................................................'
 
     >>> a = needleman_wunsch_altshul_erikson(ref, query, match_score=10, mismatch_score=-9, gap_open_score=-100, gap_extend_score=-6)
     >>> a.score
     930
     >>> a.cigar.to_string() # 5
-    '15M6D91M'
+    b'15M6D91M'
 
     >>> aref, aquery = a.gapped_alignment()
     >>> aref
-    'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
+    b'TCCCTCAAGTCCTTCCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAACAGCCGCCACCGCCGCCGCCGCCGCCGCCGCCTCCTC'
     >>> aquery
-    '...............------...........................................................................................'
+    b'...............------...........................................................................................'
     '''
 
 
