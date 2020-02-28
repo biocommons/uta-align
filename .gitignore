@@ -15,6 +15,7 @@
 .eggs
 .idea/
 .pythoscope/**
+.tox
 tmp
 uta_align/align/algorithms.c
 uta_align/align/cigar_utils.c

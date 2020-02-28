@@ -37,21 +37,21 @@ compiler_directives = {
     }
 
 setup(
-    author='Kevin Jacobs, Reece Hart',
+    author='Kevin Jacobs',
     author_email='reecehart+biocommons@gmail.com',
-    cmdclass={'build_ext': build_ext},
     description='C-based alignment for Python',
+    maintainer='Reece Hart',
+    maintainer_email='reecehart+biocommons@gmail.com',
+    url='https://github.com/biocommons/uta-align/',
+    name='uta-align',
+
+    cmdclass={'build_ext': build_ext},
     ext_modules=cythonize(extensions, compiler_directives=compiler_directives),
     install_requires=install_requires,
     license='Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0)',
-    maintainer='Reece Hart',
-    maintainer_email='reecehart+biocommons@gmail.com',
-    name='uta-align',
     packages=find_packages(),
     setup_requires=setup_requires,
-    test_suite='nose.collector',
     tests_require=tests_require,
-    url='https://github.com/biocommons/uta-align/',
     use_scm_version=True,
     zip_safe=False,
 )

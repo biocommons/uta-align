@@ -11,18 +11,10 @@ alignment algorithms with a Python interface.
 Installation
 @@@@@@@@@@@@
 
+From source::
 
-Virtual Environment and Prerequisites
-#####################################
+  $ python setup.py install
 
-::
-
-   $ python3 -m venv venv
-   $ source venv/bin/activate
-   $ pip install cython ipython setuptools_scm pytest wheel
-   $ pip install pysam
-
-Installing pysam can take a few minutes. Be patient.
 
 
 For Development
@@ -30,14 +22,17 @@ For Development
 
 ::
 
-   $ pip install -e .
-
-Because cython (.pyx) files are compiled, you'll need to rerun this
-command after code changes.
+  $ make devready
 
 Test it::
 
   $ pytest
+
+Because cython (.pyx) files are compiled, you'll need to reinstall the
+development package after code changes, like this::
+  
+  $ pip install -e .
+
 
 
 
