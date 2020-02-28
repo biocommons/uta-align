@@ -1,8 +1,53 @@
 import importlib
+import logging
 import subprocess
 
 from setuptools import find_packages, setup, Extension
-from Cython.Build import cythonize, build_ext
+
+
+# N.B. log messages typically hidden; use `pip install -v` to see
+_logger = logging.getLogger()
+
+try:
+    from Cython.Build import cythonize, build_ext
+    has_cython = True
+    _logger.warning("# cython available; will cythonize .pyx sources")
+except ImportError:
+    has_cython = False
+    _logger.warning("# cython unavailable; using included .c sources")
+
+
+
+# ###########################################################################
+# extnsion setup
+# https://cython.readthedocs.io/en/latest/src/userguide/source_files_and_compilation.html#configuring-the-c-build
+# http://docs.cython.org/en/latest/src/userguide/source_files_and_compilation.html#distributing-cython-modules
+
+import pysam
+import glob
+
+glob_ext = "pyx" if has_cython else "c"
+src_glob = "uta_align/align/*." + glob_ext
+
+if has_cython:
+    sources = [src_glob]
+else:
+    sources = glob.glob(src_glob)
+
+extensions = [
+    Extension("uta_align", sources,
+              include_dirs = pysam.get_include(),
+              libraries = [pysam.libchtslib.__file__])
+    ]
+
+if has_cython:
+    compiler_directives = {
+        'c_string_encoding': 'ascii',
+        'embedsignature': True,
+        'language_level': 3
+        }
+    extensions = cythonize(extensions, compiler_directives=compiler_directives)
+
 
 
 install_requires = [
@@ -22,19 +67,7 @@ tests_require = [
 ]
 
 
-# ###########################################################################
-# cython dependencies/setup
-# https://cython.readthedocs.io/en/latest/src/userguide/source_files_and_compilation.html#configuring-the-c-build
 
-import pysam
-extensions = [Extension("*", ['uta_align/align/*.pyx'],
-                        include_dirs = pysam.get_include(),
-                        libraries = [pysam.libchtslib.__file__])]
-compiler_directives = {
-    'c_string_encoding': 'ascii',
-    'embedsignature': True,
-    'language_level': 3
-    }
 
 setup(
     author='Kevin Jacobs',
@@ -45,8 +78,8 @@ setup(
     url='https://github.com/biocommons/uta-align/',
     name='uta-align',
 
-    cmdclass={'build_ext': build_ext},
-    ext_modules=cythonize(extensions, compiler_directives=compiler_directives),
+    #cmdclass={'build_ext': build_ext},
+    ext_modules=extensions,
     install_requires=install_requires,
     license='Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0)',
     packages=find_packages(),
