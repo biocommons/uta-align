@@ -49,44 +49,9 @@ if has_cython:
     extensions = cythonize(extensions, compiler_directives=compiler_directives)
 
 
-
-install_requires = [
-    "pysam>=0.15.0",
-]
-
-setup_requires = [
-    "pytest-runner",
-    "setuptools > 41"
-    "setuptools_scm",
-    "wheel",
-]
-
-tests_require = [
-    "coverage",
-    "pytest",
-]
-
-
-
-
 setup(
-    author='Kevin Jacobs',
-    author_email='reecehart+biocommons@gmail.com',
-    description='C-based alignment for Python',
-    maintainer='Reece Hart',
-    maintainer_email='reecehart+biocommons@gmail.com',
-    url='https://github.com/biocommons/uta-align/',
-    name='uta-align',
-
-    #cmdclass={'build_ext': build_ext},
     ext_modules=extensions,
-    install_requires=install_requires,
-    license='Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0)',
-    packages=find_packages(),
-    setup_requires=setup_requires,
-    tests_require=tests_require,
     use_scm_version=True,
-    zip_safe=False,
 )
 
 
