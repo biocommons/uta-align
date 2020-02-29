@@ -1,0 +1,8 @@
+[build-system]
+requires = [
+    "pysam >= 0.15",
+    "setuptools >= 45",
+    "setuptools_scm >= 3, <4"
+]
+build-backend = "setuptools.build_meta"
+

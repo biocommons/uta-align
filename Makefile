@@ -44,8 +44,6 @@ venv/3 venv/3.5 venv/3.6 venv/3.7: venv/%:
 
 #=> develop: install package in develop mode
 develop:
-	pip install cython
-	pip install pysam
 	pip install -e .
 
 #=> install: install package
