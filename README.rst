@@ -20,7 +20,7 @@ From source::
 For Development
 ###############
 
-::
+Install developer environment::
 
   $ make devready
 

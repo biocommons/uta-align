@@ -4,23 +4,23 @@
 {
     "distutils": {
         "depends": [
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/htslib_util.h",
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/bgzf.h",
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/cram.h",
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/faidx.h",
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/hfile.h",
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/hts.h",
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/kstring.h",
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/sam.h",
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/tbx.h",
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/vcf.h",
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/vcfutils.h",
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/pysam_stream.h"
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/htslib_util.h",
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/bgzf.h",
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/cram.h",
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/faidx.h",
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/hfile.h",
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/hts.h",
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/kstring.h",
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/sam.h",
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/tbx.h",
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/vcf.h",
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/vcfutils.h",
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/pysam_stream.h"
         ],
         "include_dirs": [
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam",
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib",
-            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/samtools"
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam",
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/include/htslib",
+            "/tmp/pip-build-env-uvyja3e6/overlay/lib/python3.7/site-packages/pysam/include/samtools"
         ],
         "name": "uta_align",
         "sources": [
