@@ -4,27 +4,23 @@
 {
     "distutils": {
         "depends": [
-            ".tox/py37/lib/python3.7/site-packages/pysam/htslib_util.h",
-            ".tox/py37/lib/python3.7/site-packages/pysam/pysam_stream.h",
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam/include/htslib/htslib/bgzf.h",
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam/include/htslib/htslib/cram.h",
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam/include/htslib/htslib/faidx.h",
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam/include/htslib/htslib/hfile.h",
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam/include/htslib/htslib/hts.h",
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam/include/htslib/htslib/kstring.h",
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam/include/htslib/htslib/sam.h",
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam/include/htslib/htslib/tbx.h",
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam/include/htslib/htslib/vcf.h",
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam/include/htslib/htslib/vcfutils.h"
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/htslib_util.h",
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/bgzf.h",
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/cram.h",
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/faidx.h",
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/hfile.h",
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/hts.h",
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/kstring.h",
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/sam.h",
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/tbx.h",
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/vcf.h",
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/vcfutils.h",
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/pysam_stream.h"
         ],
         "include_dirs": [
-            ".tox/py37/lib/python3.7/site-packages/pysam",
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam",
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam/include/htslib",
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam/include/samtools"
-        ],
-        "libraries": [
-            "/home/reece/projects/biocommons/uta-align/.tox/py37/lib/python3.7/site-packages/pysam/libchtslib.cpython-37m-x86_64-linux-gnu.so"
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam",
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/htslib",
+            "/tmp/pip-build-env-u6bhl33p/overlay/lib/python3.7/site-packages/pysam/include/samtools"
         ],
         "name": "uta_align",
         "sources": [
@@ -857,15 +853,15 @@ static const char *__pyx_filename;
 
 static const char *__pyx_f[] = {
   "uta_align/align/algorithms.pyx",
-  ".tox/py37/lib/python3.7/site-packages/Cython/Includes/cpython/array.pxd",
-  ".tox/py37/lib/python3.7/site-packages/Cython/Includes/cpython/type.pxd",
-  ".tox/py37/lib/python3.7/site-packages/Cython/Includes/cpython/bool.pxd",
-  ".tox/py37/lib/python3.7/site-packages/Cython/Includes/cpython/complex.pxd",
-  ".tox/py37/lib/python3.7/site-packages/pysam/libchtslib.pxd",
-  ".tox/py37/lib/python3.7/site-packages/pysam/libcfaidx.pxd",
-  ".tox/py37/lib/python3.7/site-packages/pysam/libcalignedsegment.pxd",
-  ".tox/py37/lib/python3.7/site-packages/pysam/libcalignmentfile.pxd",
-  ".tox/py37/lib/python3.7/site-packages/pysam/libcsamfile.pxd",
+  "array.pxd",
+  "type.pxd",
+  "bool.pxd",
+  "complex.pxd",
+  "libchtslib.pxd",
+  "libcfaidx.pxd",
+  "libcalignedsegment.pxd",
+  "libcalignmentfile.pxd",
+  "libcsamfile.pxd",
   "uta_align/align/cigar_utils.pxd",
 };
 /* NoFastGil.proto */

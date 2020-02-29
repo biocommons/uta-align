@@ -44,6 +44,7 @@ venv/3 venv/3.5 venv/3.6 venv/3.7: venv/%:
 
 #=> develop: install package in develop mode
 develop:
+	pip install cython
 	pip install -e .
 
 #=> install: install package
@@ -98,7 +99,7 @@ clean:
 #=> cleaner: remove files and directories that are easily rebuilt
 .PHONY: cleaner
 cleaner: clean
-	rm -fr .cache *.egg-info build dist doc/_build htmlcov
+	rm -fr *.so .cache *.egg-info build dist doc/_build htmlcov
 	find . \( -name \*.pyc -o -name \*.orig -o -name \*.rej \) -print0 | xargs -0r rm
 	find . -name __pycache__ -print0 | xargs -0r rm -fr
 
@@ -106,6 +107,12 @@ cleaner: clean
 .PHONY: cleanest
 cleanest: cleaner
 	rm -fr .eggs .tox venv
+
+#=> purge: aggresseively remove cached dependencies to force a complete rebuild
+.PHONY: purge
+purge: cleanest
+	find ~/.cache/pip -name pysam-\* -print0 | xargs -0r rm -v
+
 
 
 ## <LICENSE>
