@@ -1,15 +1,17 @@
-dist: xenial
+dist: bionic
 sudo: required
 language: python
 python:
 - '3.6'
 - '3.7'
+- '3.8'
 cache: pip
-before_install: 
 install:
+- pip install cython
+- pip install pysam
 - pip install tox-travis coveralls
 script:
-- make tox
+- make test
 after_success:
 - coveralls
 stages:
