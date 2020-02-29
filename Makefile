@@ -52,6 +52,10 @@ develop:
 bdist bdist_egg bdist_wheel build sdist install: %:
 	python setup.py $@
 
+upload-test:
+	rm -fr dist
+	python setup.py sdist bdist_wheel
+	twine upload -u reece --repository-url https://test.pypi.org/legacy/ dist/*
 
 
 ############################################################################
