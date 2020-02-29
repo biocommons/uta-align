@@ -39,3 +39,4 @@ development package after code changes, like this::
 .. |pypi_badge| image:: https://badge.fury.io/py/uta-align.png
   :target: https://pypi.python.org/pypi?name=uta-align
   :align: middle
+
