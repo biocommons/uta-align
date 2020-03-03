@@ -20,17 +20,24 @@ From source::
 For Development
 ###############
 
-Install developer environment::
+* Install developer environment::
 
   $ make devready
 
-Activate the environment::
+* Activate the environment::
 
   $ source venv/3.7/bin/activate
 
 (or other python version as appropriate for your system)
 
-Test it::
+
+* During development, you'll need to recompile any code changes to the
+  .pyx files, like this::
+
+  $ pip install -e .
+
+
+* Test it (in current Python environment)::
 
   $ make test
   ======================================== test session starts ========================================
@@ -46,12 +53,15 @@ Test it::
   ========================================= 5 passed in 0.12s =========================================
 
 
-Because cython (.pyx) files are compiled, you'll need to reinstall the
-development package after code changes, like this::
+* Tox test it (in multiple environments::
   
-  $ pip install -e .
+  $ make tox
 
-
+  GLOB sdist-make: /home/reece/projects/biocommons/uta-align/setup.py
+  py37 inst-nodeps: /home/reece/projects/biocommons/uta-align/.tox/.tmp/package/1/uta-align-1.1.13a2.dev7+g98b7cc9.d20200303.zip
+  ...
+  py37: commands succeeded
+  congratulations :)
 
 
 .. |pypi_badge| image:: https://badge.fury.io/py/uta-align.png
