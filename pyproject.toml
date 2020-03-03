@@ -5,6 +5,7 @@ requires = [
     "pysam >= 0.15",
     "setuptools >= 45",
     "setuptools_scm",
+    "tox",
     "wheel"
 ]
 build-backend = "setuptools.build_meta"
