@@ -1,3 +1,5 @@
+# this is used by tox only with tox.ini/[tox]/isolated_build = True
+
 [build-system]
 requires = [
     "cython >= 0.29",
