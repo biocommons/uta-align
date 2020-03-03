@@ -9,7 +9,7 @@ python:
 
 cache: pip
 
-install: pip install tox-travis
+install: pip install tox tox-travis
 
 script: tox
 
