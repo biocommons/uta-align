@@ -54,7 +54,7 @@ bdist bdist_egg bdist_wheel build sdist install: %:
 
 upload-test:
 	rm -fr dist
-	python setup.py sdist bdist_wheel
+	python setup.py sdist
 	twine upload -u reece --repository-url https://test.pypi.org/legacy/ dist/*
 
 
@@ -65,7 +65,7 @@ upload-test:
 #=> test: execute tests
 .PHONY: test
 test:
-	python setup.py pytest 
+	pytest 
 
 #=> tox: execute tests via tox
 .PHONY: tox
