@@ -1,6 +1,7 @@
 [build-system]
 requires = [
     "cython >= 0.29",
+    "cython-setuptools",
     "pysam >= 0.15",
     "setuptools >= 45",
     "setuptools_scm",
