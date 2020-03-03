@@ -15,6 +15,10 @@ PYV=3.7
 VEDIR=venv/${PYV}
 
 
+# Ignore packages in user directory (~/.local/lib/python*)
+export PYTHONNOUSERSITE=1
+
+
 ############################################################################
 #= BASIC USAGE
 default: help
