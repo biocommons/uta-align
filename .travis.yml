@@ -9,13 +9,9 @@ python:
 
 cache: pip
 
-install: 
-  - pip install cython
-  - pip install pysam
-  - python setup.py install
+install: pip install tox-travis
 
-script:
-  - pytest
+script: tox
 
 after_success:
   - coveralls
