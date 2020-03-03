@@ -56,7 +56,7 @@ For Development
 * Tox test it (in multiple environments::
   
   $ make tox
-
+  
   GLOB sdist-make: /home/reece/projects/biocommons/uta-align/setup.py
   py37 inst-nodeps: /home/reece/projects/biocommons/uta-align/.tox/.tmp/package/1/uta-align-1.1.13a2.dev7+g98b7cc9.d20200303.zip
   ...
