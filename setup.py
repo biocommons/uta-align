@@ -40,9 +40,7 @@ else:
     sources = glob.glob(src_glob)
 
 extensions = [
-    Extension("uta_align", sources,
-              include_dirs = pysam.get_include())
-#              libraries = [pysam.libchtslib.__file__])
+    Extension("*", sources, include_dirs = pysam.get_include())
     ]
 
 if has_cython:

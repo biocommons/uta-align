@@ -4,31 +4,30 @@
 {
     "distutils": {
         "depends": [
-            "/home/reece/projects/biocommons/uta-align/venv/3.7/lib/python3.7/site-packages/pysam/include/htslib/htslib/bgzf.h",
-            "/home/reece/projects/biocommons/uta-align/venv/3.7/lib/python3.7/site-packages/pysam/include/htslib/htslib/cram.h",
-            "/home/reece/projects/biocommons/uta-align/venv/3.7/lib/python3.7/site-packages/pysam/include/htslib/htslib/faidx.h",
-            "/home/reece/projects/biocommons/uta-align/venv/3.7/lib/python3.7/site-packages/pysam/include/htslib/htslib/hfile.h",
-            "/home/reece/projects/biocommons/uta-align/venv/3.7/lib/python3.7/site-packages/pysam/include/htslib/htslib/hts.h",
-            "/home/reece/projects/biocommons/uta-align/venv/3.7/lib/python3.7/site-packages/pysam/include/htslib/htslib/kstring.h",
-            "/home/reece/projects/biocommons/uta-align/venv/3.7/lib/python3.7/site-packages/pysam/include/htslib/htslib/sam.h",
-            "/home/reece/projects/biocommons/uta-align/venv/3.7/lib/python3.7/site-packages/pysam/include/htslib/htslib/tbx.h",
-            "/home/reece/projects/biocommons/uta-align/venv/3.7/lib/python3.7/site-packages/pysam/include/htslib/htslib/vcf.h",
-            "/home/reece/projects/biocommons/uta-align/venv/3.7/lib/python3.7/site-packages/pysam/include/htslib/htslib/vcfutils.h",
-            "venv/3.7/lib/python3.7/site-packages/pysam/htslib_util.h",
-            "venv/3.7/lib/python3.7/site-packages/pysam/pysam_stream.h"
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/htslib_util.h",
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/bgzf.h",
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/cram.h",
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/faidx.h",
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/hfile.h",
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/hts.h",
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/kstring.h",
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/sam.h",
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/tbx.h",
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/vcf.h",
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/include/htslib/htslib/vcfutils.h",
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/pysam_stream.h"
         ],
         "include_dirs": [
-            "venv/3.7/lib/python3.7/site-packages/pysam",
-            "/home/reece/projects/biocommons/uta-align/venv/3.7/lib/python3.7/site-packages/pysam",
-            "/home/reece/projects/biocommons/uta-align/venv/3.7/lib/python3.7/site-packages/pysam/include/htslib",
-            "/home/reece/projects/biocommons/uta-align/venv/3.7/lib/python3.7/site-packages/pysam/include/samtools"
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam",
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/include/htslib",
+            "/tmp/pip-build-env-ti5bhta9/overlay/lib/python3.7/site-packages/pysam/include/samtools"
         ],
-        "name": "uta_align",
+        "name": "uta_align.align.algorithms",
         "sources": [
             "uta_align/align/algorithms.pyx"
         ]
     },
-    "module_name": "uta_align"
+    "module_name": "uta_align.align.algorithms"
 }
 END: Cython Metadata */
 
@@ -622,8 +621,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__uta_align
-#define __PYX_HAVE_API__uta_align
+#define __PYX_HAVE__uta_align__align__algorithms
+#define __PYX_HAVE_API__uta_align__align__algorithms
 /* Early includes */
 #include <stdint.h>
 #include <limits.h>
@@ -854,15 +853,15 @@ static const char *__pyx_filename;
 
 static const char *__pyx_f[] = {
   "uta_align/align/algorithms.pyx",
-  "venv/3.7/lib/python3.7/site-packages/Cython/Includes/cpython/array.pxd",
-  "venv/3.7/lib/python3.7/site-packages/Cython/Includes/cpython/type.pxd",
-  "venv/3.7/lib/python3.7/site-packages/Cython/Includes/cpython/bool.pxd",
-  "venv/3.7/lib/python3.7/site-packages/Cython/Includes/cpython/complex.pxd",
-  "venv/3.7/lib/python3.7/site-packages/pysam/libchtslib.pxd",
-  "venv/3.7/lib/python3.7/site-packages/pysam/libcfaidx.pxd",
-  "venv/3.7/lib/python3.7/site-packages/pysam/libcalignedsegment.pxd",
-  "venv/3.7/lib/python3.7/site-packages/pysam/libcalignmentfile.pxd",
-  "venv/3.7/lib/python3.7/site-packages/pysam/libcsamfile.pxd",
+  "array.pxd",
+  "type.pxd",
+  "bool.pxd",
+  "complex.pxd",
+  "libchtslib.pxd",
+  "libcfaidx.pxd",
+  "libcalignedsegment.pxd",
+  "libcalignmentfile.pxd",
+  "libcsamfile.pxd",
   "uta_align/align/cigar_utils.pxd",
 };
 /* NoFastGil.proto */
@@ -1098,12 +1097,12 @@ struct __pyx_opt_args_9uta_align_5align_11cigar_utils_13CigarSequence_invert {
   PyObject *left_clip;
   PyObject *right_clip;
 };
-struct __pyx_opt_args_9uta_align_align_local_full;
-struct __pyx_opt_args_9uta_align_align_local_score;
-struct __pyx_opt_args_9uta_align_align_glocal_full;
-struct __pyx_opt_args_9uta_align_align_glocal_score;
-struct __pyx_opt_args_9uta_align_align_global_full;
-struct __pyx_opt_args_9uta_align_align_global_score;
+struct __pyx_opt_args_9uta_align_5align_10algorithms_align_local_full;
+struct __pyx_opt_args_9uta_align_5align_10algorithms_align_local_score;
+struct __pyx_opt_args_9uta_align_5align_10algorithms_align_glocal_full;
+struct __pyx_opt_args_9uta_align_5align_10algorithms_align_glocal_score;
+struct __pyx_opt_args_9uta_align_5align_10algorithms_align_global_full;
+struct __pyx_opt_args_9uta_align_5align_10algorithms_align_global_score;
 
 /* "uta_align/align/algorithms.pyx":61
  * 
@@ -1121,23 +1120,23 @@ enum  {
  *     TRACE_NEXT_DEL =  8
  *     TRACE_NEXT_INS = 16
  */
-  __pyx_e_9uta_align_TRACE_DEL = 1,
-  __pyx_e_9uta_align_TRACE_INS = 2,
-  __pyx_e_9uta_align_TRACE_MATCH = 4,
-  __pyx_e_9uta_align_TRACE_DIR_MASK = ((__pyx_e_9uta_align_TRACE_DEL | __pyx_e_9uta_align_TRACE_INS) | __pyx_e_9uta_align_TRACE_MATCH),
-  __pyx_e_9uta_align_TRACE_NEXT_DEL = 8,
-  __pyx_e_9uta_align_TRACE_NEXT_INS = 16,
-  __pyx_e_9uta_align_TRACE_A = 0x01,
-  __pyx_e_9uta_align_TRACE_B = 0x02,
-  __pyx_e_9uta_align_TRACE_C = 0x04,
-  __pyx_e_9uta_align_TRACE_D = 0x08,
-  __pyx_e_9uta_align_TRACE_E = 0x10,
-  __pyx_e_9uta_align_TRACE_F = 0x20,
-  __pyx_e_9uta_align_TRACE_G = 0x40,
-  __pyx_e_9uta_align_MODE_GLOBAL = 1,
-  __pyx_e_9uta_align_MODE_LOCAL = 2,
-  __pyx_e_9uta_align_MODE_GLOCAL = 3,
-  __pyx_e_9uta_align_MODE_LOCAL_GLOBAL = 4
+  __pyx_e_9uta_align_5align_10algorithms_TRACE_DEL = 1,
+  __pyx_e_9uta_align_5align_10algorithms_TRACE_INS = 2,
+  __pyx_e_9uta_align_5align_10algorithms_TRACE_MATCH = 4,
+  __pyx_e_9uta_align_5align_10algorithms_TRACE_DIR_MASK = ((__pyx_e_9uta_align_5align_10algorithms_TRACE_DEL | __pyx_e_9uta_align_5align_10algorithms_TRACE_INS) | __pyx_e_9uta_align_5align_10algorithms_TRACE_MATCH),
+  __pyx_e_9uta_align_5align_10algorithms_TRACE_NEXT_DEL = 8,
+  __pyx_e_9uta_align_5align_10algorithms_TRACE_NEXT_INS = 16,
+  __pyx_e_9uta_align_5align_10algorithms_TRACE_A = 0x01,
+  __pyx_e_9uta_align_5align_10algorithms_TRACE_B = 0x02,
+  __pyx_e_9uta_align_5align_10algorithms_TRACE_C = 0x04,
+  __pyx_e_9uta_align_5align_10algorithms_TRACE_D = 0x08,
+  __pyx_e_9uta_align_5align_10algorithms_TRACE_E = 0x10,
+  __pyx_e_9uta_align_5align_10algorithms_TRACE_F = 0x20,
+  __pyx_e_9uta_align_5align_10algorithms_TRACE_G = 0x40,
+  __pyx_e_9uta_align_5align_10algorithms_MODE_GLOBAL = 1,
+  __pyx_e_9uta_align_5align_10algorithms_MODE_LOCAL = 2,
+  __pyx_e_9uta_align_5align_10algorithms_MODE_GLOCAL = 3,
+  __pyx_e_9uta_align_5align_10algorithms_MODE_LOCAL_GLOBAL = 4
 };
 
 /* "uta_align/align/algorithms.pyx":236
@@ -1147,7 +1146,7 @@ enum  {
  *                       bytes   s2,
  *                       int32_t match_score=10,
  */
-struct __pyx_opt_args_9uta_align_align_local_full {
+struct __pyx_opt_args_9uta_align_5align_10algorithms_align_local_full {
   int __pyx_n;
   int32_t match_score;
   int32_t mismatch_score;
@@ -1164,7 +1163,7 @@ struct __pyx_opt_args_9uta_align_align_local_full {
  *                        bytes   s2,
  *                        int32_t match_score=10,
  */
-struct __pyx_opt_args_9uta_align_align_local_score {
+struct __pyx_opt_args_9uta_align_5align_10algorithms_align_local_score {
   int __pyx_n;
   int32_t match_score;
   int32_t mismatch_score;
@@ -1179,7 +1178,7 @@ struct __pyx_opt_args_9uta_align_align_local_score {
  *                        bytes   s2,
  *                        int     mode,
  */
-struct __pyx_opt_args_9uta_align_align_glocal_full {
+struct __pyx_opt_args_9uta_align_5align_10algorithms_align_glocal_full {
   int __pyx_n;
   int32_t match_score;
   int32_t mismatch_score;
@@ -1196,7 +1195,7 @@ struct __pyx_opt_args_9uta_align_align_glocal_full {
  *                         bytes   s2,
  *                         int     mode,
  */
-struct __pyx_opt_args_9uta_align_align_glocal_score {
+struct __pyx_opt_args_9uta_align_5align_10algorithms_align_glocal_score {
   int __pyx_n;
   int32_t match_score;
   int32_t mismatch_score;
@@ -1211,7 +1210,7 @@ struct __pyx_opt_args_9uta_align_align_glocal_score {
  *                        bytes   s2,
  *                        int32_t match_score=10,
  */
-struct __pyx_opt_args_9uta_align_align_global_full {
+struct __pyx_opt_args_9uta_align_5align_10algorithms_align_global_full {
   int __pyx_n;
   int32_t match_score;
   int32_t mismatch_score;
@@ -1227,7 +1226,7 @@ struct __pyx_opt_args_9uta_align_align_global_full {
  *                         bytes   s2,
  *                         int32_t match_score=10,
  */
-struct __pyx_opt_args_9uta_align_align_global_score {
+struct __pyx_opt_args_9uta_align_5align_10algorithms_align_global_score {
   int __pyx_n;
   int32_t match_score;
   int32_t mismatch_score;
@@ -2714,23 +2713,23 @@ static PyTypeObject *__pyx_ptype_9uta_align_5align_11cigar_utils_CigarOperator =
 static PyTypeObject *__pyx_ptype_9uta_align_5align_11cigar_utils_CigarSequence = 0;
 static struct __pyx_obj_9uta_align_5align_11cigar_utils_CigarOperator *(*__pyx_f_9uta_align_5align_11cigar_utils_get_op_by_char)(char); /*proto*/
 
-/* Module declarations from 'uta_align' */
-static CYTHON_INLINE int32_t __pyx_f_9uta_align_max2(int32_t, int32_t); /*proto*/
-static CYTHON_INLINE int32_t __pyx_f_9uta_align_max3(int32_t, int32_t, int32_t); /*proto*/
-static CYTHON_INLINE int32_t __pyx_f_9uta_align_max4(int32_t, int32_t, int32_t, int32_t); /*proto*/
-static PyObject *__pyx_f_9uta_align_align_local_full(PyObject *, PyObject *, struct __pyx_opt_args_9uta_align_align_local_full *__pyx_optional_args); /*proto*/
-static PyObject *__pyx_f_9uta_align_align_local_score(PyObject *, PyObject *, struct __pyx_opt_args_9uta_align_align_local_score *__pyx_optional_args); /*proto*/
-static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *, PyObject *, int, struct __pyx_opt_args_9uta_align_align_glocal_full *__pyx_optional_args); /*proto*/
-static PyObject *__pyx_f_9uta_align_align_glocal_score(PyObject *, PyObject *, int, struct __pyx_opt_args_9uta_align_align_glocal_score *__pyx_optional_args); /*proto*/
-static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *, PyObject *, struct __pyx_opt_args_9uta_align_align_global_full *__pyx_optional_args); /*proto*/
-static PyObject *__pyx_f_9uta_align_align_global_score(PyObject *, PyObject *, struct __pyx_opt_args_9uta_align_align_global_score *__pyx_optional_args); /*proto*/
-static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *, PyObject *, size_t, size_t, char *, int, int, int); /*proto*/
-static PyObject *__pyx_f_9uta_align__roll_cigar_altshul_erikson(PyObject *, PyObject *, size_t, size_t, char *, int, int); /*proto*/
-#define __Pyx_MODULE_NAME "uta_align"
-extern int __pyx_module_is_main_uta_align;
-int __pyx_module_is_main_uta_align = 0;
+/* Module declarations from 'uta_align.align.algorithms' */
+static CYTHON_INLINE int32_t __pyx_f_9uta_align_5align_10algorithms_max2(int32_t, int32_t); /*proto*/
+static CYTHON_INLINE int32_t __pyx_f_9uta_align_5align_10algorithms_max3(int32_t, int32_t, int32_t); /*proto*/
+static CYTHON_INLINE int32_t __pyx_f_9uta_align_5align_10algorithms_max4(int32_t, int32_t, int32_t, int32_t); /*proto*/
+static PyObject *__pyx_f_9uta_align_5align_10algorithms_align_local_full(PyObject *, PyObject *, struct __pyx_opt_args_9uta_align_5align_10algorithms_align_local_full *__pyx_optional_args); /*proto*/
+static PyObject *__pyx_f_9uta_align_5align_10algorithms_align_local_score(PyObject *, PyObject *, struct __pyx_opt_args_9uta_align_5align_10algorithms_align_local_score *__pyx_optional_args); /*proto*/
+static PyObject *__pyx_f_9uta_align_5align_10algorithms_align_glocal_full(PyObject *, PyObject *, int, struct __pyx_opt_args_9uta_align_5align_10algorithms_align_glocal_full *__pyx_optional_args); /*proto*/
+static PyObject *__pyx_f_9uta_align_5align_10algorithms_align_glocal_score(PyObject *, PyObject *, int, struct __pyx_opt_args_9uta_align_5align_10algorithms_align_glocal_score *__pyx_optional_args); /*proto*/
+static PyObject *__pyx_f_9uta_align_5align_10algorithms_align_global_full(PyObject *, PyObject *, struct __pyx_opt_args_9uta_align_5align_10algorithms_align_global_full *__pyx_optional_args); /*proto*/
+static PyObject *__pyx_f_9uta_align_5align_10algorithms_align_global_score(PyObject *, PyObject *, struct __pyx_opt_args_9uta_align_5align_10algorithms_align_global_score *__pyx_optional_args); /*proto*/
+static PyObject *__pyx_f_9uta_align_5align_10algorithms__roll_cigar_gotoh(PyObject *, PyObject *, size_t, size_t, char *, int, int, int); /*proto*/
+static PyObject *__pyx_f_9uta_align_5align_10algorithms__roll_cigar_altshul_erikson(PyObject *, PyObject *, size_t, size_t, char *, int, int); /*proto*/
+#define __Pyx_MODULE_NAME "uta_align.align.algorithms"
+extern int __pyx_module_is_main_uta_align__align__algorithms;
+int __pyx_module_is_main_uta_align__align__algorithms = 0;
 
-/* Implementation of 'uta_align' */
+/* Implementation of 'uta_align.align.algorithms' */
 static PyObject *__pyx_builtin_object;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_range;
@@ -2826,7 +2825,6 @@ static const char __pyx_k_metaclass[] = "__metaclass__";
 static const char __pyx_k_query_len[] = "query_len";
 static const char __pyx_k_ref_start[] = "ref_start";
 static const char __pyx_k_soft_clip[] = "soft_clip";
-static const char __pyx_k_uta_align[] = "uta_align";
 static const char __pyx_k_ValueError[] = "ValueError";
 static const char __pyx_k_gapped_len[] = "gapped_len";
 static const char __pyx_k_hide_match[] = "hide_match";
@@ -2858,6 +2856,7 @@ static const char __pyx_k_Unknown_alignment_mode[] = "Unknown alignment mode ";
 static const char __pyx_k_Alignment_gapped_alignment[] = "Alignment.gapped_alignment";
 static const char __pyx_k_smith_waterman_gotoh_align[] = "smith_waterman_gotoh_align";
 static const char __pyx_k_smith_waterman_gotoh_score[] = "smith_waterman_gotoh_score";
+static const char __pyx_k_uta_align_align_algorithms[] = "uta_align.align.algorithms";
 static const char __pyx_k_uta_align_align_cigar_utils[] = "uta_align.align.cigar_utils";
 static const char __pyx_k_needleman_wunsch_gotoh_align[] = "needleman_wunsch_gotoh_align";
 static const char __pyx_k_needleman_wunsch_gotoh_score[] = "needleman_wunsch_gotoh_score";
@@ -3020,22 +3019,22 @@ static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_test_align;
 static PyObject *__pyx_kp_u_test_align_line_980;
 static PyObject *__pyx_n_s_trace;
-static PyObject *__pyx_n_s_uta_align;
+static PyObject *__pyx_n_s_uta_align_align_algorithms;
 static PyObject *__pyx_kp_s_uta_align_align_algorithms_pyx;
 static PyObject *__pyx_n_s_uta_align_align_cigar_utils;
-static PyObject *__pyx_pf_9uta_align_invert_alignment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_cigar, PyObject *__pyx_v_start, PyObject *__pyx_v_stop, PyObject *__pyx_v_length); /* proto */
-static PyObject *__pyx_pf_9uta_align_2cigar_alignment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_str1, PyObject *__pyx_v_str2, PyObject *__pyx_v_cigar, PyObject *__pyx_v_hide_match); /* proto */
-static PyObject *__pyx_pf_9uta_align_9Alignment___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ref, PyObject *__pyx_v_ref_start, PyObject *__pyx_v_ref_stop, PyObject *__pyx_v_query, PyObject *__pyx_v_query_start, PyObject *__pyx_v_query_stop, PyObject *__pyx_v_cigar, PyObject *__pyx_v_score); /* proto */
-static PyObject *__pyx_pf_9uta_align_9Alignment_2gapped_alignment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_hide_match); /* proto */
-static PyObject *__pyx_pf_9uta_align_4align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_ref, PyObject *__pyx_v_query, PyObject *__pyx_v_mode, char __pyx_v_score_only, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar, char __pyx_v_soft_clip); /* proto */
-static PyObject *__pyx_pf_9uta_align_6test_align(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar); /* proto */
-static PyObject *__pyx_pf_9uta_align_10smith_waterman_gotoh_align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar, char __pyx_v_add_soft_clips); /* proto */
-static PyObject *__pyx_pf_9uta_align_12smith_waterman_gotoh_score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score); /* proto */
-static PyObject *__pyx_pf_9uta_align_14needleman_wunsch_gotoh_align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar); /* proto */
-static PyObject *__pyx_pf_9uta_align_16needleman_wunsch_gotoh_score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score); /* proto */
-static PyObject *__pyx_pf_9uta_align_18glocal_align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar, char __pyx_v_add_soft_clips); /* proto */
-static PyObject *__pyx_pf_9uta_align_20glocal_score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score); /* proto */
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_invert_alignment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_cigar, PyObject *__pyx_v_start, PyObject *__pyx_v_stop, PyObject *__pyx_v_length); /* proto */
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_2cigar_alignment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_str1, PyObject *__pyx_v_str2, PyObject *__pyx_v_cigar, PyObject *__pyx_v_hide_match); /* proto */
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_9Alignment___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ref, PyObject *__pyx_v_ref_start, PyObject *__pyx_v_ref_stop, PyObject *__pyx_v_query, PyObject *__pyx_v_query_start, PyObject *__pyx_v_query_stop, PyObject *__pyx_v_cigar, PyObject *__pyx_v_score); /* proto */
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_9Alignment_2gapped_alignment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_hide_match); /* proto */
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_4align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_ref, PyObject *__pyx_v_query, PyObject *__pyx_v_mode, char __pyx_v_score_only, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar, char __pyx_v_soft_clip); /* proto */
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_6test_align(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_8needleman_wunsch_altshul_erikson(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar); /* proto */
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_10smith_waterman_gotoh_align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar, char __pyx_v_add_soft_clips); /* proto */
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_12smith_waterman_gotoh_score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score); /* proto */
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_14needleman_wunsch_gotoh_align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar); /* proto */
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_16needleman_wunsch_gotoh_score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score); /* proto */
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_18glocal_align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar, char __pyx_v_add_soft_clips); /* proto */
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_20glocal_score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score); /* proto */
 static int __pyx_pf_7cpython_5array_5array___getbuffer__(arrayobject *__pyx_v_self, Py_buffer *__pyx_v_info, CYTHON_UNUSED int __pyx_v_flags); /* proto */
 static void __pyx_pf_7cpython_5array_5array_2__releasebuffer__(CYTHON_UNUSED arrayobject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static __Pyx_CachedCFunction __pyx_umethod_PyBytes_Type_lower = {0, &__pyx_n_s_lower, 0, 0, 0};
@@ -3087,7 +3086,7 @@ static PyObject *__pyx_codeobj__37;
  * 
  */
 
-static CYTHON_INLINE int32_t __pyx_f_9uta_align_min2(int32_t __pyx_v_a, int32_t __pyx_v_b) {
+static CYTHON_INLINE int32_t __pyx_f_9uta_align_5align_10algorithms_min2(int32_t __pyx_v_a, int32_t __pyx_v_b) {
   int32_t __pyx_r;
   int32_t __pyx_t_1;
 
@@ -3127,7 +3126,7 @@ static CYTHON_INLINE int32_t __pyx_f_9uta_align_min2(int32_t __pyx_v_a, int32_t 
  * 
  */
 
-static CYTHON_INLINE int32_t __pyx_f_9uta_align_max2(int32_t __pyx_v_a, int32_t __pyx_v_b) {
+static CYTHON_INLINE int32_t __pyx_f_9uta_align_5align_10algorithms_max2(int32_t __pyx_v_a, int32_t __pyx_v_b) {
   int32_t __pyx_r;
   int32_t __pyx_t_1;
 
@@ -3167,7 +3166,7 @@ static CYTHON_INLINE int32_t __pyx_f_9uta_align_max2(int32_t __pyx_v_a, int32_t 
  * 
  */
 
-static CYTHON_INLINE int32_t __pyx_f_9uta_align_max3(int32_t __pyx_v_a, int32_t __pyx_v_b, int32_t __pyx_v_c) {
+static CYTHON_INLINE int32_t __pyx_f_9uta_align_5align_10algorithms_max3(int32_t __pyx_v_a, int32_t __pyx_v_b, int32_t __pyx_v_c) {
   int32_t __pyx_r;
 
   /* "uta_align/align/algorithms.pyx":95
@@ -3177,7 +3176,7 @@ static CYTHON_INLINE int32_t __pyx_f_9uta_align_max3(int32_t __pyx_v_a, int32_t 
  * 
  * 
  */
-  __pyx_r = __pyx_f_9uta_align_max2(__pyx_v_a, __pyx_f_9uta_align_max2(__pyx_v_b, __pyx_v_c));
+  __pyx_r = __pyx_f_9uta_align_5align_10algorithms_max2(__pyx_v_a, __pyx_f_9uta_align_5align_10algorithms_max2(__pyx_v_b, __pyx_v_c));
   goto __pyx_L0;
 
   /* "uta_align/align/algorithms.pyx":94
@@ -3201,7 +3200,7 @@ static CYTHON_INLINE int32_t __pyx_f_9uta_align_max3(int32_t __pyx_v_a, int32_t 
  * 
  */
 
-static CYTHON_INLINE int32_t __pyx_f_9uta_align_max4(int32_t __pyx_v_a, int32_t __pyx_v_b, int32_t __pyx_v_c, int32_t __pyx_v_d) {
+static CYTHON_INLINE int32_t __pyx_f_9uta_align_5align_10algorithms_max4(int32_t __pyx_v_a, int32_t __pyx_v_b, int32_t __pyx_v_c, int32_t __pyx_v_d) {
   int32_t __pyx_r;
 
   /* "uta_align/align/algorithms.pyx":99
@@ -3211,7 +3210,7 @@ static CYTHON_INLINE int32_t __pyx_f_9uta_align_max4(int32_t __pyx_v_a, int32_t 
  * 
  * 
  */
-  __pyx_r = __pyx_f_9uta_align_max2(__pyx_f_9uta_align_max2(__pyx_v_a, __pyx_v_b), __pyx_f_9uta_align_max2(__pyx_v_c, __pyx_v_d));
+  __pyx_r = __pyx_f_9uta_align_5align_10algorithms_max2(__pyx_f_9uta_align_5align_10algorithms_max2(__pyx_v_a, __pyx_v_b), __pyx_f_9uta_align_5align_10algorithms_max2(__pyx_v_c, __pyx_v_d));
   goto __pyx_L0;
 
   /* "uta_align/align/algorithms.pyx":98
@@ -3236,10 +3235,10 @@ static CYTHON_INLINE int32_t __pyx_f_9uta_align_max4(int32_t __pyx_v_a, int32_t 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9uta_align_1invert_alignment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_9uta_align_invert_alignment[] = "invert_alignment(cigar, start=None, stop=None, length=None)\n\n    Inverts the alignment between query sequence and reference.\n\n    :param cigar: Query cigar string\n    :param start: Alignment start in reference coordinates\n    :param stop: Alignment stop in reference coordinates\n    :param length: Length of reference sequence\n    :return: Inverted cigar string with the right soft clips,\n             alignment start in query coordinates,\n             alignment stop in query coordinates\n    ";
-static PyMethodDef __pyx_mdef_9uta_align_1invert_alignment = {"invert_alignment", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_1invert_alignment, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_invert_alignment};
-static PyObject *__pyx_pw_9uta_align_1invert_alignment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_1invert_alignment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9uta_align_5align_10algorithms_invert_alignment[] = "invert_alignment(cigar, start=None, stop=None, length=None)\n\n    Inverts the alignment between query sequence and reference.\n\n    :param cigar: Query cigar string\n    :param start: Alignment start in reference coordinates\n    :param stop: Alignment stop in reference coordinates\n    :param length: Length of reference sequence\n    :return: Inverted cigar string with the right soft clips,\n             alignment start in query coordinates,\n             alignment stop in query coordinates\n    ";
+static PyMethodDef __pyx_mdef_9uta_align_5align_10algorithms_1invert_alignment = {"invert_alignment", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_5align_10algorithms_1invert_alignment, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_5align_10algorithms_invert_alignment};
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_1invert_alignment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_cigar = 0;
   PyObject *__pyx_v_start = 0;
   PyObject *__pyx_v_stop = 0;
@@ -3317,18 +3316,18 @@ static PyObject *__pyx_pw_9uta_align_1invert_alignment(PyObject *__pyx_self, PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("invert_alignment", 0, 1, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 102, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("uta_align.invert_alignment", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.invert_alignment", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9uta_align_invert_alignment(__pyx_self, __pyx_v_cigar, __pyx_v_start, __pyx_v_stop, __pyx_v_length);
+  __pyx_r = __pyx_pf_9uta_align_5align_10algorithms_invert_alignment(__pyx_self, __pyx_v_cigar, __pyx_v_start, __pyx_v_stop, __pyx_v_length);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9uta_align_invert_alignment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_cigar, PyObject *__pyx_v_start, PyObject *__pyx_v_stop, PyObject *__pyx_v_length) {
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_invert_alignment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_cigar, PyObject *__pyx_v_start, PyObject *__pyx_v_stop, PyObject *__pyx_v_length) {
   PyObject *__pyx_v_left_clip = NULL;
   PyObject *__pyx_v_right_clip = NULL;
   PyObject *__pyx_v_inv_cigar = NULL;
@@ -3660,7 +3659,7 @@ static PyObject *__pyx_pf_9uta_align_invert_alignment(CYTHON_UNUSED PyObject *__
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("uta_align.invert_alignment", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.invert_alignment", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_left_clip);
@@ -3682,10 +3681,10 @@ static PyObject *__pyx_pf_9uta_align_invert_alignment(CYTHON_UNUSED PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9uta_align_3cigar_alignment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_9uta_align_2cigar_alignment[] = "cigar_alignment(str1, str2, cigar, hide_match=True)";
-static PyMethodDef __pyx_mdef_9uta_align_3cigar_alignment = {"cigar_alignment", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_3cigar_alignment, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_2cigar_alignment};
-static PyObject *__pyx_pw_9uta_align_3cigar_alignment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_3cigar_alignment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9uta_align_5align_10algorithms_2cigar_alignment[] = "cigar_alignment(str1, str2, cigar, hide_match=True)";
+static PyMethodDef __pyx_mdef_9uta_align_5align_10algorithms_3cigar_alignment = {"cigar_alignment", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_5align_10algorithms_3cigar_alignment, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_5align_10algorithms_2cigar_alignment};
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_3cigar_alignment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_str1 = 0;
   PyObject *__pyx_v_str2 = 0;
   PyObject *__pyx_v_cigar = 0;
@@ -3759,18 +3758,18 @@ static PyObject *__pyx_pw_9uta_align_3cigar_alignment(PyObject *__pyx_self, PyOb
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("cigar_alignment", 0, 3, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 129, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("uta_align.cigar_alignment", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.cigar_alignment", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9uta_align_2cigar_alignment(__pyx_self, __pyx_v_str1, __pyx_v_str2, __pyx_v_cigar, __pyx_v_hide_match);
+  __pyx_r = __pyx_pf_9uta_align_5align_10algorithms_2cigar_alignment(__pyx_self, __pyx_v_str1, __pyx_v_str2, __pyx_v_cigar, __pyx_v_hide_match);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9uta_align_2cigar_alignment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_str1, PyObject *__pyx_v_str2, PyObject *__pyx_v_cigar, PyObject *__pyx_v_hide_match) {
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_2cigar_alignment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_str1, PyObject *__pyx_v_str2, PyObject *__pyx_v_cigar, PyObject *__pyx_v_hide_match) {
   struct __pyx_obj_9uta_align_5align_11cigar_utils_CigarOperator *__pyx_v_op = 0;
   int __pyx_v_hide;
   CYTHON_UNUSED int __pyx_v_k;
@@ -4543,7 +4542,7 @@ static PyObject *__pyx_pf_9uta_align_2cigar_alignment(CYTHON_UNUSED PyObject *__
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("uta_align.cigar_alignment", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.cigar_alignment", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_op);
@@ -4564,10 +4563,10 @@ static PyObject *__pyx_pf_9uta_align_2cigar_alignment(CYTHON_UNUSED PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9uta_align_9Alignment_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_9uta_align_9Alignment___init__[] = "Alignment.__init__(self, ref, ref_start, ref_stop, query, query_start, query_stop, cigar, score)";
-static PyMethodDef __pyx_mdef_9uta_align_9Alignment_1__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_9Alignment_1__init__, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_9Alignment___init__};
-static PyObject *__pyx_pw_9uta_align_9Alignment_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_9Alignment_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9uta_align_5align_10algorithms_9Alignment___init__[] = "Alignment.__init__(self, ref, ref_start, ref_stop, query, query_start, query_stop, cigar, score)";
+static PyMethodDef __pyx_mdef_9uta_align_5align_10algorithms_9Alignment_1__init__ = {"__init__", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_5align_10algorithms_9Alignment_1__init__, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_5align_10algorithms_9Alignment___init__};
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_9Alignment_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_ref = 0;
   PyObject *__pyx_v_ref_start = 0;
@@ -4692,18 +4691,18 @@ static PyObject *__pyx_pw_9uta_align_9Alignment_1__init__(PyObject *__pyx_self, 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 1, 9, 9, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 211, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("uta_align.Alignment.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.Alignment.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9uta_align_9Alignment___init__(__pyx_self, __pyx_v_self, __pyx_v_ref, __pyx_v_ref_start, __pyx_v_ref_stop, __pyx_v_query, __pyx_v_query_start, __pyx_v_query_stop, __pyx_v_cigar, __pyx_v_score);
+  __pyx_r = __pyx_pf_9uta_align_5align_10algorithms_9Alignment___init__(__pyx_self, __pyx_v_self, __pyx_v_ref, __pyx_v_ref_start, __pyx_v_ref_stop, __pyx_v_query, __pyx_v_query_start, __pyx_v_query_stop, __pyx_v_cigar, __pyx_v_score);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9uta_align_9Alignment___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ref, PyObject *__pyx_v_ref_start, PyObject *__pyx_v_ref_stop, PyObject *__pyx_v_query, PyObject *__pyx_v_query_start, PyObject *__pyx_v_query_stop, PyObject *__pyx_v_cigar, PyObject *__pyx_v_score) {
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_9Alignment___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ref, PyObject *__pyx_v_ref_start, PyObject *__pyx_v_ref_stop, PyObject *__pyx_v_query, PyObject *__pyx_v_query_start, PyObject *__pyx_v_query_stop, PyObject *__pyx_v_cigar, PyObject *__pyx_v_score) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -4842,7 +4841,7 @@ static PyObject *__pyx_pf_9uta_align_9Alignment___init__(CYTHON_UNUSED PyObject 
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("uta_align.Alignment.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.Alignment.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4859,10 +4858,10 @@ static PyObject *__pyx_pf_9uta_align_9Alignment___init__(CYTHON_UNUSED PyObject 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9uta_align_9Alignment_3gapped_alignment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_9uta_align_9Alignment_2gapped_alignment[] = "Alignment.gapped_alignment(self, hide_match=True)";
-static PyMethodDef __pyx_mdef_9uta_align_9Alignment_3gapped_alignment = {"gapped_alignment", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_9Alignment_3gapped_alignment, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_9Alignment_2gapped_alignment};
-static PyObject *__pyx_pw_9uta_align_9Alignment_3gapped_alignment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_9Alignment_3gapped_alignment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9uta_align_5align_10algorithms_9Alignment_2gapped_alignment[] = "Alignment.gapped_alignment(self, hide_match=True)";
+static PyMethodDef __pyx_mdef_9uta_align_5align_10algorithms_9Alignment_3gapped_alignment = {"gapped_alignment", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_5align_10algorithms_9Alignment_3gapped_alignment, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_5align_10algorithms_9Alignment_2gapped_alignment};
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_9Alignment_3gapped_alignment(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_hide_match = 0;
   PyObject *__pyx_r = 0;
@@ -4914,18 +4913,18 @@ static PyObject *__pyx_pw_9uta_align_9Alignment_3gapped_alignment(PyObject *__py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("gapped_alignment", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 225, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("uta_align.Alignment.gapped_alignment", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.Alignment.gapped_alignment", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9uta_align_9Alignment_2gapped_alignment(__pyx_self, __pyx_v_self, __pyx_v_hide_match);
+  __pyx_r = __pyx_pf_9uta_align_5align_10algorithms_9Alignment_2gapped_alignment(__pyx_self, __pyx_v_self, __pyx_v_hide_match);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9uta_align_9Alignment_2gapped_alignment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_hide_match) {
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_9Alignment_2gapped_alignment(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_hide_match) {
   PyObject *__pyx_v_ref = NULL;
   PyObject *__pyx_v_query = NULL;
   PyObject *__pyx_r = NULL;
@@ -5102,7 +5101,7 @@ static PyObject *__pyx_pf_9uta_align_9Alignment_2gapped_alignment(CYTHON_UNUSED 
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("uta_align.Alignment.gapped_alignment", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.Alignment.gapped_alignment", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_ref);
@@ -5120,7 +5119,7 @@ static PyObject *__pyx_pf_9uta_align_9Alignment_2gapped_alignment(CYTHON_UNUSED 
  *                       int32_t match_score=10,
  */
 
-static PyObject *__pyx_f_9uta_align_align_local_full(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, struct __pyx_opt_args_9uta_align_align_local_full *__pyx_optional_args) {
+static PyObject *__pyx_f_9uta_align_5align_10algorithms_align_local_full(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, struct __pyx_opt_args_9uta_align_5align_10algorithms_align_local_full *__pyx_optional_args) {
   int32_t __pyx_v_match_score = ((int32_t)10);
   int32_t __pyx_v_mismatch_score = ((int32_t)-9);
   int32_t __pyx_v_gap_open_score = ((int32_t)-15);
@@ -5495,7 +5494,7 @@ static PyObject *__pyx_f_9uta_align_align_local_full(PyObject *__pyx_v_s1, PyObj
  *                 insccost  = inscost    + gap_extend_score
  *                 inscost   = max2(Sleft + gap_open_score, insccost)
  */
-            __pyx_v_delcost = __pyx_f_9uta_align_max2((__pyx_v_Sup + __pyx_v_gap_open_score), __pyx_v_delccost);
+            __pyx_v_delcost = __pyx_f_9uta_align_5align_10algorithms_max2((__pyx_v_Sup + __pyx_v_gap_open_score), __pyx_v_delccost);
 
             /* "uta_align/align/algorithms.pyx":294
  *                 delccost  = coldel[j]  + gap_extend_score
@@ -5513,7 +5512,7 @@ static PyObject *__pyx_f_9uta_align_align_local_full(PyObject *__pyx_v_s1, PyObj
  *                 Sij       = max4(0, delcost, inscost, matcost)
  * 
  */
-            __pyx_v_inscost = __pyx_f_9uta_align_max2((__pyx_v_Sleft + __pyx_v_gap_open_score), __pyx_v_insccost);
+            __pyx_v_inscost = __pyx_f_9uta_align_5align_10algorithms_max2((__pyx_v_Sleft + __pyx_v_gap_open_score), __pyx_v_insccost);
 
             /* "uta_align/align/algorithms.pyx":296
  *                 insccost  = inscost    + gap_extend_score
@@ -5522,7 +5521,7 @@ static PyObject *__pyx_f_9uta_align_align_local_full(PyObject *__pyx_v_s1, PyObj
  * 
  *                 Sdiag     = Sup
  */
-            __pyx_v_Sij = __pyx_f_9uta_align_max4(0, __pyx_v_delcost, __pyx_v_inscost, __pyx_v_matcost);
+            __pyx_v_Sij = __pyx_f_9uta_align_5align_10algorithms_max4(0, __pyx_v_delcost, __pyx_v_inscost, __pyx_v_matcost);
 
             /* "uta_align/align/algorithms.pyx":298
  *                 Sij       = max4(0, delcost, inscost, matcost)
@@ -5632,7 +5631,7 @@ static PyObject *__pyx_f_9uta_align_align_local_full(PyObject *__pyx_v_s1, PyObj
  *                 if Sij == inscost:
  *                     back |= TRACE_INS
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_MATCH);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_MATCH);
 
               /* "uta_align/align/algorithms.pyx":309
  * 
@@ -5660,7 +5659,7 @@ static PyObject *__pyx_f_9uta_align_align_local_full(PyObject *__pyx_v_s1, PyObj
  *                 if Sij == delcost:
  *                     back |= TRACE_DEL
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_INS);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_INS);
 
               /* "uta_align/align/algorithms.pyx":311
  *                 if Sij == matcost:
@@ -5688,7 +5687,7 @@ static PyObject *__pyx_f_9uta_align_align_local_full(PyObject *__pyx_v_s1, PyObj
  *                 if delcost == delccost:
  *                     back |= TRACE_NEXT_DEL
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_DEL);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_DEL);
 
               /* "uta_align/align/algorithms.pyx":313
  *                 if Sij == inscost:
@@ -5716,7 +5715,7 @@ static PyObject *__pyx_f_9uta_align_align_local_full(PyObject *__pyx_v_s1, PyObj
  *                 if inscost == insccost:
  *                     back |= TRACE_NEXT_INS
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_NEXT_DEL);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_NEXT_DEL);
 
               /* "uta_align/align/algorithms.pyx":315
  *                 if Sij == delcost:
@@ -5744,7 +5743,7 @@ static PyObject *__pyx_f_9uta_align_align_local_full(PyObject *__pyx_v_s1, PyObj
  * 
  *                 editpos[0] = back
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_NEXT_INS);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_NEXT_INS);
 
               /* "uta_align/align/algorithms.pyx":317
  *                 if delcost == delccost:
@@ -5802,7 +5801,7 @@ static PyObject *__pyx_f_9uta_align_align_local_full(PyObject *__pyx_v_s1, PyObj
  * 
  *     free(coldel)
  */
-  __pyx_t_11 = __pyx_f_9uta_align__roll_cigar_gotoh(__pyx_v_s1, __pyx_v_s2, __pyx_v_stop_i, __pyx_v_stop_j, __pyx_v_edits, __pyx_e_9uta_align_MODE_LOCAL, __pyx_v_soft_clip, __pyx_v_extended_cigar); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_t_11 = __pyx_f_9uta_align_5align_10algorithms__roll_cigar_gotoh(__pyx_v_s1, __pyx_v_s2, __pyx_v_stop_i, __pyx_v_stop_j, __pyx_v_edits, __pyx_e_9uta_align_5align_10algorithms_MODE_LOCAL, __pyx_v_soft_clip, __pyx_v_extended_cigar); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   if ((likely(PyTuple_CheckExact(__pyx_t_11))) || (PyList_CheckExact(__pyx_t_11))) {
     PyObject* sequence = __pyx_t_11;
@@ -6040,7 +6039,7 @@ static PyObject *__pyx_f_9uta_align_align_local_full(PyObject *__pyx_v_s1, PyObj
   __Pyx_XDECREF(__pyx_t_17);
   __Pyx_XDECREF(__pyx_t_19);
   __Pyx_XDECREF(__pyx_t_21);
-  __Pyx_AddTraceback("uta_align.align_local_full", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.align_local_full", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_cigar);
@@ -6057,7 +6056,7 @@ static PyObject *__pyx_f_9uta_align_align_local_full(PyObject *__pyx_v_s1, PyObj
  *                        int32_t match_score=10,
  */
 
-static PyObject *__pyx_f_9uta_align_align_local_score(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, struct __pyx_opt_args_9uta_align_align_local_score *__pyx_optional_args) {
+static PyObject *__pyx_f_9uta_align_5align_10algorithms_align_local_score(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, struct __pyx_opt_args_9uta_align_5align_10algorithms_align_local_score *__pyx_optional_args) {
   int32_t __pyx_v_match_score = ((int32_t)10);
   int32_t __pyx_v_mismatch_score = ((int32_t)-9);
   int32_t __pyx_v_gap_open_score = ((int32_t)-15);
@@ -6367,7 +6366,7 @@ static PyObject *__pyx_f_9uta_align_align_local_score(PyObject *__pyx_v_s1, PyOb
  *                 inscost   = max2(Sleft + gap_open_score, inscost   + gap_extend_score)
  *                 Sij       = max4(0, delcost, inscost, matcost)
  */
-            __pyx_v_delcost = __pyx_f_9uta_align_max2((__pyx_v_Sup + __pyx_v_gap_open_score), ((__pyx_v_coldel[__pyx_v_j]) + __pyx_v_gap_extend_score));
+            __pyx_v_delcost = __pyx_f_9uta_align_5align_10algorithms_max2((__pyx_v_Sup + __pyx_v_gap_open_score), ((__pyx_v_coldel[__pyx_v_j]) + __pyx_v_gap_extend_score));
 
             /* "uta_align/align/algorithms.pyx":377
  *                 matcost   = Sdiag + (match_score if c1==c2 else mismatch_score)
@@ -6376,7 +6375,7 @@ static PyObject *__pyx_f_9uta_align_align_local_score(PyObject *__pyx_v_s1, PyOb
  *                 Sij       = max4(0, delcost, inscost, matcost)
  * 
  */
-            __pyx_v_inscost = __pyx_f_9uta_align_max2((__pyx_v_Sleft + __pyx_v_gap_open_score), (__pyx_v_inscost + __pyx_v_gap_extend_score));
+            __pyx_v_inscost = __pyx_f_9uta_align_5align_10algorithms_max2((__pyx_v_Sleft + __pyx_v_gap_open_score), (__pyx_v_inscost + __pyx_v_gap_extend_score));
 
             /* "uta_align/align/algorithms.pyx":378
  *                 delcost   = max2(Sup   + gap_open_score, coldel[j] + gap_extend_score)
@@ -6385,7 +6384,7 @@ static PyObject *__pyx_f_9uta_align_align_local_score(PyObject *__pyx_v_s1, PyOb
  * 
  *                 S[j]      = Sij
  */
-            __pyx_v_Sij = __pyx_f_9uta_align_max4(0, __pyx_v_delcost, __pyx_v_inscost, __pyx_v_matcost);
+            __pyx_v_Sij = __pyx_f_9uta_align_5align_10algorithms_max4(0, __pyx_v_delcost, __pyx_v_inscost, __pyx_v_matcost);
 
             /* "uta_align/align/algorithms.pyx":380
  *                 Sij       = max4(0, delcost, inscost, matcost)
@@ -6631,7 +6630,7 @@ static PyObject *__pyx_f_9uta_align_align_local_score(PyObject *__pyx_v_s1, PyOb
   __Pyx_XDECREF(__pyx_t_15);
   __Pyx_XDECREF(__pyx_t_16);
   __Pyx_XDECREF(__pyx_t_18);
-  __Pyx_AddTraceback("uta_align.align_local_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.align_local_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -6647,7 +6646,7 @@ static PyObject *__pyx_f_9uta_align_align_local_score(PyObject *__pyx_v_s1, PyOb
  *                        int     mode,
  */
 
-static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int __pyx_v_mode, struct __pyx_opt_args_9uta_align_align_glocal_full *__pyx_optional_args) {
+static PyObject *__pyx_f_9uta_align_5align_10algorithms_align_glocal_full(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int __pyx_v_mode, struct __pyx_opt_args_9uta_align_5align_10algorithms_align_glocal_full *__pyx_optional_args) {
   int32_t __pyx_v_match_score = ((int32_t)10);
   int32_t __pyx_v_mismatch_score = ((int32_t)-9);
   int32_t __pyx_v_gap_open_score = ((int32_t)-15);
@@ -7051,7 +7050,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *__pyx_v_s1, PyOb
  *                 insccost  = inscost    + gap_extend_score
  *                 inscost   = max2(Sleft + gap_open_score, insccost)
  */
-            __pyx_v_delcost = __pyx_f_9uta_align_max2((__pyx_v_Sup + __pyx_v_gap_open_score), __pyx_v_delccost);
+            __pyx_v_delcost = __pyx_f_9uta_align_5align_10algorithms_max2((__pyx_v_Sup + __pyx_v_gap_open_score), __pyx_v_delccost);
 
             /* "uta_align/align/algorithms.pyx":461
  *                 delccost  = coldel[j]  + gap_extend_score
@@ -7069,7 +7068,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *__pyx_v_s1, PyOb
  *                 Sij       = max3(delcost, inscost, matcost)
  * 
  */
-            __pyx_v_inscost = __pyx_f_9uta_align_max2((__pyx_v_Sleft + __pyx_v_gap_open_score), __pyx_v_insccost);
+            __pyx_v_inscost = __pyx_f_9uta_align_5align_10algorithms_max2((__pyx_v_Sleft + __pyx_v_gap_open_score), __pyx_v_insccost);
 
             /* "uta_align/align/algorithms.pyx":463
  *                 insccost  = inscost    + gap_extend_score
@@ -7078,7 +7077,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *__pyx_v_s1, PyOb
  * 
  *                 Sdiag     = Sup
  */
-            __pyx_v_Sij = __pyx_f_9uta_align_max3(__pyx_v_delcost, __pyx_v_inscost, __pyx_v_matcost);
+            __pyx_v_Sij = __pyx_f_9uta_align_5align_10algorithms_max3(__pyx_v_delcost, __pyx_v_inscost, __pyx_v_matcost);
 
             /* "uta_align/align/algorithms.pyx":465
  *                 Sij       = max3(delcost, inscost, matcost)
@@ -7196,7 +7195,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *__pyx_v_s1, PyOb
  *                 if Sij == inscost:
  *                     back |= TRACE_INS
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_MATCH);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_MATCH);
 
               /* "uta_align/align/algorithms.pyx":476
  * 
@@ -7224,7 +7223,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *__pyx_v_s1, PyOb
  *                 if Sij == delcost:
  *                     back |= TRACE_DEL
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_INS);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_INS);
 
               /* "uta_align/align/algorithms.pyx":478
  *                 if Sij == matcost:
@@ -7252,7 +7251,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *__pyx_v_s1, PyOb
  *                 if delcost == delccost:
  *                     back |= TRACE_NEXT_DEL
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_DEL);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_DEL);
 
               /* "uta_align/align/algorithms.pyx":480
  *                 if Sij == inscost:
@@ -7280,7 +7279,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *__pyx_v_s1, PyOb
  *                 if inscost == insccost:
  *                     back |= TRACE_NEXT_INS
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_NEXT_DEL);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_NEXT_DEL);
 
               /* "uta_align/align/algorithms.pyx":482
  *                 if Sij == delcost:
@@ -7308,7 +7307,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *__pyx_v_s1, PyOb
  * 
  *                 editpos[0] = back
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_NEXT_INS);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_NEXT_INS);
 
               /* "uta_align/align/algorithms.pyx":484
  *                 if delcost == delccost:
@@ -7392,7 +7391,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *__pyx_v_s1, PyOb
  *             Smax, stop_i, stop_j = Sij, n, m
  *         elif Smax_col >= Smax_row:
  */
-        __pyx_t_10 = ((__pyx_v_mode == __pyx_e_9uta_align_MODE_LOCAL_GLOBAL) != 0);
+        __pyx_t_10 = ((__pyx_v_mode == __pyx_e_9uta_align_5align_10algorithms_MODE_LOCAL_GLOBAL) != 0);
         if (__pyx_t_10) {
 
           /* "uta_align/align/algorithms.pyx":496
@@ -7497,7 +7496,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *__pyx_v_s1, PyOb
  * 
  *     free(coldel)
  */
-  __pyx_t_12 = __pyx_f_9uta_align__roll_cigar_gotoh(__pyx_v_s1, __pyx_v_s2, __pyx_v_stop_i, __pyx_v_stop_j, __pyx_v_edits, __pyx_e_9uta_align_MODE_LOCAL, __pyx_v_soft_clip, __pyx_v_extended_cigar); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 502, __pyx_L1_error)
+  __pyx_t_12 = __pyx_f_9uta_align_5align_10algorithms__roll_cigar_gotoh(__pyx_v_s1, __pyx_v_s2, __pyx_v_stop_i, __pyx_v_stop_j, __pyx_v_edits, __pyx_e_9uta_align_5align_10algorithms_MODE_LOCAL, __pyx_v_soft_clip, __pyx_v_extended_cigar); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 502, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   if ((likely(PyTuple_CheckExact(__pyx_t_12))) || (PyList_CheckExact(__pyx_t_12))) {
     PyObject* sequence = __pyx_t_12;
@@ -7735,7 +7734,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *__pyx_v_s1, PyOb
   __Pyx_XDECREF(__pyx_t_18);
   __Pyx_XDECREF(__pyx_t_20);
   __Pyx_XDECREF(__pyx_t_22);
-  __Pyx_AddTraceback("uta_align.align_glocal_full", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.align_glocal_full", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_cigar);
@@ -7752,7 +7751,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_full(PyObject *__pyx_v_s1, PyOb
  *                         int     mode,
  */
 
-static PyObject *__pyx_f_9uta_align_align_glocal_score(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int __pyx_v_mode, struct __pyx_opt_args_9uta_align_align_glocal_score *__pyx_optional_args) {
+static PyObject *__pyx_f_9uta_align_5align_10algorithms_align_glocal_score(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int __pyx_v_mode, struct __pyx_opt_args_9uta_align_5align_10algorithms_align_glocal_score *__pyx_optional_args) {
   int32_t __pyx_v_match_score = ((int32_t)10);
   int32_t __pyx_v_mismatch_score = ((int32_t)-9);
   int32_t __pyx_v_gap_open_score = ((int32_t)-15);
@@ -8083,7 +8082,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_score(PyObject *__pyx_v_s1, PyO
  *                 inscost   = max2(Sleft + gap_open_score, inscost   + gap_extend_score)
  *                 Sij       = max3(delcost, inscost, matcost)
  */
-            __pyx_v_delcost = __pyx_f_9uta_align_max2((__pyx_v_Sup + __pyx_v_gap_open_score), ((__pyx_v_coldel[__pyx_v_j]) + __pyx_v_gap_extend_score));
+            __pyx_v_delcost = __pyx_f_9uta_align_5align_10algorithms_max2((__pyx_v_Sup + __pyx_v_gap_open_score), ((__pyx_v_coldel[__pyx_v_j]) + __pyx_v_gap_extend_score));
 
             /* "uta_align/align/algorithms.pyx":568
  *                 matcost   = Sdiag + (match_score if c1==c2 else mismatch_score)
@@ -8092,7 +8091,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_score(PyObject *__pyx_v_s1, PyO
  *                 Sij       = max3(delcost, inscost, matcost)
  * 
  */
-            __pyx_v_inscost = __pyx_f_9uta_align_max2((__pyx_v_Sleft + __pyx_v_gap_open_score), (__pyx_v_inscost + __pyx_v_gap_extend_score));
+            __pyx_v_inscost = __pyx_f_9uta_align_5align_10algorithms_max2((__pyx_v_Sleft + __pyx_v_gap_open_score), (__pyx_v_inscost + __pyx_v_gap_extend_score));
 
             /* "uta_align/align/algorithms.pyx":569
  *                 delcost   = max2(Sup   + gap_open_score, coldel[j] + gap_extend_score)
@@ -8101,7 +8100,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_score(PyObject *__pyx_v_s1, PyO
  * 
  *                 Sdiag     = Sup
  */
-            __pyx_v_Sij = __pyx_f_9uta_align_max3(__pyx_v_delcost, __pyx_v_inscost, __pyx_v_matcost);
+            __pyx_v_Sij = __pyx_f_9uta_align_5align_10algorithms_max3(__pyx_v_delcost, __pyx_v_inscost, __pyx_v_matcost);
 
             /* "uta_align/align/algorithms.pyx":571
  *                 Sij       = max3(delcost, inscost, matcost)
@@ -8248,7 +8247,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_score(PyObject *__pyx_v_s1, PyO
  *             Smax, stop_i, stop_j = Sij, n, m
  *         elif Smax_col >= Smax_row:
  */
-        __pyx_t_10 = ((__pyx_v_mode == __pyx_e_9uta_align_MODE_LOCAL_GLOBAL) != 0);
+        __pyx_t_10 = ((__pyx_v_mode == __pyx_e_9uta_align_5align_10algorithms_MODE_LOCAL_GLOBAL) != 0);
         if (__pyx_t_10) {
 
           /* "uta_align/align/algorithms.pyx":587
@@ -8486,7 +8485,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_score(PyObject *__pyx_v_s1, PyO
   __Pyx_XDECREF(__pyx_t_16);
   __Pyx_XDECREF(__pyx_t_17);
   __Pyx_XDECREF(__pyx_t_19);
-  __Pyx_AddTraceback("uta_align.align_glocal_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.align_glocal_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -8502,7 +8501,7 @@ static PyObject *__pyx_f_9uta_align_align_glocal_score(PyObject *__pyx_v_s1, PyO
  *                        int32_t match_score=10,
  */
 
-static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, struct __pyx_opt_args_9uta_align_align_global_full *__pyx_optional_args) {
+static PyObject *__pyx_f_9uta_align_5align_10algorithms_align_global_full(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, struct __pyx_opt_args_9uta_align_5align_10algorithms_align_global_full *__pyx_optional_args) {
   int32_t __pyx_v_match_score = ((int32_t)10);
   int32_t __pyx_v_mismatch_score = ((int32_t)-9);
   int32_t __pyx_v_gap_open_score = ((int32_t)-15);
@@ -8755,7 +8754,7 @@ static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyOb
  * 
  *         for i in range(1,n+1):
  */
-          (__pyx_v_edits[__pyx_v_j]) = __pyx_e_9uta_align_TRACE_INS;
+          (__pyx_v_edits[__pyx_v_j]) = __pyx_e_9uta_align_5align_10algorithms_TRACE_INS;
         }
 
         /* "uta_align/align/algorithms.pyx":646
@@ -8822,7 +8821,7 @@ static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyOb
  *             editpos   += 1
  * 
  */
-          (__pyx_v_editpos[0]) = __pyx_e_9uta_align_TRACE_DEL;
+          (__pyx_v_editpos[0]) = __pyx_e_9uta_align_5align_10algorithms_TRACE_DEL;
 
           /* "uta_align/align/algorithms.pyx":653
  *             inscost    = NINF
@@ -8893,7 +8892,7 @@ static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyOb
  *                 insccost  = inscost    + gap_extend_score
  *                 inscost   = max2(Sleft + gap_open_score, insccost)
  */
-            __pyx_v_delcost = __pyx_f_9uta_align_max2((__pyx_v_Sup + __pyx_v_gap_open_score), __pyx_v_delccost);
+            __pyx_v_delcost = __pyx_f_9uta_align_5align_10algorithms_max2((__pyx_v_Sup + __pyx_v_gap_open_score), __pyx_v_delccost);
 
             /* "uta_align/align/algorithms.pyx":662
  *                 delccost  = coldel[j]  + gap_extend_score
@@ -8911,7 +8910,7 @@ static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyOb
  *                 Sij       = max3(delcost, inscost, matcost)
  * 
  */
-            __pyx_v_inscost = __pyx_f_9uta_align_max2((__pyx_v_Sleft + __pyx_v_gap_open_score), __pyx_v_insccost);
+            __pyx_v_inscost = __pyx_f_9uta_align_5align_10algorithms_max2((__pyx_v_Sleft + __pyx_v_gap_open_score), __pyx_v_insccost);
 
             /* "uta_align/align/algorithms.pyx":664
  *                 insccost  = inscost    + gap_extend_score
@@ -8920,7 +8919,7 @@ static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyOb
  * 
  *                 Sdiag     = Sup
  */
-            __pyx_v_Sij = __pyx_f_9uta_align_max3(__pyx_v_delcost, __pyx_v_inscost, __pyx_v_matcost);
+            __pyx_v_Sij = __pyx_f_9uta_align_5align_10algorithms_max3(__pyx_v_delcost, __pyx_v_inscost, __pyx_v_matcost);
 
             /* "uta_align/align/algorithms.pyx":666
  *                 Sij       = max3(delcost, inscost, matcost)
@@ -8984,7 +8983,7 @@ static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyOb
  *                 if Sij == inscost:
  *                     back |= TRACE_INS
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_MATCH);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_MATCH);
 
               /* "uta_align/align/algorithms.pyx":672
  * 
@@ -9012,7 +9011,7 @@ static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyOb
  *                 if Sij == delcost:
  *                     back |= TRACE_DEL
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_INS);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_INS);
 
               /* "uta_align/align/algorithms.pyx":674
  *                 if Sij == matcost:
@@ -9040,7 +9039,7 @@ static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyOb
  *                 if delcost == delccost:
  *                     back |= TRACE_NEXT_DEL
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_DEL);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_DEL);
 
               /* "uta_align/align/algorithms.pyx":676
  *                 if Sij == inscost:
@@ -9068,7 +9067,7 @@ static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyOb
  *                 if inscost == insccost:
  *                     back |= TRACE_NEXT_INS
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_NEXT_DEL);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_NEXT_DEL);
 
               /* "uta_align/align/algorithms.pyx":678
  *                 if Sij == delcost:
@@ -9096,7 +9095,7 @@ static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyOb
  * 
  *                 editpos[0] = back
  */
-              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_TRACE_NEXT_INS);
+              __pyx_v_back = (__pyx_v_back | __pyx_e_9uta_align_5align_10algorithms_TRACE_NEXT_INS);
 
               /* "uta_align/align/algorithms.pyx":680
  *                 if delcost == delccost:
@@ -9163,7 +9162,7 @@ static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyOb
  * 
  *     free(coldel)
  */
-  __pyx_t_11 = __pyx_f_9uta_align__roll_cigar_gotoh(__pyx_v_s1, __pyx_v_s2, __pyx_v_n, __pyx_v_m, __pyx_v_edits, __pyx_e_9uta_align_MODE_GLOBAL, 0, __pyx_v_extended_cigar); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 688, __pyx_L1_error)
+  __pyx_t_11 = __pyx_f_9uta_align_5align_10algorithms__roll_cigar_gotoh(__pyx_v_s1, __pyx_v_s2, __pyx_v_n, __pyx_v_m, __pyx_v_edits, __pyx_e_9uta_align_5align_10algorithms_MODE_GLOBAL, 0, __pyx_v_extended_cigar); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 688, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   if ((likely(PyTuple_CheckExact(__pyx_t_11))) || (PyList_CheckExact(__pyx_t_11))) {
     PyObject* sequence = __pyx_t_11;
@@ -9387,7 +9386,7 @@ static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyOb
   __Pyx_XDECREF(__pyx_t_15);
   __Pyx_XDECREF(__pyx_t_16);
   __Pyx_XDECREF(__pyx_t_17);
-  __Pyx_AddTraceback("uta_align.align_global_full", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.align_global_full", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v__);
@@ -9405,7 +9404,7 @@ static PyObject *__pyx_f_9uta_align_align_global_full(PyObject *__pyx_v_s1, PyOb
  *                         int32_t match_score=10,
  */
 
-static PyObject *__pyx_f_9uta_align_align_global_score(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, struct __pyx_opt_args_9uta_align_align_global_score *__pyx_optional_args) {
+static PyObject *__pyx_f_9uta_align_5align_10algorithms_align_global_score(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, struct __pyx_opt_args_9uta_align_5align_10algorithms_align_global_score *__pyx_optional_args) {
   int32_t __pyx_v_match_score = ((int32_t)10);
   int32_t __pyx_v_mismatch_score = ((int32_t)-9);
   int32_t __pyx_v_gap_open_score = ((int32_t)-15);
@@ -9713,7 +9712,7 @@ static PyObject *__pyx_f_9uta_align_align_global_score(PyObject *__pyx_v_s1, PyO
  *                 inscost   = max2(Sleft + gap_open_score, inscost   + gap_extend_score)
  *                 Sij       = max3(delcost, inscost, matcost)
  */
-            __pyx_v_delcost = __pyx_f_9uta_align_max2((__pyx_v_Sup + __pyx_v_gap_open_score), ((__pyx_v_coldel[__pyx_v_j]) + __pyx_v_gap_extend_score));
+            __pyx_v_delcost = __pyx_f_9uta_align_5align_10algorithms_max2((__pyx_v_Sup + __pyx_v_gap_open_score), ((__pyx_v_coldel[__pyx_v_j]) + __pyx_v_gap_extend_score));
 
             /* "uta_align/align/algorithms.pyx":752
  *                 matcost   = Sdiag + (match_score if c1==c2 else mismatch_score)
@@ -9722,7 +9721,7 @@ static PyObject *__pyx_f_9uta_align_align_global_score(PyObject *__pyx_v_s1, PyO
  *                 Sij       = max3(delcost, inscost, matcost)
  * 
  */
-            __pyx_v_inscost = __pyx_f_9uta_align_max2((__pyx_v_Sleft + __pyx_v_gap_open_score), (__pyx_v_inscost + __pyx_v_gap_extend_score));
+            __pyx_v_inscost = __pyx_f_9uta_align_5align_10algorithms_max2((__pyx_v_Sleft + __pyx_v_gap_open_score), (__pyx_v_inscost + __pyx_v_gap_extend_score));
 
             /* "uta_align/align/algorithms.pyx":753
  *                 delcost   = max2(Sup   + gap_open_score, coldel[j] + gap_extend_score)
@@ -9731,7 +9730,7 @@ static PyObject *__pyx_f_9uta_align_align_global_score(PyObject *__pyx_v_s1, PyO
  * 
  *                 Sdiag     = Sup
  */
-            __pyx_v_Sij = __pyx_f_9uta_align_max3(__pyx_v_delcost, __pyx_v_inscost, __pyx_v_matcost);
+            __pyx_v_Sij = __pyx_f_9uta_align_5align_10algorithms_max3(__pyx_v_delcost, __pyx_v_inscost, __pyx_v_matcost);
 
             /* "uta_align/align/algorithms.pyx":755
  *                 Sij       = max3(delcost, inscost, matcost)
@@ -9967,7 +9966,7 @@ static PyObject *__pyx_f_9uta_align_align_global_score(PyObject *__pyx_v_s1, PyO
   __Pyx_XDECREF(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_15);
   __Pyx_XDECREF(__pyx_t_17);
-  __Pyx_AddTraceback("uta_align.align_global_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.align_global_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -9983,7 +9982,7 @@ static PyObject *__pyx_f_9uta_align_align_global_score(PyObject *__pyx_v_s1, PyO
  *     Compute the sequence of edits required to transform sequence s1 to s2
  */
 
-static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, size_t __pyx_v_i, size_t __pyx_v_j, char *__pyx_v_edits, int __pyx_v_mode, int __pyx_v_soft_clip, int __pyx_v_extended_cigar) {
+static PyObject *__pyx_f_9uta_align_5align_10algorithms__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, size_t __pyx_v_i, size_t __pyx_v_j, char *__pyx_v_edits, int __pyx_v_mode, int __pyx_v_soft_clip, int __pyx_v_extended_cigar) {
   size_t __pyx_v_n;
   size_t __pyx_v_m;
   char *__pyx_v_ss1;
@@ -10163,7 +10162,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyOb
  *         cigar.append( (DELETION, n - i - 1) )
  *         ref_stop = n
  */
-  __pyx_t_5 = ((__pyx_v_mode == __pyx_e_9uta_align_MODE_GLOBAL) != 0);
+  __pyx_t_5 = ((__pyx_v_mode == __pyx_e_9uta_align_5align_10algorithms_MODE_GLOBAL) != 0);
   if (__pyx_t_5) {
   } else {
     __pyx_t_4 = __pyx_t_5;
@@ -10223,7 +10222,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyOb
  *         cigar.append( (INSERTION, m - j - 1) )
  *         query_stop = m
  */
-  __pyx_t_5 = ((__pyx_v_mode == __pyx_e_9uta_align_MODE_GLOBAL) != 0);
+  __pyx_t_5 = ((__pyx_v_mode == __pyx_e_9uta_align_5align_10algorithms_MODE_GLOBAL) != 0);
   if (__pyx_t_5) {
   } else {
     __pyx_t_4 = __pyx_t_5;
@@ -10301,7 +10300,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyOb
  *     back_dir  = back
  * 
  */
-  __pyx_v_back = __pyx_e_9uta_align_TRACE_MATCH;
+  __pyx_v_back = __pyx_e_9uta_align_5align_10algorithms_TRACE_MATCH;
 
   /* "uta_align/align/algorithms.pyx":804
  *     count     = 0
@@ -10365,7 +10364,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyOb
  * 
  *         if op==b'D' and (last_back & TRACE_NEXT_DEL):
  */
-    __pyx_v_back_dir = (__pyx_v_back & __pyx_e_9uta_align_TRACE_DIR_MASK);
+    __pyx_v_back_dir = (__pyx_v_back & __pyx_e_9uta_align_5align_10algorithms_TRACE_DIR_MASK);
 
     /* "uta_align/align/algorithms.pyx":812
  *         back_dir  = back & TRACE_DIR_MASK
@@ -10380,7 +10379,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyOb
       __pyx_t_4 = __pyx_t_5;
       goto __pyx_L17_bool_binop_done;
     }
-    __pyx_t_5 = ((__pyx_v_last_back & __pyx_e_9uta_align_TRACE_NEXT_DEL) != 0);
+    __pyx_t_5 = ((__pyx_v_last_back & __pyx_e_9uta_align_5align_10algorithms_TRACE_NEXT_DEL) != 0);
     __pyx_t_4 = __pyx_t_5;
     __pyx_L17_bool_binop_done:;
     if (__pyx_t_4) {
@@ -10417,7 +10416,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyOb
       __pyx_t_4 = __pyx_t_5;
       goto __pyx_L19_bool_binop_done;
     }
-    __pyx_t_5 = ((__pyx_v_last_back & __pyx_e_9uta_align_TRACE_NEXT_INS) != 0);
+    __pyx_t_5 = ((__pyx_v_last_back & __pyx_e_9uta_align_5align_10algorithms_TRACE_NEXT_INS) != 0);
     __pyx_t_4 = __pyx_t_5;
     __pyx_L19_bool_binop_done:;
     if (__pyx_t_4) {
@@ -10448,7 +10447,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyOb
  *             op = b'M'
  *         elif back_dir & TRACE_DEL:
  */
-    __pyx_t_4 = ((__pyx_v_back_dir & __pyx_e_9uta_align_TRACE_MATCH) != 0);
+    __pyx_t_4 = ((__pyx_v_back_dir & __pyx_e_9uta_align_5align_10algorithms_TRACE_MATCH) != 0);
     if (__pyx_t_4) {
 
       /* "uta_align/align/algorithms.pyx":817
@@ -10477,7 +10476,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyOb
  *             op = b'D'
  *         elif back_dir & TRACE_INS:
  */
-    __pyx_t_4 = ((__pyx_v_back_dir & __pyx_e_9uta_align_TRACE_DEL) != 0);
+    __pyx_t_4 = ((__pyx_v_back_dir & __pyx_e_9uta_align_5align_10algorithms_TRACE_DEL) != 0);
     if (__pyx_t_4) {
 
       /* "uta_align/align/algorithms.pyx":819
@@ -10506,7 +10505,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyOb
  *             op = b'I'
  *         else:
  */
-    __pyx_t_4 = ((__pyx_v_back_dir & __pyx_e_9uta_align_TRACE_INS) != 0);
+    __pyx_t_4 = ((__pyx_v_back_dir & __pyx_e_9uta_align_5align_10algorithms_TRACE_INS) != 0);
     if (__pyx_t_4) {
 
       /* "uta_align/align/algorithms.pyx":821
@@ -10884,7 +10883,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyOb
  *         cigar.append( (DELETION, j) )
  *         i = 0
  */
-  __pyx_t_5 = ((__pyx_v_mode == __pyx_e_9uta_align_MODE_GLOBAL) != 0);
+  __pyx_t_5 = ((__pyx_v_mode == __pyx_e_9uta_align_5align_10algorithms_MODE_GLOBAL) != 0);
   if (__pyx_t_5) {
   } else {
     __pyx_t_4 = __pyx_t_5;
@@ -10944,7 +10943,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyOb
  *         cigar.append( (INSERTION, j) )
  *         j = 0
  */
-  __pyx_t_5 = ((__pyx_v_mode == __pyx_e_9uta_align_MODE_GLOBAL) != 0);
+  __pyx_t_5 = ((__pyx_v_mode == __pyx_e_9uta_align_5align_10algorithms_MODE_GLOBAL) != 0);
   if (__pyx_t_5) {
   } else {
     __pyx_t_4 = __pyx_t_5;
@@ -11060,7 +11059,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyOb
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("uta_align._roll_cigar_gotoh", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms._roll_cigar_gotoh", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_cigar);
@@ -11078,10 +11077,10 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_gotoh(PyObject *__pyx_v_s1, PyOb
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9uta_align_5align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_9uta_align_4align[] = "align(bytes ref, bytes query, bytes mode, char score_only=0, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6, char extended_cigar=0, char soft_clip=0)\n\n    Align ref to query using a global, glocal or hybrid global/local (glocal) gapped alignment with\n    affine gap penalties using the scoring parameters provided.  An Alignment object is returned.\n\n    :param              ref: reference sequence  (str/bytes)\n    :param            query: query sequence (str/bytes)\n    :param             mode: 'global', 'local' or 'glocal'\n    :param       score_only: Compute only optimal alignment score and stop coordinates (boolean, default=False)\n    :param      match_score: match score (int, default=10)\n    :param   mismatch_score: mismatch score (int, default=-9)\n    :param   gap_open_score: gap open score (int, default=-15)\n    :param gap_extend_score: gap extend score (int, default=-6)\n    :param   extended_cigar: produce extended CIGAR (boolean, default=False)\n    :param        soft_clip: add soft-clipping to local/glocal alignments (boolean, default=False)\n    :return:                 Alignment object\n\n    If mode == 'global' then the Needleman-Wunsch-Gotoh algorithm is used to return the global\n    alignment of ref to query.\n\n    If mode == 'local' then the Smith-Waterman-Gotoh algorithm is used to return the local\n    alignment of ref to query.\n\n    If mode == 'glocal' then a variant of the Needleman-Wunsch-Gotoh algorithm is used to return the\n    alignment of ref to query.  This alignment is similar to global alignment with no penalty for leading\n    or trailing gaps, provided that the maximum scoring alignments that spans from the start of the\n    reference or the query sequence and read the end of the reference or the query sequence.\n\n    If mode == 'local_global' then a variant of the Needleman-Wunsch-Gotoh algorithm is used to\n    return the alignment of ref to query.  This alignme""nt is similar to global alignment with no\n    penalty for leading gaps and to glocal alignments except the alignment must span to the end of\n    both the reference and query alignments.\n\n    If score_only evaluates to True, then only the optimal alignment score and end coordinates of the\n    alignment are returned.  Otherwise, the start coordinates and alignment operations are also returned.\n    The operations to align ref to query are returned as a sequence, represented by tuples of extended\n    CIGAR (Compact Idiosyncratic Gapped Alignment Report) operations and counts:\n\n      Match or mismatch: (MATCH,        count) if not extended_cigar\n      Match:             (SEQ_MATCH,    count) if extended_cigar\n      Mismatch:          (SEQ_MISMATCH, count) if extended_cigar\n      Insertion:         (INSERTION,    count)\n      Deletion:          (DELETION,     count)\n\n    This implementation is based on a standard dynamic programming algorithm, requiring O(n*m) time,\n    where n and m are the lengths of the two sequences.  If full alignments are requested (not score_only),\n    then O(n*m) space is also required.\n\n    See also:\n\n         http://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm\n\n         http://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm\n\n         Needleman, Saul B.; and Wunsch, Christian D. (1970). \"A general method applicable to the\n         search for similarities in the amino acid sequence of two proteins\".  Journal of Molecular\n         Biology 48 (3): 443.53.  doi:10.1016/0022-2836(70)90057-4.  PMID 5420325.\n\n         Smith, Temple F.; and Waterman, Michael S. (1981). \"Identification of Common Molecular\n         Subsequences\".  Journal of Molecular Biology 147: 195\342\200\223197.\n         http://gel.ym.edu.tw/~chc/AB_papers/03.pdf\n\n         Gotoh O (1982). \"An improved algorithm for matching biological sequences.\" J Mol Biol,\n         162:705-708.\n    ";
-static PyMethodDef __pyx_mdef_9uta_align_5align = {"align", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_5align, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_4align};
-static PyObject *__pyx_pw_9uta_align_5align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_5align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9uta_align_5align_10algorithms_4align[] = "align(bytes ref, bytes query, bytes mode, char score_only=0, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6, char extended_cigar=0, char soft_clip=0)\n\n    Align ref to query using a global, glocal or hybrid global/local (glocal) gapped alignment with\n    affine gap penalties using the scoring parameters provided.  An Alignment object is returned.\n\n    :param              ref: reference sequence  (str/bytes)\n    :param            query: query sequence (str/bytes)\n    :param             mode: 'global', 'local' or 'glocal'\n    :param       score_only: Compute only optimal alignment score and stop coordinates (boolean, default=False)\n    :param      match_score: match score (int, default=10)\n    :param   mismatch_score: mismatch score (int, default=-9)\n    :param   gap_open_score: gap open score (int, default=-15)\n    :param gap_extend_score: gap extend score (int, default=-6)\n    :param   extended_cigar: produce extended CIGAR (boolean, default=False)\n    :param        soft_clip: add soft-clipping to local/glocal alignments (boolean, default=False)\n    :return:                 Alignment object\n\n    If mode == 'global' then the Needleman-Wunsch-Gotoh algorithm is used to return the global\n    alignment of ref to query.\n\n    If mode == 'local' then the Smith-Waterman-Gotoh algorithm is used to return the local\n    alignment of ref to query.\n\n    If mode == 'glocal' then a variant of the Needleman-Wunsch-Gotoh algorithm is used to return the\n    alignment of ref to query.  This alignment is similar to global alignment with no penalty for leading\n    or trailing gaps, provided that the maximum scoring alignments that spans from the start of the\n    reference or the query sequence and read the end of the reference or the query sequence.\n\n    If mode == 'local_global' then a variant of the Needleman-Wunsch-Gotoh algorithm is used to\n    return the alignment of ref to query.  This alignme""nt is similar to global alignment with no\n    penalty for leading gaps and to glocal alignments except the alignment must span to the end of\n    both the reference and query alignments.\n\n    If score_only evaluates to True, then only the optimal alignment score and end coordinates of the\n    alignment are returned.  Otherwise, the start coordinates and alignment operations are also returned.\n    The operations to align ref to query are returned as a sequence, represented by tuples of extended\n    CIGAR (Compact Idiosyncratic Gapped Alignment Report) operations and counts:\n\n      Match or mismatch: (MATCH,        count) if not extended_cigar\n      Match:             (SEQ_MATCH,    count) if extended_cigar\n      Mismatch:          (SEQ_MISMATCH, count) if extended_cigar\n      Insertion:         (INSERTION,    count)\n      Deletion:          (DELETION,     count)\n\n    This implementation is based on a standard dynamic programming algorithm, requiring O(n*m) time,\n    where n and m are the lengths of the two sequences.  If full alignments are requested (not score_only),\n    then O(n*m) space is also required.\n\n    See also:\n\n         http://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm\n\n         http://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm\n\n         Needleman, Saul B.; and Wunsch, Christian D. (1970). \"A general method applicable to the\n         search for similarities in the amino acid sequence of two proteins\".  Journal of Molecular\n         Biology 48 (3): 443.53.  doi:10.1016/0022-2836(70)90057-4.  PMID 5420325.\n\n         Smith, Temple F.; and Waterman, Michael S. (1981). \"Identification of Common Molecular\n         Subsequences\".  Journal of Molecular Biology 147: 195\342\200\223197.\n         http://gel.ym.edu.tw/~chc/AB_papers/03.pdf\n\n         Gotoh O (1982). \"An improved algorithm for matching biological sequences.\" J Mol Biol,\n         162:705-708.\n    ";
+static PyMethodDef __pyx_mdef_9uta_align_5align_10algorithms_5align = {"align", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_5align_10algorithms_5align, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_5align_10algorithms_4align};
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_5align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_ref = 0;
   PyObject *__pyx_v_query = 0;
   PyObject *__pyx_v_mode = 0;
@@ -11254,14 +11253,14 @@ static PyObject *__pyx_pw_9uta_align_5align(PyObject *__pyx_self, PyObject *__py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("align", 0, 3, 10, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 868, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("uta_align.align", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.align", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ref), (&PyBytes_Type), 1, "ref", 1))) __PYX_ERR(0, 868, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_query), (&PyBytes_Type), 1, "query", 1))) __PYX_ERR(0, 869, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_mode), (&PyBytes_Type), 1, "mode", 1))) __PYX_ERR(0, 870, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9uta_align_4align(__pyx_self, __pyx_v_ref, __pyx_v_query, __pyx_v_mode, __pyx_v_score_only, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score, __pyx_v_extended_cigar, __pyx_v_soft_clip);
+  __pyx_r = __pyx_pf_9uta_align_5align_10algorithms_4align(__pyx_self, __pyx_v_ref, __pyx_v_query, __pyx_v_mode, __pyx_v_score_only, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score, __pyx_v_extended_cigar, __pyx_v_soft_clip);
 
   /* function exit code */
   goto __pyx_L0;
@@ -11272,18 +11271,18 @@ static PyObject *__pyx_pw_9uta_align_5align(PyObject *__pyx_self, PyObject *__py
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9uta_align_4align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_ref, PyObject *__pyx_v_query, PyObject *__pyx_v_mode, char __pyx_v_score_only, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar, char __pyx_v_soft_clip) {
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_4align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_ref, PyObject *__pyx_v_query, PyObject *__pyx_v_mode, char __pyx_v_score_only, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar, char __pyx_v_soft_clip) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   int __pyx_t_3;
-  struct __pyx_opt_args_9uta_align_align_local_score __pyx_t_4;
-  struct __pyx_opt_args_9uta_align_align_local_full __pyx_t_5;
-  struct __pyx_opt_args_9uta_align_align_global_score __pyx_t_6;
-  struct __pyx_opt_args_9uta_align_align_global_full __pyx_t_7;
-  struct __pyx_opt_args_9uta_align_align_glocal_score __pyx_t_8;
-  struct __pyx_opt_args_9uta_align_align_glocal_full __pyx_t_9;
+  struct __pyx_opt_args_9uta_align_5align_10algorithms_align_local_score __pyx_t_4;
+  struct __pyx_opt_args_9uta_align_5align_10algorithms_align_local_full __pyx_t_5;
+  struct __pyx_opt_args_9uta_align_5align_10algorithms_align_global_score __pyx_t_6;
+  struct __pyx_opt_args_9uta_align_5align_10algorithms_align_global_full __pyx_t_7;
+  struct __pyx_opt_args_9uta_align_5align_10algorithms_align_glocal_score __pyx_t_8;
+  struct __pyx_opt_args_9uta_align_5align_10algorithms_align_glocal_full __pyx_t_9;
   PyObject *__pyx_t_10 = NULL;
   __Pyx_RefNannySetupContext("align", 0);
   __Pyx_INCREF(__pyx_v_mode);
@@ -11463,7 +11462,7 @@ static PyObject *__pyx_pf_9uta_align_4align(CYTHON_UNUSED PyObject *__pyx_self, 
       __pyx_t_4.mismatch_score = __pyx_v_mismatch_score;
       __pyx_t_4.gap_open_score = __pyx_v_gap_open_score;
       __pyx_t_4.gap_extend_score = __pyx_v_gap_extend_score;
-      __pyx_t_2 = __pyx_f_9uta_align_align_local_score(__pyx_v_ref, __pyx_v_query, &__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 955, __pyx_L1_error)
+      __pyx_t_2 = __pyx_f_9uta_align_5align_10algorithms_align_local_score(__pyx_v_ref, __pyx_v_query, &__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 955, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_r = __pyx_t_2;
       __pyx_t_2 = 0;
@@ -11494,7 +11493,7 @@ static PyObject *__pyx_pf_9uta_align_4align(CYTHON_UNUSED PyObject *__pyx_self, 
       __pyx_t_5.gap_extend_score = __pyx_v_gap_extend_score;
       __pyx_t_5.extended_cigar = __pyx_v_extended_cigar;
       __pyx_t_5.soft_clip = __pyx_v_soft_clip;
-      __pyx_t_2 = __pyx_f_9uta_align_align_local_full(__pyx_v_ref, __pyx_v_query, &__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 957, __pyx_L1_error)
+      __pyx_t_2 = __pyx_f_9uta_align_5align_10algorithms_align_local_full(__pyx_v_ref, __pyx_v_query, &__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 957, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_r = __pyx_t_2;
       __pyx_t_2 = 0;
@@ -11544,7 +11543,7 @@ static PyObject *__pyx_pf_9uta_align_4align(CYTHON_UNUSED PyObject *__pyx_self, 
       __pyx_t_6.mismatch_score = __pyx_v_mismatch_score;
       __pyx_t_6.gap_open_score = __pyx_v_gap_open_score;
       __pyx_t_6.gap_extend_score = __pyx_v_gap_extend_score;
-      __pyx_t_2 = __pyx_f_9uta_align_align_global_score(__pyx_v_ref, __pyx_v_query, &__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 960, __pyx_L1_error)
+      __pyx_t_2 = __pyx_f_9uta_align_5align_10algorithms_align_global_score(__pyx_v_ref, __pyx_v_query, &__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 960, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_r = __pyx_t_2;
       __pyx_t_2 = 0;
@@ -11574,7 +11573,7 @@ static PyObject *__pyx_pf_9uta_align_4align(CYTHON_UNUSED PyObject *__pyx_self, 
       __pyx_t_7.gap_open_score = __pyx_v_gap_open_score;
       __pyx_t_7.gap_extend_score = __pyx_v_gap_extend_score;
       __pyx_t_7.extended_cigar = __pyx_v_extended_cigar;
-      __pyx_t_2 = __pyx_f_9uta_align_align_global_full(__pyx_v_ref, __pyx_v_query, &__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 962, __pyx_L1_error)
+      __pyx_t_2 = __pyx_f_9uta_align_5align_10algorithms_align_global_full(__pyx_v_ref, __pyx_v_query, &__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 962, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_r = __pyx_t_2;
       __pyx_t_2 = 0;
@@ -11624,7 +11623,7 @@ static PyObject *__pyx_pf_9uta_align_4align(CYTHON_UNUSED PyObject *__pyx_self, 
       __pyx_t_8.mismatch_score = __pyx_v_mismatch_score;
       __pyx_t_8.gap_open_score = __pyx_v_gap_open_score;
       __pyx_t_8.gap_extend_score = __pyx_v_gap_extend_score;
-      __pyx_t_2 = __pyx_f_9uta_align_align_glocal_score(__pyx_v_ref, __pyx_v_query, __pyx_e_9uta_align_MODE_GLOCAL, &__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 965, __pyx_L1_error)
+      __pyx_t_2 = __pyx_f_9uta_align_5align_10algorithms_align_glocal_score(__pyx_v_ref, __pyx_v_query, __pyx_e_9uta_align_5align_10algorithms_MODE_GLOCAL, &__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 965, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_r = __pyx_t_2;
       __pyx_t_2 = 0;
@@ -11655,7 +11654,7 @@ static PyObject *__pyx_pf_9uta_align_4align(CYTHON_UNUSED PyObject *__pyx_self, 
       __pyx_t_9.gap_extend_score = __pyx_v_gap_extend_score;
       __pyx_t_9.extended_cigar = __pyx_v_extended_cigar;
       __pyx_t_9.soft_clip = __pyx_v_soft_clip;
-      __pyx_t_2 = __pyx_f_9uta_align_align_glocal_full(__pyx_v_ref, __pyx_v_query, __pyx_e_9uta_align_MODE_GLOCAL, &__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 967, __pyx_L1_error)
+      __pyx_t_2 = __pyx_f_9uta_align_5align_10algorithms_align_glocal_full(__pyx_v_ref, __pyx_v_query, __pyx_e_9uta_align_5align_10algorithms_MODE_GLOCAL, &__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 967, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_r = __pyx_t_2;
       __pyx_t_2 = 0;
@@ -11705,7 +11704,7 @@ static PyObject *__pyx_pf_9uta_align_4align(CYTHON_UNUSED PyObject *__pyx_self, 
       __pyx_t_8.mismatch_score = __pyx_v_mismatch_score;
       __pyx_t_8.gap_open_score = __pyx_v_gap_open_score;
       __pyx_t_8.gap_extend_score = __pyx_v_gap_extend_score;
-      __pyx_t_2 = __pyx_f_9uta_align_align_glocal_score(__pyx_v_ref, __pyx_v_query, __pyx_e_9uta_align_MODE_LOCAL_GLOBAL, &__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 970, __pyx_L1_error)
+      __pyx_t_2 = __pyx_f_9uta_align_5align_10algorithms_align_glocal_score(__pyx_v_ref, __pyx_v_query, __pyx_e_9uta_align_5align_10algorithms_MODE_LOCAL_GLOBAL, &__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 970, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_r = __pyx_t_2;
       __pyx_t_2 = 0;
@@ -11736,7 +11735,7 @@ static PyObject *__pyx_pf_9uta_align_4align(CYTHON_UNUSED PyObject *__pyx_self, 
       __pyx_t_9.gap_extend_score = __pyx_v_gap_extend_score;
       __pyx_t_9.extended_cigar = __pyx_v_extended_cigar;
       __pyx_t_9.soft_clip = __pyx_v_soft_clip;
-      __pyx_t_2 = __pyx_f_9uta_align_align_glocal_full(__pyx_v_ref, __pyx_v_query, __pyx_e_9uta_align_MODE_LOCAL_GLOBAL, &__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 972, __pyx_L1_error)
+      __pyx_t_2 = __pyx_f_9uta_align_5align_10algorithms_align_glocal_full(__pyx_v_ref, __pyx_v_query, __pyx_e_9uta_align_5align_10algorithms_MODE_LOCAL_GLOBAL, &__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 972, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_r = __pyx_t_2;
       __pyx_t_2 = 0;
@@ -11782,7 +11781,7 @@ static PyObject *__pyx_pf_9uta_align_4align(CYTHON_UNUSED PyObject *__pyx_self, 
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("uta_align.align", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.align", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_mode);
@@ -11800,21 +11799,21 @@ static PyObject *__pyx_pf_9uta_align_4align(CYTHON_UNUSED PyObject *__pyx_self, 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9uta_align_7test_align(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_9uta_align_6test_align[] = "test_align()\n\n    >>> s1,s2=b'b',b'abc'\n    >>> a = align(s1,s2,b'local')\n    >>> a.score\n    10\n    >>> a.cigar.to_string()\n    b'1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'b'\n    >>> a2\n    b'.'\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = align(s1,s2,b'local')\n    >>> a.ref_start, a.ref_stop\n    (1, 2)\n    >>> a.query_start, a.query_stop\n    (0, 1)\n    >>> a.score\n    10\n    >>> a.cigar.to_string()\n    b'1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'b'\n    >>> a2\n    b'.'\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = align(s1,s2,b'local',match_score=30)\n    >>> a.ref_start, a.ref_stop\n    (0, 7)\n    >>> a.query_start, a.query_stop\n    (0, 3)\n    >>> a.score\n    48\n    >>> a.cigar.to_string()\n    b'1M2D1M2D1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'abbcbbd'\n    >>> a2\n    b'.--.--.'\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = align(s1,s2,b'local',mismatch_score=-20)\n    >>> a.ref_start, a.ref_stop\n    (46, 53)\n    >>> a.query_start, a.query_stop\n    (6, 14)\n    >>> a.score\n    55\n    >>> a.cigar.to_string()\n    b'2M1I5M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'GC-ACACA'\n    >>> a2\n    b'..G.....'\n\n    >>> s1,s2=b'b',b'abc'\n    >>> a = align(s1,s2,b'glocal')\n    >>> a.score\n    10\n    >>> a.cigar.to_string()\n    b'1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'b'\n    >>> a2\n    b'.'\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = align(s1,s2,b'glocal')\n    >>> a.ref_start, a.ref_stop\n    (1, 2)\n    >>> a.query_start, a.query_stop\n    (0, 1)\n    >>> a.score\n    10\n    >>> a.cigar.to_string()\n    b'1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'b'\n    >>> a2\n    b'.'\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = align(s1,s2,b'glocal',match_score=30)\n    >>> a.ref_start, a.ref_stop\n    (0, 7)\n    >>> a.query_start, a.query_stop\n    (0, 3)""\n    >>> a.score\n    48\n    >>> a.cigar.to_string()\n    b'1M2D1M2D1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'abbcbbd'\n    >>> a2\n    b'.--.--.'\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = align(s1,s2,b'glocal',mismatch_score=-20)\n    >>> a.ref_start, a.ref_stop\n    (36, 53)\n    >>> a.query_start, a.query_stop\n    (0, 15)\n    >>> a.score\n    27\n    >>> a.cigar.to_string()\n    b'1M1D3M4D1M1I2M1I5M1I'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'GACTGCCAAG-GC-ACACA-'\n    >>> a2\n    b'.-...----.T..G.....T'\n\n    >>> s1,s2=b'b',b'abc'\n    >>> a = align(s1,s2,b'glocal',score_only=True)\n    >>> a.ref_stop, a.query_stop, a.score\n    (1, 2, 10)\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = align(s1,s2,b'glocal',score_only=True)\n    >>> a.ref_stop, a.query_stop, a.score\n    (2, 1, 10)\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = align(s1,s2,b'glocal',score_only=True,match_score=30)\n    >>> a.ref_stop, a.query_stop, a.score\n    (7, 3, 48)\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = align(s1,s2,b'glocal',score_only=True,mismatch_score=-20)\n    >>> a.ref_stop, a.query_stop, a.score\n    (53, 15, 27)\n\n    >>> s1,s2=b'b',b'abc'\n    >>> a = align(s1,s2,b'local',score_only=True)\n    >>> a.ref_stop, a.query_stop, a.score\n    (1, 2, 10)\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = align(s1,s2,b'local',score_only=True)\n    >>> a.ref_stop, a.query_stop, a.score\n    (2, 1, 10)\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = align(s1,s2,b'local',score_only=True,match_score=30)\n    >>> a.ref_stop, a.query_stop, a.score\n    (7, 3, 48)\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = align(s1,s2,b'local',score_only=True,mismatch_score=-20)\n    >>> a.ref_stop, a.query_stop, a.score\n    (53, 14, 55)\n""\n    >>> s1,s2=b'b',b'abc'\n    >>> a = align(s1,s2,b'global')\n    >>> a.score\n    -20\n    >>> a.cigar.to_string()\n    b'1I1M1I'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'-b-'\n    >>> a2\n    b'a.c'\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = align(s1,s2,b'global')\n    >>> a.score\n    -20\n    >>> a.cigar.to_string()\n    b'1D1M1D'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'abc'\n    >>> a2\n    b'-.-'\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = align(s1,s2,b'global',match_score=30)\n    >>> a.score\n    48\n    >>> a.cigar.to_string()\n    b'1M2D1M2D1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'abbcbbd'\n    >>> a2\n    b'.--.--.'\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = align(s1,s2,b'global')\n    >>> a.score\n    -198\n    >>> a.cigar.to_string()\n    b'1D1M9D3M5D1M19D3M3D1M2D4M5D2M2D'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> a2\n    b'-.---------...-----.-------------------...---.--....-----..--'\n\n    >>> s1,s2=b'b',b'abc'\n    >>> a = align(s1,s2,b'global',score_only=True)\n    >>> a.score\n    -20\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = align(s1,s2,b'global',score_only=True)\n    >>> a.score\n    -20\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = align(s1,s2,b'global',score_only=True,match_score=30)\n    >>> a.score\n    48\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = align(s1,s2,b'global',score_only=True)\n    >>> a.score\n    -198\n    ";
-static PyMethodDef __pyx_mdef_9uta_align_7test_align = {"test_align", (PyCFunction)__pyx_pw_9uta_align_7test_align, METH_NOARGS, __pyx_doc_9uta_align_6test_align};
-static PyObject *__pyx_pw_9uta_align_7test_align(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_7test_align(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_9uta_align_5align_10algorithms_6test_align[] = "test_align()\n\n    >>> s1,s2=b'b',b'abc'\n    >>> a = align(s1,s2,b'local')\n    >>> a.score\n    10\n    >>> a.cigar.to_string()\n    b'1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'b'\n    >>> a2\n    b'.'\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = align(s1,s2,b'local')\n    >>> a.ref_start, a.ref_stop\n    (1, 2)\n    >>> a.query_start, a.query_stop\n    (0, 1)\n    >>> a.score\n    10\n    >>> a.cigar.to_string()\n    b'1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'b'\n    >>> a2\n    b'.'\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = align(s1,s2,b'local',match_score=30)\n    >>> a.ref_start, a.ref_stop\n    (0, 7)\n    >>> a.query_start, a.query_stop\n    (0, 3)\n    >>> a.score\n    48\n    >>> a.cigar.to_string()\n    b'1M2D1M2D1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'abbcbbd'\n    >>> a2\n    b'.--.--.'\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = align(s1,s2,b'local',mismatch_score=-20)\n    >>> a.ref_start, a.ref_stop\n    (46, 53)\n    >>> a.query_start, a.query_stop\n    (6, 14)\n    >>> a.score\n    55\n    >>> a.cigar.to_string()\n    b'2M1I5M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'GC-ACACA'\n    >>> a2\n    b'..G.....'\n\n    >>> s1,s2=b'b',b'abc'\n    >>> a = align(s1,s2,b'glocal')\n    >>> a.score\n    10\n    >>> a.cigar.to_string()\n    b'1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'b'\n    >>> a2\n    b'.'\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = align(s1,s2,b'glocal')\n    >>> a.ref_start, a.ref_stop\n    (1, 2)\n    >>> a.query_start, a.query_stop\n    (0, 1)\n    >>> a.score\n    10\n    >>> a.cigar.to_string()\n    b'1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'b'\n    >>> a2\n    b'.'\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = align(s1,s2,b'glocal',match_score=30)\n    >>> a.ref_start, a.ref_stop\n    (0, 7)\n    >>> a.query_start, a.query_stop\n    (0, 3)""\n    >>> a.score\n    48\n    >>> a.cigar.to_string()\n    b'1M2D1M2D1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'abbcbbd'\n    >>> a2\n    b'.--.--.'\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = align(s1,s2,b'glocal',mismatch_score=-20)\n    >>> a.ref_start, a.ref_stop\n    (36, 53)\n    >>> a.query_start, a.query_stop\n    (0, 15)\n    >>> a.score\n    27\n    >>> a.cigar.to_string()\n    b'1M1D3M4D1M1I2M1I5M1I'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'GACTGCCAAG-GC-ACACA-'\n    >>> a2\n    b'.-...----.T..G.....T'\n\n    >>> s1,s2=b'b',b'abc'\n    >>> a = align(s1,s2,b'glocal',score_only=True)\n    >>> a.ref_stop, a.query_stop, a.score\n    (1, 2, 10)\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = align(s1,s2,b'glocal',score_only=True)\n    >>> a.ref_stop, a.query_stop, a.score\n    (2, 1, 10)\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = align(s1,s2,b'glocal',score_only=True,match_score=30)\n    >>> a.ref_stop, a.query_stop, a.score\n    (7, 3, 48)\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = align(s1,s2,b'glocal',score_only=True,mismatch_score=-20)\n    >>> a.ref_stop, a.query_stop, a.score\n    (53, 15, 27)\n\n    >>> s1,s2=b'b',b'abc'\n    >>> a = align(s1,s2,b'local',score_only=True)\n    >>> a.ref_stop, a.query_stop, a.score\n    (1, 2, 10)\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = align(s1,s2,b'local',score_only=True)\n    >>> a.ref_stop, a.query_stop, a.score\n    (2, 1, 10)\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = align(s1,s2,b'local',score_only=True,match_score=30)\n    >>> a.ref_stop, a.query_stop, a.score\n    (7, 3, 48)\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = align(s1,s2,b'local',score_only=True,mismatch_score=-20)\n    >>> a.ref_stop, a.query_stop, a.score\n    (53, 14, 55)\n""\n    >>> s1,s2=b'b',b'abc'\n    >>> a = align(s1,s2,b'global')\n    >>> a.score\n    -20\n    >>> a.cigar.to_string()\n    b'1I1M1I'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'-b-'\n    >>> a2\n    b'a.c'\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = align(s1,s2,b'global')\n    >>> a.score\n    -20\n    >>> a.cigar.to_string()\n    b'1D1M1D'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'abc'\n    >>> a2\n    b'-.-'\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = align(s1,s2,b'global',match_score=30)\n    >>> a.score\n    48\n    >>> a.cigar.to_string()\n    b'1M2D1M2D1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'abbcbbd'\n    >>> a2\n    b'.--.--.'\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = align(s1,s2,b'global')\n    >>> a.score\n    -198\n    >>> a.cigar.to_string()\n    b'1D1M9D3M5D1M19D3M3D1M2D4M5D2M2D'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> a2\n    b'-.---------...-----.-------------------...---.--....-----..--'\n\n    >>> s1,s2=b'b',b'abc'\n    >>> a = align(s1,s2,b'global',score_only=True)\n    >>> a.score\n    -20\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = align(s1,s2,b'global',score_only=True)\n    >>> a.score\n    -20\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = align(s1,s2,b'global',score_only=True,match_score=30)\n    >>> a.score\n    48\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = align(s1,s2,b'global',score_only=True)\n    >>> a.score\n    -198\n    ";
+static PyMethodDef __pyx_mdef_9uta_align_5align_10algorithms_7test_align = {"test_align", (PyCFunction)__pyx_pw_9uta_align_5align_10algorithms_7test_align, METH_NOARGS, __pyx_doc_9uta_align_5align_10algorithms_6test_align};
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_7test_align(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("test_align (wrapper)", 0);
-  __pyx_r = __pyx_pf_9uta_align_6test_align(__pyx_self);
+  __pyx_r = __pyx_pf_9uta_align_5align_10algorithms_6test_align(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9uta_align_6test_align(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_6test_align(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("test_align", 0);
@@ -11835,10 +11834,10 @@ static PyObject *__pyx_pf_9uta_align_6test_align(CYTHON_UNUSED PyObject *__pyx_s
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9uta_align_9needleman_wunsch_altshul_erikson(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_9uta_align_8needleman_wunsch_altshul_erikson[] = "needleman_wunsch_altshul_erikson(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6, char extended_cigar=0)\n\n    Align s1 to s2 using the Needleman-Wunsch-Altshul-Erikson algorithm for\n    global gapped alignment with affine gap penalties.  The optimal\n    alignment score and a corresponding sequence of alignment operations are\n    returned.\n\n    See: http://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm\n\n         Needleman, Saul B.; and Wunsch, Christian D. (1970). \"A general\n         method applicable to the search for similarities in the amino acid\n         sequence of two proteins\".  Journal of Molecular Biology 48 (3):\n         443.53.  doi:10.1016/0022-2836(70)90057-4.  PMID 5420325.\n\n         Altschul SF, Erickson BW.  \"Optimal sequence alignment using affine\n         gap costs.\" Bull Math Biol.  1986;48(5-6):603-16.\n\n    >>> s1,s2=b'b',b'abc'\n    >>> a = needleman_wunsch_altshul_erikson(s1,s2)\n    >>> a.score\n    -20\n    >>> a.cigar.to_string()\n    b'1I1M1I'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'-b-'\n    >>> a2\n    b'a.c'\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = needleman_wunsch_altshul_erikson(s1,s2)\n    >>> a.score\n    -20\n    >>> a.cigar.to_string()\n    b'1D1M1D'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'abc'\n    >>> a2\n    b'-.-'\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = needleman_wunsch_altshul_erikson(s1,s2,match_score=30)\n    >>> a.score\n    48\n    >>> a.cigar.to_string()\n    b'1M2D1M2D1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'abbcbbd'\n    >>> a2\n    b'.--.--.'\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = needleman_wunsch_altshul_erikson(s1,s2)\n    >>> a.score\n    -198\n    >>> a.cigar.to_string()\n    b'1D1M9D3M5D1M19D3M3D1M2D4M5D2M2D'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n   "" b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> a2\n    b'-.---------...-----.-------------------...---.--....-----..--'\n    ";
-static PyMethodDef __pyx_mdef_9uta_align_9needleman_wunsch_altshul_erikson = {"needleman_wunsch_altshul_erikson", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_9needleman_wunsch_altshul_erikson, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_8needleman_wunsch_altshul_erikson};
-static PyObject *__pyx_pw_9uta_align_9needleman_wunsch_altshul_erikson(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_9needleman_wunsch_altshul_erikson(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9uta_align_5align_10algorithms_8needleman_wunsch_altshul_erikson[] = "needleman_wunsch_altshul_erikson(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6, char extended_cigar=0)\n\n    Align s1 to s2 using the Needleman-Wunsch-Altshul-Erikson algorithm for\n    global gapped alignment with affine gap penalties.  The optimal\n    alignment score and a corresponding sequence of alignment operations are\n    returned.\n\n    See: http://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm\n\n         Needleman, Saul B.; and Wunsch, Christian D. (1970). \"A general\n         method applicable to the search for similarities in the amino acid\n         sequence of two proteins\".  Journal of Molecular Biology 48 (3):\n         443.53.  doi:10.1016/0022-2836(70)90057-4.  PMID 5420325.\n\n         Altschul SF, Erickson BW.  \"Optimal sequence alignment using affine\n         gap costs.\" Bull Math Biol.  1986;48(5-6):603-16.\n\n    >>> s1,s2=b'b',b'abc'\n    >>> a = needleman_wunsch_altshul_erikson(s1,s2)\n    >>> a.score\n    -20\n    >>> a.cigar.to_string()\n    b'1I1M1I'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'-b-'\n    >>> a2\n    b'a.c'\n\n    >>> s1,s2=b'abc',b'b'\n    >>> a = needleman_wunsch_altshul_erikson(s1,s2)\n    >>> a.score\n    -20\n    >>> a.cigar.to_string()\n    b'1D1M1D'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'abc'\n    >>> a2\n    b'-.-'\n\n    >>> s1,s2=b'abbcbbd',b'acd'\n    >>> a = needleman_wunsch_altshul_erikson(s1,s2,match_score=30)\n    >>> a.score\n    48\n    >>> a.cigar.to_string()\n    b'1M2D1M2D1M'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n    b'abbcbbd'\n    >>> a2\n    b'.--.--.'\n\n    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> s2=b'GCTGGTGCGACACAT'\n    >>> a = needleman_wunsch_altshul_erikson(s1,s2)\n    >>> a.score\n    -198\n    >>> a.cigar.to_string()\n    b'1D1M9D3M5D1M19D3M3D1M2D4M5D2M2D'\n    >>> a1,a2 = a.gapped_alignment()\n    >>> a1\n   "" b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'\n    >>> a2\n    b'-.---------...-----.-------------------...---.--....-----..--'\n    ";
+static PyMethodDef __pyx_mdef_9uta_align_5align_10algorithms_9needleman_wunsch_altshul_erikson = {"needleman_wunsch_altshul_erikson", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_5align_10algorithms_9needleman_wunsch_altshul_erikson, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_5align_10algorithms_8needleman_wunsch_altshul_erikson};
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_9needleman_wunsch_altshul_erikson(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_s1 = 0;
   PyObject *__pyx_v_s2 = 0;
   int32_t __pyx_v_match_score;
@@ -11968,13 +11967,13 @@ static PyObject *__pyx_pw_9uta_align_9needleman_wunsch_altshul_erikson(PyObject 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("needleman_wunsch_altshul_erikson", 0, 2, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1221, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("uta_align.needleman_wunsch_altshul_erikson", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.needleman_wunsch_altshul_erikson", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s1), (&PyBytes_Type), 1, "s1", 1))) __PYX_ERR(0, 1221, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s2), (&PyBytes_Type), 1, "s2", 1))) __PYX_ERR(0, 1222, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score, __pyx_v_extended_cigar);
+  __pyx_r = __pyx_pf_9uta_align_5align_10algorithms_8needleman_wunsch_altshul_erikson(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score, __pyx_v_extended_cigar);
 
   /* function exit code */
   goto __pyx_L0;
@@ -11985,7 +11984,7 @@ static PyObject *__pyx_pw_9uta_align_9needleman_wunsch_altshul_erikson(PyObject 
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar) {
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_8needleman_wunsch_altshul_erikson(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar) {
   size_t __pyx_v_n;
   size_t __pyx_v_m;
   char *__pyx_v_ss1;
@@ -12175,7 +12174,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *     trace[(n+2)*(m+2) - 1] = TRACE_C
  * 
  */
-  (__pyx_v_trace[0]) = (__pyx_e_9uta_align_TRACE_E | __pyx_e_9uta_align_TRACE_G);
+  (__pyx_v_trace[0]) = (__pyx_e_9uta_align_5align_10algorithms_TRACE_E | __pyx_e_9uta_align_5align_10algorithms_TRACE_G);
 
   /* "uta_align/align/algorithms.pyx":1326
  *     memset(<void*>trace, 0, (n+2)*(m+2))
@@ -12184,7 +12183,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  * 
  *     for j in range(1,m+1):
  */
-  (__pyx_v_trace[(((__pyx_v_n + 2) * (__pyx_v_m + 2)) - 1)]) = __pyx_e_9uta_align_TRACE_C;
+  (__pyx_v_trace[(((__pyx_v_n + 2) * (__pyx_v_m + 2)) - 1)]) = __pyx_e_9uta_align_5align_10algorithms_TRACE_C;
 
   /* "uta_align/align/algorithms.pyx":1328
  *     trace[(n+2)*(m+2) - 1] = TRACE_C
@@ -12223,7 +12222,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *         if j<m:
  *             trace[j] |= TRACE_F
  */
-    (__pyx_v_trace[__pyx_v_j]) = (__pyx_e_9uta_align_TRACE_B | __pyx_e_9uta_align_TRACE_E);
+    (__pyx_v_trace[__pyx_v_j]) = (__pyx_e_9uta_align_5align_10algorithms_TRACE_B | __pyx_e_9uta_align_5align_10algorithms_TRACE_E);
 
     /* "uta_align/align/algorithms.pyx":1332
  *         P[j]     = NINF
@@ -12243,7 +12242,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *     for i in range(1,n+1):
  */
       __pyx_t_7 = __pyx_v_j;
-      (__pyx_v_trace[__pyx_t_7]) = ((__pyx_v_trace[__pyx_t_7]) | __pyx_e_9uta_align_TRACE_F);
+      (__pyx_v_trace[__pyx_t_7]) = ((__pyx_v_trace[__pyx_t_7]) | __pyx_e_9uta_align_5align_10algorithms_TRACE_F);
 
       /* "uta_align/align/algorithms.pyx":1332
  *         P[j]     = NINF
@@ -12338,7 +12337,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *             trace[i*(m+2)] |= TRACE_D
  */
     __pyx_t_8 = (__pyx_v_i * (__pyx_v_m + 2));
-    (__pyx_v_trace[__pyx_t_8]) = ((__pyx_v_trace[__pyx_t_8]) | (__pyx_e_9uta_align_TRACE_A | __pyx_e_9uta_align_TRACE_G));
+    (__pyx_v_trace[__pyx_t_8]) = ((__pyx_v_trace[__pyx_t_8]) | (__pyx_e_9uta_align_5align_10algorithms_TRACE_A | __pyx_e_9uta_align_5align_10algorithms_TRACE_G));
 
     /* "uta_align/align/algorithms.pyx":1344
  *         Qleft      = Qij
@@ -12358,7 +12357,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *         for j in range(1,m+1):
  */
       __pyx_t_8 = (__pyx_v_i * (__pyx_v_m + 2));
-      (__pyx_v_trace[__pyx_t_8]) = ((__pyx_v_trace[__pyx_t_8]) | __pyx_e_9uta_align_TRACE_D);
+      (__pyx_v_trace[__pyx_t_8]) = ((__pyx_v_trace[__pyx_t_8]) | __pyx_e_9uta_align_5align_10algorithms_TRACE_D);
 
       /* "uta_align/align/algorithms.pyx":1344
  *         Qleft      = Qij
@@ -12433,7 +12432,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  * 
  *             insopen  = Rleft + gap_open_score
  */
-      __pyx_v_Pij = __pyx_f_9uta_align_max2(__pyx_v_delopen, __pyx_v_delext);
+      __pyx_v_Pij = __pyx_f_9uta_align_5align_10algorithms_max2(__pyx_v_delopen, __pyx_v_delext);
 
       /* "uta_align/align/algorithms.pyx":1356
  *             Pij      = max2(delopen, delext)
@@ -12460,7 +12459,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  * 
  *             match    = Rdiag + (match_score if c1==c2 else mismatch_score)
  */
-      __pyx_v_Qij = __pyx_f_9uta_align_max2(__pyx_v_insopen, __pyx_v_insext);
+      __pyx_v_Qij = __pyx_f_9uta_align_5align_10algorithms_max2(__pyx_v_insopen, __pyx_v_insext);
 
       /* "uta_align/align/algorithms.pyx":1360
  *             Qij      = max2(insopen, insext)
@@ -12483,7 +12482,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  * 
  *             k = (i-1)*(m+2) + j
  */
-      __pyx_v_Rij = __pyx_f_9uta_align_max3(__pyx_v_Pij, __pyx_v_Qij, __pyx_v_match);
+      __pyx_v_Rij = __pyx_f_9uta_align_5align_10algorithms_max3(__pyx_v_Pij, __pyx_v_Qij, __pyx_v_match);
 
       /* "uta_align/align/algorithms.pyx":1364
  *             Rij      = max3(Pij, Qij, match)
@@ -12512,7 +12511,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *                 trace[k] |= TRACE_E
  */
         __pyx_t_10 = __pyx_v_k;
-        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_TRACE_D);
+        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_5align_10algorithms_TRACE_D);
 
         /* "uta_align/align/algorithms.pyx":1365
  * 
@@ -12541,7 +12540,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *             k = i*(m+2) + j - 1
  */
         __pyx_t_10 = __pyx_v_k;
-        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_TRACE_E);
+        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_5align_10algorithms_TRACE_E);
 
         /* "uta_align/align/algorithms.pyx":1367
  *             if Pij == delext:
@@ -12579,7 +12578,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *                 trace[k] |= TRACE_G
  */
         __pyx_t_10 = __pyx_v_k;
-        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_TRACE_F);
+        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_5align_10algorithms_TRACE_F);
 
         /* "uta_align/align/algorithms.pyx":1371
  * 
@@ -12608,7 +12607,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *             k = i*(m+2)+j
  */
         __pyx_t_10 = __pyx_v_k;
-        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_TRACE_G);
+        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_5align_10algorithms_TRACE_G);
 
         /* "uta_align/align/algorithms.pyx":1373
  *             if Qij == insext:
@@ -12646,7 +12645,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *                 trace[k] |= TRACE_B
  */
         __pyx_t_10 = __pyx_v_k;
-        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_TRACE_A);
+        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_5align_10algorithms_TRACE_A);
 
         /* "uta_align/align/algorithms.pyx":1377
  * 
@@ -12675,7 +12674,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *                 trace[k] |= TRACE_C
  */
         __pyx_t_10 = __pyx_v_k;
-        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_TRACE_B);
+        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_5align_10algorithms_TRACE_B);
 
         /* "uta_align/align/algorithms.pyx":1379
  *             if Rij == Pij:
@@ -12704,7 +12703,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *             Rdiag        = Rup
  */
         __pyx_t_10 = __pyx_v_k;
-        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_TRACE_C);
+        (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) | __pyx_e_9uta_align_5align_10algorithms_TRACE_C);
 
         /* "uta_align/align/algorithms.pyx":1381
  *             if Rij == Qij:
@@ -12790,7 +12789,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *             b = trace[ij+1]   & TRACE_B   # B[i,  j+1]
  *             c = trace[ij+m+3] & TRACE_C   # C[i+1,j+1]
  */
-      __pyx_v_a = ((__pyx_v_trace[((__pyx_v_ij + __pyx_v_m) + 2)]) & __pyx_e_9uta_align_TRACE_A);
+      __pyx_v_a = ((__pyx_v_trace[((__pyx_v_ij + __pyx_v_m) + 2)]) & __pyx_e_9uta_align_5align_10algorithms_TRACE_A);
 
       /* "uta_align/align/algorithms.pyx":1393
  *             ij = i*(m+2)+j
@@ -12799,7 +12798,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *             c = trace[ij+m+3] & TRACE_C   # C[i+1,j+1]
  *             d = trace[ij]     & TRACE_D   # D[i,  j  ]
  */
-      __pyx_v_b = ((__pyx_v_trace[(__pyx_v_ij + 1)]) & __pyx_e_9uta_align_TRACE_B);
+      __pyx_v_b = ((__pyx_v_trace[(__pyx_v_ij + 1)]) & __pyx_e_9uta_align_5align_10algorithms_TRACE_B);
 
       /* "uta_align/align/algorithms.pyx":1394
  *             a = trace[ij+m+2] & TRACE_A   # A[i+1,j  ]
@@ -12808,7 +12807,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *             d = trace[ij]     & TRACE_D   # D[i,  j  ]
  *             e = trace[ij]     & TRACE_E   # E[i,  j  ]
  */
-      __pyx_v_c = ((__pyx_v_trace[((__pyx_v_ij + __pyx_v_m) + 3)]) & __pyx_e_9uta_align_TRACE_C);
+      __pyx_v_c = ((__pyx_v_trace[((__pyx_v_ij + __pyx_v_m) + 3)]) & __pyx_e_9uta_align_5align_10algorithms_TRACE_C);
 
       /* "uta_align/align/algorithms.pyx":1395
  *             b = trace[ij+1]   & TRACE_B   # B[i,  j+1]
@@ -12817,7 +12816,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *             e = trace[ij]     & TRACE_E   # E[i,  j  ]
  *             f = trace[ij]     & TRACE_F   # F[i,  j  ]
  */
-      __pyx_v_d = ((__pyx_v_trace[__pyx_v_ij]) & __pyx_e_9uta_align_TRACE_D);
+      __pyx_v_d = ((__pyx_v_trace[__pyx_v_ij]) & __pyx_e_9uta_align_5align_10algorithms_TRACE_D);
 
       /* "uta_align/align/algorithms.pyx":1396
  *             c = trace[ij+m+3] & TRACE_C   # C[i+1,j+1]
@@ -12826,7 +12825,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *             f = trace[ij]     & TRACE_F   # F[i,  j  ]
  *             g = trace[ij]     & TRACE_G   # G[i,  j  ]
  */
-      __pyx_v_e = ((__pyx_v_trace[__pyx_v_ij]) & __pyx_e_9uta_align_TRACE_E);
+      __pyx_v_e = ((__pyx_v_trace[__pyx_v_ij]) & __pyx_e_9uta_align_5align_10algorithms_TRACE_E);
 
       /* "uta_align/align/algorithms.pyx":1397
  *             d = trace[ij]     & TRACE_D   # D[i,  j  ]
@@ -12835,7 +12834,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *             g = trace[ij]     & TRACE_G   # G[i,  j  ]
  * 
  */
-      __pyx_v_f = ((__pyx_v_trace[__pyx_v_ij]) & __pyx_e_9uta_align_TRACE_F);
+      __pyx_v_f = ((__pyx_v_trace[__pyx_v_ij]) & __pyx_e_9uta_align_5align_10algorithms_TRACE_F);
 
       /* "uta_align/align/algorithms.pyx":1398
  *             e = trace[ij]     & TRACE_E   # E[i,  j  ]
@@ -12844,7 +12843,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  * 
  *             if a or b or c:
  */
-      __pyx_v_g = ((__pyx_v_trace[__pyx_v_ij]) & __pyx_e_9uta_align_TRACE_G);
+      __pyx_v_g = ((__pyx_v_trace[__pyx_v_ij]) & __pyx_e_9uta_align_5align_10algorithms_TRACE_G);
 
       /* "uta_align/align/algorithms.pyx":1400
  *             g = trace[ij]     & TRACE_G   # G[i,  j  ]
@@ -12895,7 +12894,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *                     trace[ij]      = (trace[ij]&(~TRACE_E))|(((trace[ij]&TRACE_A)^TRACE_A)<<4)|TRACE_A
  *                 else:
  */
-          (__pyx_v_trace[((__pyx_v_ij + __pyx_v_m) + 2)]) = (((__pyx_v_trace[((__pyx_v_ij + __pyx_v_m) + 2)]) & (~__pyx_e_9uta_align_TRACE_D)) | ((__pyx_v_e ^ __pyx_e_9uta_align_TRACE_E) >> 1));
+          (__pyx_v_trace[((__pyx_v_ij + __pyx_v_m) + 2)]) = (((__pyx_v_trace[((__pyx_v_ij + __pyx_v_m) + 2)]) & (~__pyx_e_9uta_align_5align_10algorithms_TRACE_D)) | ((__pyx_v_e ^ __pyx_e_9uta_align_5align_10algorithms_TRACE_E) >> 1));
 
           /* "uta_align/align/algorithms.pyx":1403
  *                 if a and d:
@@ -12904,7 +12903,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *                 else:
  *                     trace[ij+m+2] &= ~TRACE_D
  */
-          (__pyx_v_trace[__pyx_v_ij]) = ((((__pyx_v_trace[__pyx_v_ij]) & (~__pyx_e_9uta_align_TRACE_E)) | ((((__pyx_v_trace[__pyx_v_ij]) & __pyx_e_9uta_align_TRACE_A) ^ __pyx_e_9uta_align_TRACE_A) << 4)) | __pyx_e_9uta_align_TRACE_A);
+          (__pyx_v_trace[__pyx_v_ij]) = ((((__pyx_v_trace[__pyx_v_ij]) & (~__pyx_e_9uta_align_5align_10algorithms_TRACE_E)) | ((((__pyx_v_trace[__pyx_v_ij]) & __pyx_e_9uta_align_5align_10algorithms_TRACE_A) ^ __pyx_e_9uta_align_5align_10algorithms_TRACE_A) << 4)) | __pyx_e_9uta_align_5align_10algorithms_TRACE_A);
 
           /* "uta_align/align/algorithms.pyx":1401
  * 
@@ -12925,7 +12924,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  */
         /*else*/ {
           __pyx_t_3 = ((__pyx_v_ij + __pyx_v_m) + 2);
-          (__pyx_v_trace[__pyx_t_3]) = ((__pyx_v_trace[__pyx_t_3]) & (~__pyx_e_9uta_align_TRACE_D));
+          (__pyx_v_trace[__pyx_t_3]) = ((__pyx_v_trace[__pyx_t_3]) & (~__pyx_e_9uta_align_5align_10algorithms_TRACE_D));
 
           /* "uta_align/align/algorithms.pyx":1406
  *                 else:
@@ -12935,7 +12934,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *                 if b and f:
  */
           __pyx_t_10 = __pyx_v_ij;
-          (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) & (~__pyx_e_9uta_align_TRACE_E));
+          (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) & (~__pyx_e_9uta_align_5align_10algorithms_TRACE_E));
         }
         __pyx_L26:;
 
@@ -12964,7 +12963,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *                     trace[ij]      = (trace[ij]&(~TRACE_G))|(((trace[ij]&TRACE_B)^TRACE_B)<<5)|TRACE_B
  *                 else:
  */
-          (__pyx_v_trace[(__pyx_v_ij + 1)]) = (((__pyx_v_trace[(__pyx_v_ij + 1)]) & (~__pyx_e_9uta_align_TRACE_F)) | ((__pyx_v_g ^ __pyx_e_9uta_align_TRACE_G) >> 1));
+          (__pyx_v_trace[(__pyx_v_ij + 1)]) = (((__pyx_v_trace[(__pyx_v_ij + 1)]) & (~__pyx_e_9uta_align_5align_10algorithms_TRACE_F)) | ((__pyx_v_g ^ __pyx_e_9uta_align_5align_10algorithms_TRACE_G) >> 1));
 
           /* "uta_align/align/algorithms.pyx":1410
  *                 if b and f:
@@ -12973,7 +12972,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *                 else:
  *                     trace[ij+1]   &= ~TRACE_F
  */
-          (__pyx_v_trace[__pyx_v_ij]) = ((((__pyx_v_trace[__pyx_v_ij]) & (~__pyx_e_9uta_align_TRACE_G)) | ((((__pyx_v_trace[__pyx_v_ij]) & __pyx_e_9uta_align_TRACE_B) ^ __pyx_e_9uta_align_TRACE_B) << 5)) | __pyx_e_9uta_align_TRACE_B);
+          (__pyx_v_trace[__pyx_v_ij]) = ((((__pyx_v_trace[__pyx_v_ij]) & (~__pyx_e_9uta_align_5align_10algorithms_TRACE_G)) | ((((__pyx_v_trace[__pyx_v_ij]) & __pyx_e_9uta_align_5align_10algorithms_TRACE_B) ^ __pyx_e_9uta_align_5align_10algorithms_TRACE_B) << 5)) | __pyx_e_9uta_align_5align_10algorithms_TRACE_B);
 
           /* "uta_align/align/algorithms.pyx":1408
  *                     trace[ij]     &= ~TRACE_E
@@ -12994,7 +12993,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  */
         /*else*/ {
           __pyx_t_12 = (__pyx_v_ij + 1);
-          (__pyx_v_trace[__pyx_t_12]) = ((__pyx_v_trace[__pyx_t_12]) & (~__pyx_e_9uta_align_TRACE_F));
+          (__pyx_v_trace[__pyx_t_12]) = ((__pyx_v_trace[__pyx_t_12]) & (~__pyx_e_9uta_align_5align_10algorithms_TRACE_F));
 
           /* "uta_align/align/algorithms.pyx":1413
  *                 else:
@@ -13004,7 +13003,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *     Rmax = R[m]
  */
           __pyx_t_10 = __pyx_v_ij;
-          (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) & (~__pyx_e_9uta_align_TRACE_G));
+          (__pyx_v_trace[__pyx_t_10]) = ((__pyx_v_trace[__pyx_t_10]) & (~__pyx_e_9uta_align_5align_10algorithms_TRACE_G));
         }
         __pyx_L29:;
 
@@ -13035,7 +13034,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  * 
  *     free(P)
  */
-  __pyx_t_13 = __pyx_f_9uta_align__roll_cigar_altshul_erikson(__pyx_v_s1, __pyx_v_s2, __pyx_v_n, __pyx_v_m, __pyx_v_trace, 0, __pyx_v_extended_cigar); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 1416, __pyx_L1_error)
+  __pyx_t_13 = __pyx_f_9uta_align_5align_10algorithms__roll_cigar_altshul_erikson(__pyx_v_s1, __pyx_v_s2, __pyx_v_n, __pyx_v_m, __pyx_v_trace, 0, __pyx_v_extended_cigar); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 1416, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   if ((likely(PyTuple_CheckExact(__pyx_t_13))) || (PyList_CheckExact(__pyx_t_13))) {
     PyObject* sequence = __pyx_t_13;
@@ -13248,7 +13247,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
   __Pyx_XDECREF(__pyx_t_17);
   __Pyx_XDECREF(__pyx_t_19);
   __Pyx_XDECREF(__pyx_t_21);
-  __Pyx_AddTraceback("uta_align.needleman_wunsch_altshul_erikson", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.needleman_wunsch_altshul_erikson", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_cigar);
@@ -13265,7 +13264,7 @@ static PyObject *__pyx_pf_9uta_align_8needleman_wunsch_altshul_erikson(CYTHON_UN
  *     Compute the sequence of edits required to transform sequence s1 to s2
  */
 
-static PyObject *__pyx_f_9uta_align__roll_cigar_altshul_erikson(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, size_t __pyx_v_i, size_t __pyx_v_j, char *__pyx_v_trace, int __pyx_v_soft_clip, int __pyx_v_extended_cigar) {
+static PyObject *__pyx_f_9uta_align_5align_10algorithms__roll_cigar_altshul_erikson(PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, size_t __pyx_v_i, size_t __pyx_v_j, char *__pyx_v_trace, int __pyx_v_soft_clip, int __pyx_v_extended_cigar) {
   CYTHON_UNUSED size_t __pyx_v_n;
   size_t __pyx_v_m;
   char *__pyx_v_ss1;
@@ -13473,7 +13472,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_altshul_erikson(PyObject *__pyx_
       __pyx_t_4 = __pyx_t_5;
       goto __pyx_L11_bool_binop_done;
     }
-    __pyx_t_5 = ((__pyx_v_back & (__pyx_e_9uta_align_TRACE_A | __pyx_e_9uta_align_TRACE_D)) != 0);
+    __pyx_t_5 = ((__pyx_v_back & (__pyx_e_9uta_align_5align_10algorithms_TRACE_A | __pyx_e_9uta_align_5align_10algorithms_TRACE_D)) != 0);
     __pyx_t_4 = __pyx_t_5;
     __pyx_L11_bool_binop_done:;
     if (__pyx_t_4) {
@@ -13510,7 +13509,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_altshul_erikson(PyObject *__pyx_
       __pyx_t_4 = __pyx_t_5;
       goto __pyx_L13_bool_binop_done;
     }
-    __pyx_t_5 = ((__pyx_v_back & (__pyx_e_9uta_align_TRACE_B | __pyx_e_9uta_align_TRACE_F)) != 0);
+    __pyx_t_5 = ((__pyx_v_back & (__pyx_e_9uta_align_5align_10algorithms_TRACE_B | __pyx_e_9uta_align_5align_10algorithms_TRACE_F)) != 0);
     __pyx_t_4 = __pyx_t_5;
     __pyx_L13_bool_binop_done:;
     if (__pyx_t_4) {
@@ -13541,7 +13540,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_altshul_erikson(PyObject *__pyx_
  *             op = b'M'
  *         elif back&(TRACE_A|TRACE_E):
  */
-    __pyx_t_4 = ((__pyx_v_back & __pyx_e_9uta_align_TRACE_C) != 0);
+    __pyx_t_4 = ((__pyx_v_back & __pyx_e_9uta_align_5align_10algorithms_TRACE_C) != 0);
     if (__pyx_t_4) {
 
       /* "uta_align/align/algorithms.pyx":1455
@@ -13570,7 +13569,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_altshul_erikson(PyObject *__pyx_
  *             op = b'D'
  *         elif back&(TRACE_B|TRACE_G):
  */
-    __pyx_t_4 = ((__pyx_v_back & (__pyx_e_9uta_align_TRACE_A | __pyx_e_9uta_align_TRACE_E)) != 0);
+    __pyx_t_4 = ((__pyx_v_back & (__pyx_e_9uta_align_5align_10algorithms_TRACE_A | __pyx_e_9uta_align_5align_10algorithms_TRACE_E)) != 0);
     if (__pyx_t_4) {
 
       /* "uta_align/align/algorithms.pyx":1457
@@ -13599,7 +13598,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_altshul_erikson(PyObject *__pyx_
  *             op = b'I'
  *         else:
  */
-    __pyx_t_4 = ((__pyx_v_back & (__pyx_e_9uta_align_TRACE_B | __pyx_e_9uta_align_TRACE_G)) != 0);
+    __pyx_t_4 = ((__pyx_v_back & (__pyx_e_9uta_align_5align_10algorithms_TRACE_B | __pyx_e_9uta_align_5align_10algorithms_TRACE_G)) != 0);
     if (__pyx_t_4) {
 
       /* "uta_align/align/algorithms.pyx":1459
@@ -14012,7 +14011,7 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_altshul_erikson(PyObject *__pyx_
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("uta_align._roll_cigar_altshul_erikson", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms._roll_cigar_altshul_erikson", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_cigar);
@@ -14030,10 +14029,10 @@ static PyObject *__pyx_f_9uta_align__roll_cigar_altshul_erikson(PyObject *__pyx_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9uta_align_11smith_waterman_gotoh_align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_9uta_align_10smith_waterman_gotoh_align[] = "smith_waterman_gotoh_align(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6, char extended_cigar=0, char add_soft_clips=0)";
-static PyMethodDef __pyx_mdef_9uta_align_11smith_waterman_gotoh_align = {"smith_waterman_gotoh_align", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_11smith_waterman_gotoh_align, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_10smith_waterman_gotoh_align};
-static PyObject *__pyx_pw_9uta_align_11smith_waterman_gotoh_align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_11smith_waterman_gotoh_align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9uta_align_5align_10algorithms_10smith_waterman_gotoh_align[] = "smith_waterman_gotoh_align(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6, char extended_cigar=0, char add_soft_clips=0)";
+static PyMethodDef __pyx_mdef_9uta_align_5align_10algorithms_11smith_waterman_gotoh_align = {"smith_waterman_gotoh_align", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_5align_10algorithms_11smith_waterman_gotoh_align, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_5align_10algorithms_10smith_waterman_gotoh_align};
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_11smith_waterman_gotoh_align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_s1 = 0;
   PyObject *__pyx_v_s2 = 0;
   int32_t __pyx_v_match_score;
@@ -14179,13 +14178,13 @@ static PyObject *__pyx_pw_9uta_align_11smith_waterman_gotoh_align(PyObject *__py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("smith_waterman_gotoh_align", 0, 2, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1499, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("uta_align.smith_waterman_gotoh_align", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.smith_waterman_gotoh_align", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s1), (&PyBytes_Type), 1, "s1", 1))) __PYX_ERR(0, 1499, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s2), (&PyBytes_Type), 1, "s2", 1))) __PYX_ERR(0, 1500, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9uta_align_10smith_waterman_gotoh_align(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score, __pyx_v_extended_cigar, __pyx_v_add_soft_clips);
+  __pyx_r = __pyx_pf_9uta_align_5align_10algorithms_10smith_waterman_gotoh_align(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score, __pyx_v_extended_cigar, __pyx_v_add_soft_clips);
 
   /* function exit code */
   goto __pyx_L0;
@@ -14196,12 +14195,12 @@ static PyObject *__pyx_pw_9uta_align_11smith_waterman_gotoh_align(PyObject *__py
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9uta_align_10smith_waterman_gotoh_align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar, char __pyx_v_add_soft_clips) {
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_10smith_waterman_gotoh_align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar, char __pyx_v_add_soft_clips) {
   PyObject *__pyx_v_a = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_9uta_align_align_local_full __pyx_t_2;
+  struct __pyx_opt_args_9uta_align_5align_10algorithms_align_local_full __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
@@ -14222,7 +14221,7 @@ static PyObject *__pyx_pf_9uta_align_10smith_waterman_gotoh_align(CYTHON_UNUSED 
   __pyx_t_2.gap_extend_score = __pyx_v_gap_extend_score;
   __pyx_t_2.extended_cigar = __pyx_v_extended_cigar;
   __pyx_t_2.soft_clip = __pyx_v_add_soft_clips;
-  __pyx_t_1 = __pyx_f_9uta_align_align_local_full(__pyx_v_s1, __pyx_v_s2, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1508, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9uta_align_5align_10algorithms_align_local_full(__pyx_v_s1, __pyx_v_s2, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1508, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_a = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -14320,7 +14319,7 @@ static PyObject *__pyx_pf_9uta_align_10smith_waterman_gotoh_align(CYTHON_UNUSED 
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("uta_align.smith_waterman_gotoh_align", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.smith_waterman_gotoh_align", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_a);
@@ -14338,10 +14337,10 @@ static PyObject *__pyx_pf_9uta_align_10smith_waterman_gotoh_align(CYTHON_UNUSED 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9uta_align_13smith_waterman_gotoh_score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_9uta_align_12smith_waterman_gotoh_score[] = "smith_waterman_gotoh_score(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6)";
-static PyMethodDef __pyx_mdef_9uta_align_13smith_waterman_gotoh_score = {"smith_waterman_gotoh_score", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_13smith_waterman_gotoh_score, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_12smith_waterman_gotoh_score};
-static PyObject *__pyx_pw_9uta_align_13smith_waterman_gotoh_score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_13smith_waterman_gotoh_score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9uta_align_5align_10algorithms_12smith_waterman_gotoh_score[] = "smith_waterman_gotoh_score(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6)";
+static PyMethodDef __pyx_mdef_9uta_align_5align_10algorithms_13smith_waterman_gotoh_score = {"smith_waterman_gotoh_score", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_5align_10algorithms_13smith_waterman_gotoh_score, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_5align_10algorithms_12smith_waterman_gotoh_score};
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_13smith_waterman_gotoh_score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_s1 = 0;
   PyObject *__pyx_v_s2 = 0;
   int32_t __pyx_v_match_score;
@@ -14455,13 +14454,13 @@ static PyObject *__pyx_pw_9uta_align_13smith_waterman_gotoh_score(PyObject *__py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("smith_waterman_gotoh_score", 0, 2, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1516, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("uta_align.smith_waterman_gotoh_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.smith_waterman_gotoh_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s1), (&PyBytes_Type), 1, "s1", 1))) __PYX_ERR(0, 1516, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s2), (&PyBytes_Type), 1, "s2", 1))) __PYX_ERR(0, 1517, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9uta_align_12smith_waterman_gotoh_score(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score);
+  __pyx_r = __pyx_pf_9uta_align_5align_10algorithms_12smith_waterman_gotoh_score(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score);
 
   /* function exit code */
   goto __pyx_L0;
@@ -14472,12 +14471,12 @@ static PyObject *__pyx_pw_9uta_align_13smith_waterman_gotoh_score(PyObject *__py
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9uta_align_12smith_waterman_gotoh_score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score) {
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_12smith_waterman_gotoh_score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score) {
   PyObject *__pyx_v_a = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_9uta_align_align_local_score __pyx_t_2;
+  struct __pyx_opt_args_9uta_align_5align_10algorithms_align_local_score __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
@@ -14495,7 +14494,7 @@ static PyObject *__pyx_pf_9uta_align_12smith_waterman_gotoh_score(CYTHON_UNUSED 
   __pyx_t_2.mismatch_score = __pyx_v_mismatch_score;
   __pyx_t_2.gap_open_score = __pyx_v_gap_open_score;
   __pyx_t_2.gap_extend_score = __pyx_v_gap_extend_score;
-  __pyx_t_1 = __pyx_f_9uta_align_align_local_score(__pyx_v_s1, __pyx_v_s2, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1523, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9uta_align_5align_10algorithms_align_local_score(__pyx_v_s1, __pyx_v_s2, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1523, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_a = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -14543,7 +14542,7 @@ static PyObject *__pyx_pf_9uta_align_12smith_waterman_gotoh_score(CYTHON_UNUSED 
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("uta_align.smith_waterman_gotoh_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.smith_waterman_gotoh_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_a);
@@ -14561,10 +14560,10 @@ static PyObject *__pyx_pf_9uta_align_12smith_waterman_gotoh_score(CYTHON_UNUSED 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9uta_align_15needleman_wunsch_gotoh_align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_9uta_align_14needleman_wunsch_gotoh_align[] = "needleman_wunsch_gotoh_align(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6, char extended_cigar=0)";
-static PyMethodDef __pyx_mdef_9uta_align_15needleman_wunsch_gotoh_align = {"needleman_wunsch_gotoh_align", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_15needleman_wunsch_gotoh_align, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_14needleman_wunsch_gotoh_align};
-static PyObject *__pyx_pw_9uta_align_15needleman_wunsch_gotoh_align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_15needleman_wunsch_gotoh_align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9uta_align_5align_10algorithms_14needleman_wunsch_gotoh_align[] = "needleman_wunsch_gotoh_align(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6, char extended_cigar=0)";
+static PyMethodDef __pyx_mdef_9uta_align_5align_10algorithms_15needleman_wunsch_gotoh_align = {"needleman_wunsch_gotoh_align", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_5align_10algorithms_15needleman_wunsch_gotoh_align, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_5align_10algorithms_14needleman_wunsch_gotoh_align};
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_15needleman_wunsch_gotoh_align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_s1 = 0;
   PyObject *__pyx_v_s2 = 0;
   int32_t __pyx_v_match_score;
@@ -14694,13 +14693,13 @@ static PyObject *__pyx_pw_9uta_align_15needleman_wunsch_gotoh_align(PyObject *__
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("needleman_wunsch_gotoh_align", 0, 2, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1528, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("uta_align.needleman_wunsch_gotoh_align", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.needleman_wunsch_gotoh_align", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s1), (&PyBytes_Type), 1, "s1", 1))) __PYX_ERR(0, 1528, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s2), (&PyBytes_Type), 1, "s2", 1))) __PYX_ERR(0, 1529, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9uta_align_14needleman_wunsch_gotoh_align(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score, __pyx_v_extended_cigar);
+  __pyx_r = __pyx_pf_9uta_align_5align_10algorithms_14needleman_wunsch_gotoh_align(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score, __pyx_v_extended_cigar);
 
   /* function exit code */
   goto __pyx_L0;
@@ -14711,12 +14710,12 @@ static PyObject *__pyx_pw_9uta_align_15needleman_wunsch_gotoh_align(PyObject *__
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9uta_align_14needleman_wunsch_gotoh_align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar) {
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_14needleman_wunsch_gotoh_align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar) {
   PyObject *__pyx_v_a = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_9uta_align_align_global_full __pyx_t_2;
+  struct __pyx_opt_args_9uta_align_5align_10algorithms_align_global_full __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("needleman_wunsch_gotoh_align", 0);
@@ -14734,7 +14733,7 @@ static PyObject *__pyx_pf_9uta_align_14needleman_wunsch_gotoh_align(CYTHON_UNUSE
   __pyx_t_2.gap_open_score = __pyx_v_gap_open_score;
   __pyx_t_2.gap_extend_score = __pyx_v_gap_extend_score;
   __pyx_t_2.extended_cigar = __pyx_v_extended_cigar;
-  __pyx_t_1 = __pyx_f_9uta_align_align_global_full(__pyx_v_s1, __pyx_v_s2, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1536, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9uta_align_5align_10algorithms_align_global_full(__pyx_v_s1, __pyx_v_s2, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1536, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_a = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -14776,7 +14775,7 @@ static PyObject *__pyx_pf_9uta_align_14needleman_wunsch_gotoh_align(CYTHON_UNUSE
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("uta_align.needleman_wunsch_gotoh_align", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.needleman_wunsch_gotoh_align", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_a);
@@ -14794,10 +14793,10 @@ static PyObject *__pyx_pf_9uta_align_14needleman_wunsch_gotoh_align(CYTHON_UNUSE
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9uta_align_17needleman_wunsch_gotoh_score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_9uta_align_16needleman_wunsch_gotoh_score[] = "needleman_wunsch_gotoh_score(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6)";
-static PyMethodDef __pyx_mdef_9uta_align_17needleman_wunsch_gotoh_score = {"needleman_wunsch_gotoh_score", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_17needleman_wunsch_gotoh_score, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_16needleman_wunsch_gotoh_score};
-static PyObject *__pyx_pw_9uta_align_17needleman_wunsch_gotoh_score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_17needleman_wunsch_gotoh_score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9uta_align_5align_10algorithms_16needleman_wunsch_gotoh_score[] = "needleman_wunsch_gotoh_score(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6)";
+static PyMethodDef __pyx_mdef_9uta_align_5align_10algorithms_17needleman_wunsch_gotoh_score = {"needleman_wunsch_gotoh_score", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_5align_10algorithms_17needleman_wunsch_gotoh_score, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_5align_10algorithms_16needleman_wunsch_gotoh_score};
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_17needleman_wunsch_gotoh_score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_s1 = 0;
   PyObject *__pyx_v_s2 = 0;
   int32_t __pyx_v_match_score;
@@ -14911,13 +14910,13 @@ static PyObject *__pyx_pw_9uta_align_17needleman_wunsch_gotoh_score(PyObject *__
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("needleman_wunsch_gotoh_score", 0, 2, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1541, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("uta_align.needleman_wunsch_gotoh_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.needleman_wunsch_gotoh_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s1), (&PyBytes_Type), 1, "s1", 1))) __PYX_ERR(0, 1541, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s2), (&PyBytes_Type), 1, "s2", 1))) __PYX_ERR(0, 1542, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9uta_align_16needleman_wunsch_gotoh_score(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score);
+  __pyx_r = __pyx_pf_9uta_align_5align_10algorithms_16needleman_wunsch_gotoh_score(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score);
 
   /* function exit code */
   goto __pyx_L0;
@@ -14928,12 +14927,12 @@ static PyObject *__pyx_pw_9uta_align_17needleman_wunsch_gotoh_score(PyObject *__
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9uta_align_16needleman_wunsch_gotoh_score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score) {
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_16needleman_wunsch_gotoh_score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score) {
   PyObject *__pyx_v_a = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_9uta_align_align_global_score __pyx_t_2;
+  struct __pyx_opt_args_9uta_align_5align_10algorithms_align_global_score __pyx_t_2;
   __Pyx_RefNannySetupContext("needleman_wunsch_gotoh_score", 0);
 
   /* "uta_align/align/algorithms.pyx":1548
@@ -14948,7 +14947,7 @@ static PyObject *__pyx_pf_9uta_align_16needleman_wunsch_gotoh_score(CYTHON_UNUSE
   __pyx_t_2.mismatch_score = __pyx_v_mismatch_score;
   __pyx_t_2.gap_open_score = __pyx_v_gap_open_score;
   __pyx_t_2.gap_extend_score = __pyx_v_gap_extend_score;
-  __pyx_t_1 = __pyx_f_9uta_align_align_global_score(__pyx_v_s1, __pyx_v_s2, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1548, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9uta_align_5align_10algorithms_align_global_score(__pyx_v_s1, __pyx_v_s2, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1548, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_a = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -14978,7 +14977,7 @@ static PyObject *__pyx_pf_9uta_align_16needleman_wunsch_gotoh_score(CYTHON_UNUSE
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("uta_align.needleman_wunsch_gotoh_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.needleman_wunsch_gotoh_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_a);
@@ -14996,10 +14995,10 @@ static PyObject *__pyx_pf_9uta_align_16needleman_wunsch_gotoh_score(CYTHON_UNUSE
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9uta_align_19glocal_align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_9uta_align_18glocal_align[] = "glocal_align(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6, char extended_cigar=0, char add_soft_clips=0)";
-static PyMethodDef __pyx_mdef_9uta_align_19glocal_align = {"glocal_align", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_19glocal_align, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_18glocal_align};
-static PyObject *__pyx_pw_9uta_align_19glocal_align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_19glocal_align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9uta_align_5align_10algorithms_18glocal_align[] = "glocal_align(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6, char extended_cigar=0, char add_soft_clips=0)";
+static PyMethodDef __pyx_mdef_9uta_align_5align_10algorithms_19glocal_align = {"glocal_align", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_5align_10algorithms_19glocal_align, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_5align_10algorithms_18glocal_align};
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_19glocal_align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_s1 = 0;
   PyObject *__pyx_v_s2 = 0;
   int32_t __pyx_v_match_score;
@@ -15145,13 +15144,13 @@ static PyObject *__pyx_pw_9uta_align_19glocal_align(PyObject *__pyx_self, PyObje
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("glocal_align", 0, 2, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1553, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("uta_align.glocal_align", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.glocal_align", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s1), (&PyBytes_Type), 1, "s1", 1))) __PYX_ERR(0, 1553, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s2), (&PyBytes_Type), 1, "s2", 1))) __PYX_ERR(0, 1554, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9uta_align_18glocal_align(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score, __pyx_v_extended_cigar, __pyx_v_add_soft_clips);
+  __pyx_r = __pyx_pf_9uta_align_5align_10algorithms_18glocal_align(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score, __pyx_v_extended_cigar, __pyx_v_add_soft_clips);
 
   /* function exit code */
   goto __pyx_L0;
@@ -15162,12 +15161,12 @@ static PyObject *__pyx_pw_9uta_align_19glocal_align(PyObject *__pyx_self, PyObje
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9uta_align_18glocal_align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar, char __pyx_v_add_soft_clips) {
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_18glocal_align(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score, char __pyx_v_extended_cigar, char __pyx_v_add_soft_clips) {
   PyObject *__pyx_v_a = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_9uta_align_align_glocal_full __pyx_t_2;
+  struct __pyx_opt_args_9uta_align_5align_10algorithms_align_glocal_full __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
@@ -15188,7 +15187,7 @@ static PyObject *__pyx_pf_9uta_align_18glocal_align(CYTHON_UNUSED PyObject *__py
   __pyx_t_2.gap_extend_score = __pyx_v_gap_extend_score;
   __pyx_t_2.extended_cigar = __pyx_v_extended_cigar;
   __pyx_t_2.soft_clip = __pyx_v_add_soft_clips;
-  __pyx_t_1 = __pyx_f_9uta_align_align_glocal_full(__pyx_v_s1, __pyx_v_s2, __pyx_e_9uta_align_MODE_GLOCAL, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1562, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9uta_align_5align_10algorithms_align_glocal_full(__pyx_v_s1, __pyx_v_s2, __pyx_e_9uta_align_5align_10algorithms_MODE_GLOCAL, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1562, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_a = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -15286,7 +15285,7 @@ static PyObject *__pyx_pf_9uta_align_18glocal_align(CYTHON_UNUSED PyObject *__py
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("uta_align.glocal_align", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.glocal_align", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_a);
@@ -15304,10 +15303,10 @@ static PyObject *__pyx_pf_9uta_align_18glocal_align(CYTHON_UNUSED PyObject *__py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9uta_align_21glocal_score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_9uta_align_20glocal_score[] = "glocal_score(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6)";
-static PyMethodDef __pyx_mdef_9uta_align_21glocal_score = {"glocal_score", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_21glocal_score, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_20glocal_score};
-static PyObject *__pyx_pw_9uta_align_21glocal_score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_21glocal_score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9uta_align_5align_10algorithms_20glocal_score[] = "glocal_score(bytes s1, bytes s2, int32_t match_score=10, int32_t mismatch_score=-9, int32_t gap_open_score=-15, int32_t gap_extend_score=-6)";
+static PyMethodDef __pyx_mdef_9uta_align_5align_10algorithms_21glocal_score = {"glocal_score", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9uta_align_5align_10algorithms_21glocal_score, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9uta_align_5align_10algorithms_20glocal_score};
+static PyObject *__pyx_pw_9uta_align_5align_10algorithms_21glocal_score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_s1 = 0;
   PyObject *__pyx_v_s2 = 0;
   int32_t __pyx_v_match_score;
@@ -15421,13 +15420,13 @@ static PyObject *__pyx_pw_9uta_align_21glocal_score(PyObject *__pyx_self, PyObje
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("glocal_score", 0, 2, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 1569, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("uta_align.glocal_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.glocal_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s1), (&PyBytes_Type), 1, "s1", 1))) __PYX_ERR(0, 1569, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s2), (&PyBytes_Type), 1, "s2", 1))) __PYX_ERR(0, 1570, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9uta_align_20glocal_score(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score);
+  __pyx_r = __pyx_pf_9uta_align_5align_10algorithms_20glocal_score(__pyx_self, __pyx_v_s1, __pyx_v_s2, __pyx_v_match_score, __pyx_v_mismatch_score, __pyx_v_gap_open_score, __pyx_v_gap_extend_score);
 
   /* function exit code */
   goto __pyx_L0;
@@ -15438,12 +15437,12 @@ static PyObject *__pyx_pw_9uta_align_21glocal_score(PyObject *__pyx_self, PyObje
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9uta_align_20glocal_score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score) {
+static PyObject *__pyx_pf_9uta_align_5align_10algorithms_20glocal_score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_s1, PyObject *__pyx_v_s2, int32_t __pyx_v_match_score, int32_t __pyx_v_mismatch_score, int32_t __pyx_v_gap_open_score, int32_t __pyx_v_gap_extend_score) {
   PyObject *__pyx_v_a = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_9uta_align_align_glocal_score __pyx_t_2;
+  struct __pyx_opt_args_9uta_align_5align_10algorithms_align_glocal_score __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
@@ -15461,7 +15460,7 @@ static PyObject *__pyx_pf_9uta_align_20glocal_score(CYTHON_UNUSED PyObject *__py
   __pyx_t_2.mismatch_score = __pyx_v_mismatch_score;
   __pyx_t_2.gap_open_score = __pyx_v_gap_open_score;
   __pyx_t_2.gap_extend_score = __pyx_v_gap_extend_score;
-  __pyx_t_1 = __pyx_f_9uta_align_align_glocal_score(__pyx_v_s1, __pyx_v_s2, __pyx_e_9uta_align_MODE_GLOCAL, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1576, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9uta_align_5align_10algorithms_align_glocal_score(__pyx_v_s1, __pyx_v_s2, __pyx_e_9uta_align_5align_10algorithms_MODE_GLOCAL, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1576, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_a = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -15509,7 +15508,7 @@ static PyObject *__pyx_pf_9uta_align_20glocal_score(CYTHON_UNUSED PyObject *__py
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("uta_align.glocal_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("uta_align.align.algorithms.glocal_score", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_a);
@@ -16162,17 +16161,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_uta_align(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_algorithms(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_uta_align},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_algorithms},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "uta_align",
+    "algorithms",
     0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -16346,7 +16345,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_test_align, __pyx_k_test_align, sizeof(__pyx_k_test_align), 0, 0, 1, 1},
   {&__pyx_kp_u_test_align_line_980, __pyx_k_test_align_line_980, sizeof(__pyx_k_test_align_line_980), 0, 1, 0, 0},
   {&__pyx_n_s_trace, __pyx_k_trace, sizeof(__pyx_k_trace), 0, 0, 1, 1},
-  {&__pyx_n_s_uta_align, __pyx_k_uta_align, sizeof(__pyx_k_uta_align), 0, 0, 1, 1},
+  {&__pyx_n_s_uta_align_align_algorithms, __pyx_k_uta_align_align_algorithms, sizeof(__pyx_k_uta_align_align_algorithms), 0, 0, 1, 1},
   {&__pyx_kp_s_uta_align_align_algorithms_pyx, __pyx_k_uta_align_align_algorithms_pyx, sizeof(__pyx_k_uta_align_align_algorithms_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_uta_align_align_cigar_utils, __pyx_k_uta_align_align_cigar_utils, sizeof(__pyx_k_uta_align_align_cigar_utils), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
@@ -16870,11 +16869,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC inituta_align(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC inituta_align(void)
+__Pyx_PyMODINIT_FUNC initalgorithms(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initalgorithms(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_uta_align(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_uta_align(void)
+__Pyx_PyMODINIT_FUNC PyInit_algorithms(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_algorithms(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -16941,7 +16940,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_uta_align(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_algorithms(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -16952,7 +16951,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_uta_align(PyObject *__pyx_pyinit_m
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'uta_align' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'algorithms' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -16967,7 +16966,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_uta_align(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_algorithms(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -17006,7 +17005,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("uta_align", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("algorithms", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -17024,14 +17023,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_uta_align) {
+  if (__pyx_module_is_main_uta_align__align__algorithms) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "uta_align")) {
-      if (unlikely(PyDict_SetItemString(modules, "uta_align", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "uta_align.align.algorithms")) {
+      if (unlikely(PyDict_SetItemString(modules, "uta_align.align.algorithms", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -17101,7 +17100,7 @@ if (!__Pyx_RefNanny) {
  *     '''
  *     Inverts the alignment between query sequence and reference.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_1invert_alignment, NULL, __pyx_n_s_uta_align); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_5align_10algorithms_1invert_alignment, NULL, __pyx_n_s_uta_align_align_algorithms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_invert_alignment, __pyx_t_2) < 0) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17113,7 +17112,7 @@ if (!__Pyx_RefNanny) {
  *     cdef CigarOperator op
  *     cdef int hide, k, n
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_3cigar_alignment, NULL, __pyx_n_s_uta_align); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_5align_10algorithms_3cigar_alignment, NULL, __pyx_n_s_uta_align_align_algorithms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 129, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_cigar_alignment, __pyx_t_2) < 0) __PYX_ERR(0, 129, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17127,7 +17126,7 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_tuple__14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 197, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple__14, __pyx_n_s_Alignment, __pyx_n_s_Alignment, (PyObject *) NULL, __pyx_n_s_uta_align, __pyx_kp_s_Object_with_which_to_store_pairw); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 197, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple__14, __pyx_n_s_Alignment, __pyx_n_s_Alignment, (PyObject *) NULL, __pyx_n_s_uta_align_align_algorithms, __pyx_kp_s_Object_with_which_to_store_pairw); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 197, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
   /* "uta_align/align/algorithms.pyx":209
@@ -17146,7 +17145,7 @@ if (!__Pyx_RefNanny) {
  *         self.ref         = ref
  *         self.ref_start   = ref_start
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9uta_align_9Alignment_1__init__, 0, __pyx_n_s_Alignment___init, NULL, __pyx_n_s_uta_align, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 211, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9uta_align_5align_10algorithms_9Alignment_1__init__, 0, __pyx_n_s_Alignment___init, NULL, __pyx_n_s_uta_align_align_algorithms, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 211, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 211, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -17158,7 +17157,7 @@ if (!__Pyx_RefNanny) {
  *         if self.cigar is None:
  *             raise ValueError('Gapped alignment requires full alignment to be performed')
  */
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9uta_align_9Alignment_3gapped_alignment, 0, __pyx_n_s_Alignment_gapped_alignment, NULL, __pyx_n_s_uta_align, __pyx_d, ((PyObject *)__pyx_codeobj__19)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 225, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_9uta_align_5align_10algorithms_9Alignment_3gapped_alignment, 0, __pyx_n_s_Alignment_gapped_alignment, NULL, __pyx_n_s_uta_align_align_algorithms, __pyx_d, ((PyObject *)__pyx_codeobj__19)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__20);
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_gapped_alignment, __pyx_t_3) < 0) __PYX_ERR(0, 225, __pyx_L1_error)
@@ -17185,7 +17184,7 @@ if (!__Pyx_RefNanny) {
  *           bytes   query,
  *           bytes   mode,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_5align, NULL, __pyx_n_s_uta_align); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 868, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_5align_10algorithms_5align, NULL, __pyx_n_s_uta_align_align_algorithms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 868, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_align, __pyx_t_2) < 0) __PYX_ERR(0, 868, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17197,7 +17196,7 @@ if (!__Pyx_RefNanny) {
  *     '''
  *     >>> s1,s2=b'b',b'abc'
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_7test_align, NULL, __pyx_n_s_uta_align); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 980, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_5align_10algorithms_7test_align, NULL, __pyx_n_s_uta_align_align_algorithms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 980, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test_align, __pyx_t_2) < 0) __PYX_ERR(0, 980, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17209,7 +17208,7 @@ if (!__Pyx_RefNanny) {
  *                                      bytes   s2,
  *                                      int32_t match_score=10,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_9needleman_wunsch_altshul_erikson, NULL, __pyx_n_s_uta_align); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1221, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_5align_10algorithms_9needleman_wunsch_altshul_erikson, NULL, __pyx_n_s_uta_align_align_algorithms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_needleman_wunsch_altshul_erikson, __pyx_t_2) < 0) __PYX_ERR(0, 1221, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17221,7 +17220,7 @@ if (!__Pyx_RefNanny) {
  *                                bytes   s2,
  *                                int32_t match_score=10,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_11smith_waterman_gotoh_align, NULL, __pyx_n_s_uta_align); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1499, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_5align_10algorithms_11smith_waterman_gotoh_align, NULL, __pyx_n_s_uta_align_align_algorithms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1499, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_smith_waterman_gotoh_align, __pyx_t_2) < 0) __PYX_ERR(0, 1499, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17233,7 +17232,7 @@ if (!__Pyx_RefNanny) {
  *                                bytes   s2,
  *                                int32_t match_score=10,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_13smith_waterman_gotoh_score, NULL, __pyx_n_s_uta_align); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1516, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_5align_10algorithms_13smith_waterman_gotoh_score, NULL, __pyx_n_s_uta_align_align_algorithms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1516, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_smith_waterman_gotoh_score, __pyx_t_2) < 0) __PYX_ERR(0, 1516, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17245,7 +17244,7 @@ if (!__Pyx_RefNanny) {
  *                                  bytes s2,
  *                                  int32_t match_score=10,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_15needleman_wunsch_gotoh_align, NULL, __pyx_n_s_uta_align); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1528, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_5align_10algorithms_15needleman_wunsch_gotoh_align, NULL, __pyx_n_s_uta_align_align_algorithms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_needleman_wunsch_gotoh_align, __pyx_t_2) < 0) __PYX_ERR(0, 1528, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17257,7 +17256,7 @@ if (!__Pyx_RefNanny) {
  *                                  bytes   s2,
  *                                  int32_t match_score=10,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_17needleman_wunsch_gotoh_score, NULL, __pyx_n_s_uta_align); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1541, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_5align_10algorithms_17needleman_wunsch_gotoh_score, NULL, __pyx_n_s_uta_align_align_algorithms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1541, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_needleman_wunsch_gotoh_score, __pyx_t_2) < 0) __PYX_ERR(0, 1541, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17269,7 +17268,7 @@ if (!__Pyx_RefNanny) {
  *                  bytes   s2,
  *                  int32_t match_score=10,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_19glocal_align, NULL, __pyx_n_s_uta_align); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1553, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_5align_10algorithms_19glocal_align, NULL, __pyx_n_s_uta_align_align_algorithms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1553, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_glocal_align, __pyx_t_2) < 0) __PYX_ERR(0, 1553, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17281,7 +17280,7 @@ if (!__Pyx_RefNanny) {
  *                  bytes   s2,
  *                  int32_t match_score=10,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_21glocal_score, NULL, __pyx_n_s_uta_align); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1569, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9uta_align_5align_10algorithms_21glocal_score, NULL, __pyx_n_s_uta_align_align_algorithms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1569, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_glocal_score, __pyx_t_2) < 0) __PYX_ERR(0, 1569, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17315,11 +17314,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_3);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init uta_align", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init uta_align.align.algorithms", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init uta_align");
+    PyErr_SetString(PyExc_ImportError, "init uta_align.align.algorithms");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
