@@ -16,7 +16,8 @@
 .idea/
 .pythoscope/**
 .tox
+docs/build
 tmp
-venv
 uta_align/align/algorithms.c
 uta_align/align/cigar_utils.c
+venv
