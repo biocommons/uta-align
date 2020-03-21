@@ -68,3 +68,6 @@ For Development
   :target: https://pypi.python.org/pypi?name=uta-align
   :align: middle
 
+.. |build_status| image:: https://travis-ci.org/biocommons/uta-align.svg?branch=master
+   :target: https://travis-ci.org/biocommons/uta-align
+   :align: middle
