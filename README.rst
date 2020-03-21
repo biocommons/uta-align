@@ -6,15 +6,15 @@ Smith-Waterman alignment algorithms
 Original author: Kevin Jacobs
 
 
-.. important:: Python 3.6+ only
+**IMPORTANT**: Python 3.7 only for the moment (PRs welcome!)
 
 
 Installation
 @@@@@@@@@@@@
 
-From source::
+* From source::
 
-  $ python setup.py install
+    $ python setup.py install
 
 
 
@@ -24,6 +24,13 @@ For Development
 * Install developer environment::
 
     $ make devready
+    
+  Alternatively::
+
+    $ python3 -m venv myvenv
+    $ source myvenv/bin/activate
+    $ make setup
+
 
 * Activate the environment::
 
@@ -57,7 +64,7 @@ For Development
     $ make tox
     
     GLOB sdist-make: /home/reece/projects/biocommons/uta-align/setup.py
-    py37 inst-nodeps: /home/reece/projects/biocommons/uta-align/.tox/.tmp/package/1/uta-align-1.1.13a2.dev7+g98b7cc9.d20200303.zip
+    py37 inst-nodeps: /home/reece/projects/biocommons/uta-align/.tox/.tmp/package/...
     ...
     py37: commands succeeded
     congratulations :)
