@@ -1,11 +1,12 @@
-``uta-align`` provides C-based Needleman-Wunsch and Smith-Waterman
-alignment algorithms with a Python interface.
+``uta-align`` provides C-based (Cython) Needleman-Wunsch and
+Smith-Waterman alignment algorithms
 
 |build_status| |pypi_badge|
 
+Original author: Kevin Jacobs
+
 
 .. important:: Python 3.6+ only
-
 
 
 Installation
