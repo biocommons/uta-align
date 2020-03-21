@@ -57,12 +57,21 @@ bdist bdist_egg bdist_wheel build sdist install: %:
 	python setup.py $@
 
 
-.PHONY: upload
+#=> upload, upload-test: upload package to pypi
+.PHONY: upload upload-test
 upload:
 	# N.B. pypi biocommons password is in keyring
+	# keyring set https://upload.pypi.org/legacy/ biocommons
 	rm -fr dist
-	python setup.py sdist bdist_wheel
-	twine upload -u biocommons --repository-url https://pypi.org/legacy/ dist/*
+	python setup.py sdist
+	twine upload -u biocommons dist/*
+
+upload-test:
+	# N.B. pypi biocommons password is in keyring
+	# keyring set https://test.pypi.org/legacy/ reece
+	rm -fr dist
+	python setup.py sdist
+	twine upload -u reece --repository-url https://test.pypi.org/legacy/ dist/*
 
 
 
