@@ -1,0 +1,8 @@
+update copyright
+
+
+Failed:
+* couldn't put uta_align in src/. cython build appears to fail to build appropriate path in build/.
+
+* couldn't mv uta_align/align -> uta_align/_align. Wanted this so that
+  we could create a new align function (i.e., uta_align.align) that handled encoding

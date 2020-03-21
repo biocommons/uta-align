@@ -107,7 +107,7 @@ reformat:
 .PHONY: docs
 docs: develop
 	# RTD makes json. Build here to ensure that it works.
-	make -C doc html json
+	make -C docs html json
 
 ############################################################################
 #= CLEANUP
