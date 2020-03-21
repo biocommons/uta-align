@@ -1,0 +1,14 @@
+# this is used by tox only with tox.ini/[tox]/isolated_build = True
+
+[build-system]
+requires = [
+    "cython >= 0.29",
+    "cython-setuptools",
+    "pysam >= 0.15",
+    "setuptools >= 45",
+    "setuptools_scm",
+    "tox",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+

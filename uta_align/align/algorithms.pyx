@@ -157,7 +157,7 @@ def cigar_alignment(str1, str2, cigar, hide_match=True):
             for k in range(n):
                 a1[0] = s1[0]
                 if hide and s1[0] == s2[0]:
-                    a2[0] = '.'
+                    a2[0] = b'.'
                 else:
                     a2[0] = s2[0]
                 a1 += 1
@@ -167,9 +167,9 @@ def cigar_alignment(str1, str2, cigar, hide_match=True):
 
         elif op.consumes_read_bases:
             if op is SOFT_CLIP:
-                op_char = ' '
+                op_char = b' '
             else:
-                op_char = '-'
+                op_char = b'-'
 
             for k in range(n):
                 a1[0] = op_char
@@ -180,9 +180,9 @@ def cigar_alignment(str1, str2, cigar, hide_match=True):
 
         elif op.consumes_ref_bases:
             if op is SKIPPED:
-                op_char = ' '
+                op_char = b' '
             else:
-                op_char = '-'
+                op_char = b'-'
 
             for k in range(n):
                 a1[0] = s1[0]
@@ -809,38 +809,38 @@ cdef _roll_cigar_gotoh(bytes s1, bytes s2, size_t i, size_t j, char* edits, int 
         back      = edits[m*i+j]
         back_dir  = back & TRACE_DIR_MASK
 
-        if op=='D' and (last_back & TRACE_NEXT_DEL):
-            op = 'D'
-        elif op=='I' and (last_back & TRACE_NEXT_INS):
-            op = 'I'
+        if op==b'D' and (last_back & TRACE_NEXT_DEL):
+            op = b'D'
+        elif op==b'I' and (last_back & TRACE_NEXT_INS):
+            op = b'I'
         elif back_dir & TRACE_MATCH:
-            op = 'M'
+            op = b'M'
         elif back_dir & TRACE_DEL:
-            op = 'D'
+            op = b'D'
         elif back_dir & TRACE_INS:
-            op = 'I'
+            op = b'I'
         else:
             break
 
-        if op=='M':
+        if op==b'M':
             i -= 1
             j -= 1
-        elif op=='D':
+        elif op==b'D':
             i -= 1
-        elif op=='I':
+        elif op==b'I':
             j -= 1
         else:
             raise ValueError('Invalid edit operation')
 
-        if extended_cigar and op=='M':
+        if extended_cigar and op==b'M':
             if ss1[i]==ss2[j]:
-                op = '='
+                op = b'='
             else:
-                op = 'X'
+                op = b'X'
 
         if count and last_op != op:
             cigar.append( (get_op_by_char(last_op),count) )
-            count  = 1
+            count = 1
         else:
             count += 1
 
@@ -950,28 +950,28 @@ def align(bytes   ref,
 
     mode = mode.lower()
 
-    if mode == 'local':
+    if mode == b'local':
         if score_only:
             return align_local_score(ref, query, match_score, mismatch_score, gap_open_score, gap_extend_score)
         else:
             return align_local_full(ref, query, match_score, mismatch_score, gap_open_score, gap_extend_score, extended_cigar, soft_clip)
-    elif mode == 'global':
+    elif mode == b'global':
         if score_only:
             return align_global_score(ref, query, match_score, mismatch_score, gap_open_score, gap_extend_score)
         else:
             return align_global_full(ref, query, match_score, mismatch_score, gap_open_score, gap_extend_score, extended_cigar)
-    elif mode == 'glocal':
+    elif mode == b'glocal':
         if score_only:
             return align_glocal_score(ref, query, MODE_GLOCAL, match_score, mismatch_score, gap_open_score, gap_extend_score)
         else:
             return align_glocal_full(ref, query, MODE_GLOCAL, match_score, mismatch_score, gap_open_score, gap_extend_score, extended_cigar, soft_clip)
-    elif mode == 'local_global':
+    elif mode == b'local_global':
         if score_only:
             return align_glocal_score(ref, query, MODE_LOCAL_GLOBAL, match_score, mismatch_score, gap_open_score, gap_extend_score)
         else:
             return align_glocal_full(ref, query, MODE_LOCAL_GLOBAL, match_score, mismatch_score, gap_open_score, gap_extend_score, extended_cigar, soft_clip)
     else:
-        raise ValueError('Unknown alignment mode')
+        raise ValueError('Unknown alignment mode ' + mode)
 
 
 ###################################################################################################
@@ -979,20 +979,20 @@ def align(bytes   ref,
 
 def test_align():
     '''
-    >>> s1,s2='b','abc'
-    >>> a = align(s1,s2,'local')
+    >>> s1,s2=b'b',b'abc'
+    >>> a = align(s1,s2,b'local')
     >>> a.score
     10
     >>> a.cigar.to_string()
-    '1M'
+    b'1M'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'b'
+    b'b'
     >>> a2
-    '.'
+    b'.'
 
-    >>> s1,s2='abc','b'
-    >>> a = align(s1,s2,'local')
+    >>> s1,s2=b'abc',b'b'
+    >>> a = align(s1,s2,b'local')
     >>> a.ref_start, a.ref_stop
     (1, 2)
     >>> a.query_start, a.query_stop
@@ -1000,15 +1000,15 @@ def test_align():
     >>> a.score
     10
     >>> a.cigar.to_string()
-    '1M'
+    b'1M'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'b'
+    b'b'
     >>> a2
-    '.'
+    b'.'
 
-    >>> s1,s2='abbcbbd','acd'
-    >>> a = align(s1,s2,'local',match_score=30)
+    >>> s1,s2=b'abbcbbd',b'acd'
+    >>> a = align(s1,s2,b'local',match_score=30)
     >>> a.ref_start, a.ref_stop
     (0, 7)
     >>> a.query_start, a.query_stop
@@ -1016,16 +1016,16 @@ def test_align():
     >>> a.score
     48
     >>> a.cigar.to_string()
-    '1M2D1M2D1M'
+    b'1M2D1M2D1M'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'abbcbbd'
+    b'abbcbbd'
     >>> a2
-    '.--.--.'
+    b'.--.--.'
 
-    >>> s1='AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
-    >>> s2='GCTGGTGCGACACAT'
-    >>> a = align(s1,s2,'local',mismatch_score=-20)
+    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
+    >>> s2=b'GCTGGTGCGACACAT'
+    >>> a = align(s1,s2,b'local',mismatch_score=-20)
     >>> a.ref_start, a.ref_stop
     (46, 53)
     >>> a.query_start, a.query_stop
@@ -1033,27 +1033,27 @@ def test_align():
     >>> a.score
     55
     >>> a.cigar.to_string()
-    '2M1I5M'
+    b'2M1I5M'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'GC-ACACA'
+    b'GC-ACACA'
     >>> a2
-    '..G.....'
+    b'..G.....'
 
-    >>> s1,s2='b','abc'
-    >>> a = align(s1,s2,'glocal')
+    >>> s1,s2=b'b',b'abc'
+    >>> a = align(s1,s2,b'glocal')
     >>> a.score
     10
     >>> a.cigar.to_string()
-    '1M'
+    b'1M'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'b'
+    b'b'
     >>> a2
-    '.'
+    b'.'
 
-    >>> s1,s2='abc','b'
-    >>> a = align(s1,s2,'glocal')
+    >>> s1,s2=b'abc',b'b'
+    >>> a = align(s1,s2,b'glocal')
     >>> a.ref_start, a.ref_stop
     (1, 2)
     >>> a.query_start, a.query_stop
@@ -1061,15 +1061,15 @@ def test_align():
     >>> a.score
     10
     >>> a.cigar.to_string()
-    '1M'
+    b'1M'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'b'
+    b'b'
     >>> a2
-    '.'
+    b'.'
 
-    >>> s1,s2='abbcbbd','acd'
-    >>> a = align(s1,s2,'glocal',match_score=30)
+    >>> s1,s2=b'abbcbbd',b'acd'
+    >>> a = align(s1,s2,b'glocal',match_score=30)
     >>> a.ref_start, a.ref_stop
     (0, 7)
     >>> a.query_start, a.query_stop
@@ -1077,16 +1077,16 @@ def test_align():
     >>> a.score
     48
     >>> a.cigar.to_string()
-    '1M2D1M2D1M'
+    b'1M2D1M2D1M'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'abbcbbd'
+    b'abbcbbd'
     >>> a2
-    '.--.--.'
+    b'.--.--.'
 
-    >>> s1='AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
-    >>> s2='GCTGGTGCGACACAT'
-    >>> a = align(s1,s2,'glocal',mismatch_score=-20)
+    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
+    >>> s2=b'GCTGGTGCGACACAT'
+    >>> a = align(s1,s2,b'glocal',mismatch_score=-20)
     >>> a.ref_start, a.ref_stop
     (36, 53)
     >>> a.query_start, a.query_stop
@@ -1094,122 +1094,122 @@ def test_align():
     >>> a.score
     27
     >>> a.cigar.to_string()
-    '1M1D3M4D1M1I2M1I5M1I'
+    b'1M1D3M4D1M1I2M1I5M1I'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'GACTGCCAAG-GC-ACACA-'
+    b'GACTGCCAAG-GC-ACACA-'
     >>> a2
-    '.-...----.T..G.....T'
+    b'.-...----.T..G.....T'
 
-    >>> s1,s2='b','abc'
-    >>> a = align(s1,s2,'glocal',score_only=True)
+    >>> s1,s2=b'b',b'abc'
+    >>> a = align(s1,s2,b'glocal',score_only=True)
     >>> a.ref_stop, a.query_stop, a.score
     (1, 2, 10)
 
-    >>> s1,s2='abc','b'
-    >>> a = align(s1,s2,'glocal',score_only=True)
+    >>> s1,s2=b'abc',b'b'
+    >>> a = align(s1,s2,b'glocal',score_only=True)
     >>> a.ref_stop, a.query_stop, a.score
     (2, 1, 10)
 
-    >>> s1,s2='abbcbbd','acd'
-    >>> a = align(s1,s2,'glocal',score_only=True,match_score=30)
+    >>> s1,s2=b'abbcbbd',b'acd'
+    >>> a = align(s1,s2,b'glocal',score_only=True,match_score=30)
     >>> a.ref_stop, a.query_stop, a.score
     (7, 3, 48)
 
-    >>> s1='AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
-    >>> s2='GCTGGTGCGACACAT'
-    >>> a = align(s1,s2,'glocal',score_only=True,mismatch_score=-20)
+    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
+    >>> s2=b'GCTGGTGCGACACAT'
+    >>> a = align(s1,s2,b'glocal',score_only=True,mismatch_score=-20)
     >>> a.ref_stop, a.query_stop, a.score
     (53, 15, 27)
 
-    >>> s1,s2='b','abc'
-    >>> a = align(s1,s2,'local',score_only=True)
+    >>> s1,s2=b'b',b'abc'
+    >>> a = align(s1,s2,b'local',score_only=True)
     >>> a.ref_stop, a.query_stop, a.score
     (1, 2, 10)
 
-    >>> s1,s2='abc','b'
-    >>> a = align(s1,s2,'local',score_only=True)
+    >>> s1,s2=b'abc',b'b'
+    >>> a = align(s1,s2,b'local',score_only=True)
     >>> a.ref_stop, a.query_stop, a.score
     (2, 1, 10)
 
-    >>> s1,s2='abbcbbd','acd'
-    >>> a = align(s1,s2,'local',score_only=True,match_score=30)
+    >>> s1,s2=b'abbcbbd',b'acd'
+    >>> a = align(s1,s2,b'local',score_only=True,match_score=30)
     >>> a.ref_stop, a.query_stop, a.score
     (7, 3, 48)
 
-    >>> s1='AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
-    >>> s2='GCTGGTGCGACACAT'
-    >>> a = align(s1,s2,'local',score_only=True,mismatch_score=-20)
+    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
+    >>> s2=b'GCTGGTGCGACACAT'
+    >>> a = align(s1,s2,b'local',score_only=True,mismatch_score=-20)
     >>> a.ref_stop, a.query_stop, a.score
     (53, 14, 55)
 
-    >>> s1,s2='b','abc'
-    >>> a = align(s1,s2,'global')
+    >>> s1,s2=b'b',b'abc'
+    >>> a = align(s1,s2,b'global')
     >>> a.score
     -20
     >>> a.cigar.to_string()
-    '1I1M1I'
+    b'1I1M1I'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    '-b-'
+    b'-b-'
     >>> a2
-    'a.c'
+    b'a.c'
 
-    >>> s1,s2='abc','b'
-    >>> a = align(s1,s2,'global')
+    >>> s1,s2=b'abc',b'b'
+    >>> a = align(s1,s2,b'global')
     >>> a.score
     -20
     >>> a.cigar.to_string()
-    '1D1M1D'
+    b'1D1M1D'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'abc'
+    b'abc'
     >>> a2
-    '-.-'
+    b'-.-'
 
-    >>> s1,s2='abbcbbd','acd'
-    >>> a = align(s1,s2,'global',match_score=30)
+    >>> s1,s2=b'abbcbbd',b'acd'
+    >>> a = align(s1,s2,b'global',match_score=30)
     >>> a.score
     48
     >>> a.cigar.to_string()
-    '1M2D1M2D1M'
+    b'1M2D1M2D1M'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'abbcbbd'
+    b'abbcbbd'
     >>> a2
-    '.--.--.'
+    b'.--.--.'
 
-    >>> s1='AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
-    >>> s2='GCTGGTGCGACACAT'
-    >>> a = align(s1,s2,'global')
+    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
+    >>> s2=b'GCTGGTGCGACACAT'
+    >>> a = align(s1,s2,b'global')
     >>> a.score
     -198
     >>> a.cigar.to_string()
-    '1D1M9D3M5D1M19D3M3D1M2D4M5D2M2D'
+    b'1D1M9D3M5D1M19D3M3D1M2D4M5D2M2D'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
+    b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
     >>> a2
-    '-.---------...-----.-------------------...---.--....-----..--'
+    b'-.---------...-----.-------------------...---.--....-----..--'
 
-    >>> s1,s2='b','abc'
-    >>> a = align(s1,s2,'global',score_only=True)
+    >>> s1,s2=b'b',b'abc'
+    >>> a = align(s1,s2,b'global',score_only=True)
     >>> a.score
     -20
 
-    >>> s1,s2='abc','b'
-    >>> a = align(s1,s2,'global',score_only=True)
+    >>> s1,s2=b'abc',b'b'
+    >>> a = align(s1,s2,b'global',score_only=True)
     >>> a.score
     -20
 
-    >>> s1,s2='abbcbbd','acd'
-    >>> a = align(s1,s2,'global',score_only=True,match_score=30)
+    >>> s1,s2=b'abbcbbd',b'acd'
+    >>> a = align(s1,s2,b'global',score_only=True,match_score=30)
     >>> a.score
     48
 
-    >>> s1='AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
-    >>> s2='GCTGGTGCGACACAT'
-    >>> a = align(s1,s2,'global',score_only=True)
+    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
+    >>> s2=b'GCTGGTGCGACACAT'
+    >>> a = align(s1,s2,b'global',score_only=True)
     >>> a.score
     -198
     '''
@@ -1241,54 +1241,54 @@ def needleman_wunsch_altshul_erikson(bytes   s1,
          Altschul SF, Erickson BW.  "Optimal sequence alignment using affine
          gap costs." Bull Math Biol.  1986;48(5-6):603-16.
 
-    >>> s1,s2='b','abc'
+    >>> s1,s2=b'b',b'abc'
     >>> a = needleman_wunsch_altshul_erikson(s1,s2)
     >>> a.score
     -20
     >>> a.cigar.to_string()
-    '1I1M1I'
+    b'1I1M1I'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    '-b-'
+    b'-b-'
     >>> a2
-    'a.c'
+    b'a.c'
 
-    >>> s1,s2='abc','b'
+    >>> s1,s2=b'abc',b'b'
     >>> a = needleman_wunsch_altshul_erikson(s1,s2)
     >>> a.score
     -20
     >>> a.cigar.to_string()
-    '1D1M1D'
+    b'1D1M1D'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'abc'
+    b'abc'
     >>> a2
-    '-.-'
+    b'-.-'
 
-    >>> s1,s2='abbcbbd','acd'
+    >>> s1,s2=b'abbcbbd',b'acd'
     >>> a = needleman_wunsch_altshul_erikson(s1,s2,match_score=30)
     >>> a.score
     48
     >>> a.cigar.to_string()
-    '1M2D1M2D1M'
+    b'1M2D1M2D1M'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'abbcbbd'
+    b'abbcbbd'
     >>> a2
-    '.--.--.'
+    b'.--.--.'
 
-    >>> s1='AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
-    >>> s2='GCTGGTGCGACACAT'
+    >>> s1=b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
+    >>> s2=b'GCTGGTGCGACACAT'
     >>> a = needleman_wunsch_altshul_erikson(s1,s2)
     >>> a.score
     -198
     >>> a.cigar.to_string()
-    '1D1M9D3M5D1M19D3M3D1M2D4M5D2M2D'
+    b'1D1M9D3M5D1M19D3M3D1M2D4M5D2M2D'
     >>> a1,a2 = a.gapped_alignment()
     >>> a1
-    'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
+    b'AGACCAAGTCTCTGCTACCGTACATACTCGTACTGAGACTGCCAAGGCACACAGGGGATAG'
     >>> a2
-    '-.---------...-----.-------------------...---.--....-----..--'
+    b'-.---------...-----.-------------------...---.--....-----..--'
     '''
     cdef size_t   n      = len(s1)
     cdef size_t   m      = len(s2)
@@ -1447,35 +1447,35 @@ cdef _roll_cigar_altshul_erikson(bytes s1, bytes s2, size_t i, size_t j, char* t
         last_op = op
         back    = trace[(m+2)*i+j]
 
-        if op=='D' and back&(TRACE_A|TRACE_D):
-            op = 'D'
-        elif op=='I' and back&(TRACE_B|TRACE_F):
-            op = 'I'
+        if op==b'D' and back&(TRACE_A|TRACE_D):
+            op = b'D'
+        elif op==b'I' and back&(TRACE_B|TRACE_F):
+            op = b'I'
         elif back&TRACE_C:
-            op = 'M'
+            op = b'M'
         elif back&(TRACE_A|TRACE_E):
-            op = 'D'
+            op = b'D'
         elif back&(TRACE_B|TRACE_G):
-            op = 'I'
+            op = b'I'
         else:
             break
             #raise ValueError('Invalid traceback at %d,%d = %d' % (i,j,back))
 
-        if op=='M':
+        if op==b'M':
             i -= 1
             j -= 1
-        elif op=='D':
+        elif op==b'D':
             i -= 1
-        elif op=='I':
+        elif op==b'I':
             j -= 1
         else:
             raise ValueError('Invalid edit operation')
 
-        if extended_cigar and op=='M':
+        if extended_cigar and op==b'M':
             if ss1[i]==ss2[j]:
-                op = '='
+                op = b'='
             else:
-                op = 'X'
+                op = b'X'
 
         if count and last_op != op:
             cigar.append( (get_op_by_char(last_op),count) )

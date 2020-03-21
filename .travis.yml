@@ -1,0 +1,44 @@
+dist: bionic
+os: linux
+
+language: python
+python:
+  # duplication intentional; apparent travis bug prevents builds with one version
+  - "3.7"
+  - "3.7"
+
+cache: pip
+
+install: pip install tox-travis
+
+script: tox
+
+after_success:
+  - coveralls
+
+stages:
+  - test
+  - name: deploy
+    if: tag IS present
+
+jobs:
+  include:
+  - stage: deploy
+    python: 3.7
+    install: skip
+    script: skip
+    deploy:
+      provider: pypi
+      username: biocommons
+      upload_docs: false
+      cleanup: false
+      distributions: sdist bdist_wheel
+      on:
+        tags: true
+        branch: master
+      password:
+        secure: 
+deploy:
+  provider: pypi
+  password:
+    secure: j84CzmnxZs9bQH3gtLkT4sNiIhg6UraLLJ1ndxRQSfqN471d/RCyu32vLJCcgIreJyNLfDcBipfKuMc/1GFcw3/EkPbB6MquwjWsxCeyXexkanji+N1K/y4c8oIU+sZMGDB7RSukD97dTmn1lr/SSyGj5st4+xTPv4Gkr0mtSaQpK+Y8zOcMZqyvmmb1XmFQFpV2FtAeLhsK5eZ5OaJdhBOWkU/BDG+EyR1BiX90uCq+B2E245qa2wVjr1UUA+XTQIgMUkcL6u/6V7r2EQKlTYObiaJQKJwxaUQ15pU/405pw3y0BB/ev6Ggj7lbBeEy27y4BVIPym8eB6yfckebDr6El0IfaaNXYy3bQY3PX6bahhczkmv2eSpvVYZE6jERDd/Hwa6R71fCD45v4I1vBNDzPcIZA8kHEpxBgpQpku0MaJonKDPA4jzD0HrB2ZZZNChinni+K+GMchYmQbbpL1q3Xc+0oDXNDnefl/8paikzTCPqnxg0fMS2Y+jk18LVDGqDntG32FiVPA0QlTlf/Wp/r68JQXGnheGt3dMegBrP0HqUVr67zH/sQ0CV/Z+x7NuzghHOitQX86rIJSCArQUZRyk/GU6N+kz4ssC22Ywb5/r4xgaZ2AmrnO4U7olkup11BUOuu0IgYiOxxxbIelzpuPvAYvpzdbNAOOywwyc=
