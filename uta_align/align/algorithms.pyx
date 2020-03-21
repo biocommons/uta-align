@@ -1578,7 +1578,7 @@ def glocal_score(bytes   s1,
     return a.ref_stop, a.query_stop, a.score
 
 ## <LICENSE>
-## Copyright 2014 uta-align Contributors (https://bitbucket.org/biocommons/uta-align)
+## Copyright 2014-2020 uta-align Contributors (https://github.com/biocommons/uta-align)
 ## 
 ## Licensed under the Apache License, Version 2.0 (the "License");
 ## you may not use this file except in compliance with the License.
