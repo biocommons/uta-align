@@ -59,14 +59,14 @@ DELETION.inverse      = INSERTION
 SEQ_MATCH.inverse     = SEQ_MATCH
 SEQ_MISMATCH.inverse  = SEQ_MISMATCH
 
-cpdef tuple BAM_OPS = (MATCH, INSERTION, DELETION, SKIPPED, SOFT_CLIP, HARD_CLIP, PADDING, SEQ_MATCH, SEQ_MISMATCH)
+cdef tuple BAM_OPS = (MATCH, INSERTION, DELETION, SKIPPED, SOFT_CLIP, HARD_CLIP, PADDING, SEQ_MATCH, SEQ_MISMATCH)
 
 # Create mapping from ord(char_op) to op
 _temp_map = [None]*256
 for _op in BAM_OPS:
     _temp_map[_op.code] = _op
 
-cpdef tuple BAM_OP_CHAR_MAP = tuple(_temp_map)
+cdef tuple BAM_OP_CHAR_MAP = tuple(_temp_map)
 del _temp_map, _op
 
 
