@@ -52,7 +52,6 @@ if has_cython:
 
 setup(
     ext_modules=extensions,
-    use_scm_version=True,
     packages=["uta_align"],
     )
 

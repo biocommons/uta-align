@@ -4,9 +4,9 @@ requires = [
 	"Cython ~= 3.0",
 	"pysam ~= 0.22", 
 	"setuptools ~= 69.0",
-	"setuptools_scm[toml] ~= 8.0",
+	"setuptools_scm ~= 8.0",
 ]
-# build-backend = "setuptools.build_meta"
+build-backend = "setuptools.build_meta"
 
 
 [project]
@@ -41,6 +41,8 @@ dev = [
 	"pytest-cov ~= 4.1",
 	"pytest-optional-tests",
 	"pytest ~= 7.1",
+	"setuptools_scm ~= 8.0",
+	"wheel ~= 0.42",
 ]
 docs = ["mkdocs"]
 

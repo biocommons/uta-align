@@ -58,8 +58,8 @@ install:
 
 #=> install: install package
 #=> bdist bdist_egg bdist_wheel build sdist: distribution options
-.PHONY: bdist bdist_egg bdist_wheel build build_sphinx sdist
-bdist bdist_egg bdist_wheel build sdist: %:
+.PHONY: bdist bdist_wheel build sdist
+bdist bdist_wheel build sdist: %:
 	python setup.py $@
 
 
