@@ -103,8 +103,7 @@ include = ["src", "tests"]
 [tool.pytest.ini_options]
 # https://docs.pytest.org/en/6.2.x/customize.html#pyproject-toml
 minversion = "6.0"
-addopts = "--doctest-modules --doctest-glob='*.rst'  --strict"
-#addopts = "-s -v -x --strict-markers -m 'not extra' --doctest-modules --cov=src"
+addopts = "-s -v -x --cov=uta_align"
 #addopts = "-ra -q"
 doctest_optionflags = [
 	"ALLOW_BYTES",

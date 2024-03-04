@@ -49,11 +49,12 @@ venv/3 venv/3.11 venv/3.12: venv/%:
 #=> develop: install package in develop mode
 .PHONY: develop
 develop:
-	pip install -e .[dev]
+	pip install .[dev]
+	python setup.py build_ext --inplace
 
 .PHONY: install
 install:
-	pip install -e .
+	pip install .[dev]
 
 #=> install: install package
 #=> bdist bdist_egg bdist_wheel build sdist: distribution options
