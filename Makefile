@@ -70,7 +70,7 @@ upload:
 	# keyring set https://upload.pypi.org/legacy/ biocommons
 	rm -fr dist
 	python setup.py sdist bdist_wheel
-	echo twine upload -u biocommons dist/*
+	twine upload -u biocommons dist/*
 
 upload-test:
 	# N.B. pypi biocommons password is in keyring
