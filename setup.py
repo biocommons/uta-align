@@ -1,7 +1,5 @@
 import glob
-import importlib
 import logging
-import subprocess
 
 from setuptools import find_packages, setup, Extension
 
@@ -27,12 +25,12 @@ except ImportError:
 
 
 # ###########################################################################
-# extnsion setup
+# extension setup
 # https://cython.readthedocs.io/en/latest/src/userguide/source_files_and_compilation.html#configuring-the-c-build
 # http://docs.cython.org/en/latest/src/userguide/source_files_and_compilation.html#distributing-cython-modules
 
 glob_ext = "pyx" if has_cython else "c"
-src_glob = "uta_align/align/*." + glob_ext
+src_glob = "src/uta_align/*." + glob_ext
 
 if has_cython:
     sources = [src_glob]

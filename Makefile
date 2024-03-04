@@ -47,13 +47,18 @@ venv/3 venv/3.11 venv/3.12: venv/%:
 	pip install --upgrade pip setuptools
 
 #=> develop: install package in develop mode
+.PHONY: develop
 develop:
 	pip install -e .[dev]
 
+.PHONY: install
+install:
+	pip install -e .
+
 #=> install: install package
 #=> bdist bdist_egg bdist_wheel build sdist: distribution options
-.PHONY: bdist bdist_egg bdist_wheel build build_sphinx sdist install
-bdist bdist_egg bdist_wheel build sdist install: %:
+.PHONY: bdist bdist_egg bdist_wheel build build_sphinx sdist
+bdist bdist_egg bdist_wheel build sdist: %:
 	python setup.py $@
 
 

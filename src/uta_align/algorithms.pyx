@@ -52,10 +52,10 @@ from    libc.string                     cimport memset
 from    cpython                         cimport PyErr_NoMemory
 from    cpython                         cimport PyBytes_FromStringAndSize
 
-from    uta_align.align.cigar_utils cimport CigarSequence, CigarOperator, get_op_by_char
+from    .cigar_utils cimport CigarSequence, CigarOperator, get_op_by_char
 
 # Python imports
-from    uta_align.align.cigar_utils  import INSERTION, DELETION, SOFT_CLIP, SKIPPED
+from    .cigar_utils  import INSERTION, DELETION, SOFT_CLIP, SKIPPED
 
 
 cdef enum:
