@@ -30,7 +30,7 @@ except ImportError:
 # http://docs.cython.org/en/latest/src/userguide/source_files_and_compilation.html#distributing-cython-modules
 
 glob_ext = "pyx" if has_cython else "c"
-src_glob = "uta_align/*." + glob_ext
+src_glob = "uta_align/align/*." + glob_ext
 
 if has_cython:
     sources = [src_glob]
@@ -38,7 +38,7 @@ else:
     sources = glob.glob(src_glob)
 
 extensions = [
-    Extension("uta_align", sources, include_dirs = pysam.get_include())
+    Extension("*", sources, include_dirs = pysam.get_include())
     ]
 
 if has_cython:

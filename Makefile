@@ -15,10 +15,6 @@ PYV=3
 VEDIR=venv/${PYV}
 
 
-# Ignore packages in user directory (~/.local/lib/python*)
-export PYTHONNOUSERSITE=1
-
-
 ############################################################################
 #= BASIC USAGE
 default: help
@@ -44,12 +40,12 @@ venv/3 venv/3.11 venv/3.12: venv/%:
 	python$* -mvenv $@; \
 	source $@/bin/activate; \
 	python -m ensurepip --upgrade; \
-	pip install --upgrade pip setuptools
+	pip install --upgrade pip setuptools uv
 
 #=> develop: install package in develop mode
 .PHONY: develop
 develop:
-	pip install .[dev]
+	uv pip install -e .[dev]
 	python setup.py build_ext --inplace
 
 .PHONY: install
