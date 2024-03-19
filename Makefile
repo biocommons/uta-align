@@ -76,6 +76,9 @@ upload-test:
 	twine upload -u reece --repository-url https://test.pypi.org/legacy/ dist/*
 
 
+#=> sdist-test: test *existing* sdist in new virtual environment
+sdist-test: $(wildcard dist/*tar.gz)
+	./sbin/sdist-test $<
 
 
 ############################################################################

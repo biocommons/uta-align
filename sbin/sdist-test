@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -euo pipefail
+
+cwd=$(pwd)
+sdist_path=$(realpath "$1")
+
+tmp_dir=$(mktemp -d /tmp/sdist-XXXXX)
+cd $tmp_dir
+
+/usr/bin/python3 -m venv venv
+source venv/bin/activate
+pip install -U setuptools pip uv
+uv pip install pytest pytest-cov
+uv pip install uta-align@$sdist_path
+
+python -c 'from uta_align.align.algorithms import glocal_align; glocal_align(b"AAAACAC", b"AATCAT")'
+
+cd "$cwd"
+make test
+
+#rm -fr "$tmp_dir"
