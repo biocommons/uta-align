@@ -1,14 +1,147 @@
-# this is used by tox only with tox.ini/[tox]/isolated_build = True
-
 [build-system]
 requires = [
-    "cython >= 0.29",
-    "cython-setuptools",
-    "pysam >= 0.15",
-    "setuptools >= 45",
-    "setuptools_scm",
-    "tox",
-    "wheel"
+	"wheel",
+	"Cython ~= 3.0",
+	"pysam ~= 0.22", 
+	"setuptools ~= 69.0",
+	"setuptools_scm ~= 8.0",
 ]
 build-backend = "setuptools.build_meta"
 
+
+[project]
+name = "uta-align"
+authors = [
+	{ name = "biocommons contributors", email = "biocommons-dev@googlegroups.com" },
+]
+description = "C-based sequence alignment for Python"
+readme = "README.rst"
+license = { file = "LICENSE.txt" }
+requires-python = ">=3.9"
+classifiers = [
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3.9",
+	"Programming Language :: Python :: 3.10",
+	"Programming Language :: Python :: 3.11",
+	"License :: OSI Approved :: MIT License",
+	"Operating System :: OS Independent",
+]
+dynamic = ["version"]
+dependencies = ["coloredlogs ~= 15.0", "pysam ~= 0.22", "pyyaml ~= 6.0"]
+
+[project.optional-dependencies]
+dev = [
+	"black ~= 22.3",
+	"build ~= 0.8",
+	"flake8 ~= 4.0",
+	"ipython ~= 8.4",
+	"isort ~= 5.10",
+	"pre-commit ~= 3.4",
+	"pylint ~= 2.14",
+	"pytest-cov ~= 4.1",
+	"pytest-optional-tests",
+	"pytest ~= 7.1",
+	"setuptools_scm ~= 8.0",
+	"twine ~= 5.0",
+	"wheel ~= 0.42",
+]
+docs = ["mkdocs"]
+
+
+[project.urls]
+"Homepage" = "https://github.com/biocommons/uta-align"
+"Bug Tracker" = "https://github.com/biocommons/uta-align/issues"
+
+
+[tool.coverage.run]
+branch = true
+source = ["uta-align"]
+omit = ["*_test.py", "*/test/*", "*/tests/*"]
+
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+	# Have to re-enable the standard pragma
+	"pragma: no cover",
+
+	# Don't complain about missing debug-only code:
+	"def __repr__",
+	"if self.debug",
+
+	# Don't complain if tests don't hit defensive assertion code:
+	"raise AssertionError",
+	"raise NotImplementedError",
+
+	# Don't complain if non-runnable code isn't run:
+	"if __name__ == .__main__.:",
+]
+
+[tool.black]
+line-length = 100
+
+[tool.cython]
+language_level = 3 # Use Python 3 syntax for Cython code
+
+[tool.flake8]
+# http://pep8.readthedocs.org/en/latest/intro.html#error-codes
+ignore = "E129,E221,E241,E251,E303,W291"
+exclude = [".git", "__pycache__", "build", "dist"]
+max-line-length = 120
+max-complexity = 10
+
+[tool.isort]
+profile = "black"
+src_paths = ["src", "tests"]
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = "R0913"
+
+[tool.pylint.format]
+max-line-length = 100
+
+[tool.pyright]
+include = ["src", "tests"]
+
+[tool.pytest.ini_options]
+# https://docs.pytest.org/en/6.2.x/customize.html#pyproject-toml
+minversion = "6.0"
+addopts = "-s -v -x --cov=uta_align"
+#addopts = "-ra -q"
+doctest_optionflags = [
+	"ALLOW_BYTES",
+	"ALLOW_UNICODE",
+	"ELLIPSIS",
+	"IGNORE_EXCEPTION_DETAIL",
+	"NORMALIZE_WHITESPACE",
+]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+markers = [
+	"integration: marks tests as integration (deselect with '-m \"not integration\"')",
+	"network: tests that require network connectivity",
+	"slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
+norecursedirs = ["dist", "build", ".tox"]
+
+
+# [tool.setuptools]
+# include-package-data = true
+
+# [tool.setuptools.packages.find]
+# where = ["src"]
+# exclude = ["__pycache__", "*.pyc"]
+# namespaces = true
+
+# [tool.setuptools.package-data]
+# "*" = ["*.gz", "*.json", "*.yaml"]
+
+
+[tool.setuptools_scm]
+
+
+#[tool.setuptools.ext_modules]
+# Define Cython modules here
+# Example: 
+#   mymodule = { sources = ["src/mymodule.pyx"], include_dirs = ["include"] }

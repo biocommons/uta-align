@@ -15,10 +15,6 @@ PYV=3
 VEDIR=venv/${PYV}
 
 
-# Ignore packages in user directory (~/.local/lib/python*)
-export PYTHONNOUSERSITE=1
-
-
 ############################################################################
 #= BASIC USAGE
 default: help
@@ -44,16 +40,22 @@ venv/3 venv/3.11 venv/3.12: venv/%:
 	python$* -mvenv $@; \
 	source $@/bin/activate; \
 	python -m ensurepip --upgrade; \
-	pip install --upgrade pip setuptools
+	pip install --upgrade pip setuptools uv
 
 #=> develop: install package in develop mode
+.PHONY: develop
 develop:
-	pip install -e .[dev]
+	uv pip install -e .[dev]
+	python setup.py build_ext --inplace
+
+.PHONY: install
+install:
+	pip install .[dev]
 
 #=> install: install package
 #=> bdist bdist_egg bdist_wheel build sdist: distribution options
-.PHONY: bdist bdist_egg bdist_wheel build build_sphinx sdist install
-bdist bdist_egg bdist_wheel build sdist install: %:
+.PHONY: bdist bdist_wheel build sdist
+bdist bdist_wheel build sdist: %:
 	python setup.py $@
 
 
@@ -74,6 +76,9 @@ upload-test:
 	twine upload -u reece --repository-url https://test.pypi.org/legacy/ dist/*
 
 
+#=> sdist-test: test *existing* sdist in new virtual environment
+sdist-test: $(wildcard dist/*tar.gz)
+	./sbin/sdist-test $<
 
 
 ############################################################################

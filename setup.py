@@ -1,7 +1,5 @@
 import glob
-import importlib
 import logging
-import subprocess
 
 from setuptools import find_packages, setup, Extension
 
@@ -27,7 +25,7 @@ except ImportError:
 
 
 # ###########################################################################
-# extnsion setup
+# extension setup
 # https://cython.readthedocs.io/en/latest/src/userguide/source_files_and_compilation.html#configuring-the-c-build
 # http://docs.cython.org/en/latest/src/userguide/source_files_and_compilation.html#distributing-cython-modules
 
@@ -54,7 +52,7 @@ if has_cython:
 
 setup(
     ext_modules=extensions,
-    use_scm_version=True,
+    packages=["uta_align"],
     )
 
 

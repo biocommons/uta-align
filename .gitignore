@@ -18,6 +18,6 @@
 .tox
 docs/build
 tmp
-uta_align/align/algorithms.c
-uta_align/align/cigar_utils.c
+algorithms.c
+cigar_utils.c
 venv
